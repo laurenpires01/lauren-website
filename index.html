@@ -152,7 +152,19 @@
   </section>
 
   <!-- Past Clients -->
-  <style>.client-logos .logo-carousel::before, .client-logos .logo-carousel::after { background: linear-gradient(to right, #ffffff, transparent) !important; }</style>
+  <style>
+    /* Client logos: show in colour */
+    .client-logos .logo-carousel__item img { filter: none !important; opacity: 1 !important; }
+    /* Remove broken fade edges on both carousels */
+    .client-logos .logo-carousel::before, .client-logos .logo-carousel::after,
+    .media-logos-colour .logo-carousel::before, .media-logos-colour .logo-carousel::after { display: none !important; }
+    .client-logos .logo-carousel, .media-logos-colour .logo-carousel { mask-image: none !important; -webkit-mask-image: none !important; }
+    /* Second row runs in reverse direction */
+    .logo-carousel--reverse .logo-carousel__track { animation-direction: reverse; }
+    /* Second row visible on mobile only */
+    .logo-carousel--mobile-only { display: none; }
+    @media (max-width: 768px) { .logo-carousel--mobile-only { display: block; margin-top: 1rem; } }
+  </style>
   <section class="section client-logos" style="padding: 4rem 0;">
     <div class="container">
       <div class="section__header fade-in" style="text-align: center; margin-bottom: 2rem;">
@@ -160,6 +172,7 @@
         <h2 class="section__title">Trusted By Organizations Across North America</h2>
         <p class="section__subtitle" style="margin: 0.5rem auto 0; max-width: 600px; text-align: center;">From government agencies and Fortune 500 companies to nonprofits and educational institutions.</p>
       </div>
+      <!-- Row 1: left to right -->
       <div class="logo-carousel">
           <div class="logo-carousel__track">
             <div class="logo-carousel__item"><img src="assets/clients/client-health-canada.webp" alt="Health Canada"></div>
@@ -203,6 +216,52 @@
             <div class="logo-carousel__item"><img src="assets/clients/client-chronic-health.webp" alt="Chronic Health Advocates"></div>
             <div class="logo-carousel__item"><img src="assets/clients/client-clarkson.webp" alt="Clarkson Secondary School"></div>
             <div class="logo-carousel__item"><img src="assets/clients/client-monsignor-pereyma.webp" alt="Monsignor John Pereyma CSS"></div>
+          </div>
+        </div>
+      <!-- Row 2: right to left (mobile only) -->
+      <div class="logo-carousel logo-carousel--reverse logo-carousel--mobile-only">
+          <div class="logo-carousel__track">
+            <div class="logo-carousel__item"><img src="assets/clients/client-monsignor-pereyma.webp" alt="Monsignor John Pereyma CSS"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-clarkson.webp" alt="Clarkson Secondary School"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-chronic-health.webp" alt="Chronic Health Advocates"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-lead.webp" alt="Canadian Multicultural LEAD Organization"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-bpw-niagara.webp" alt="BPW Niagara Falls"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-we-build-a-dream.webp" alt="We Build a Dream"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-replay-storytelling.webp" alt="Replay Storytelling"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-once-upon-a-woman.webp" alt="Once Upon a Woman"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-destinyfest.webp" alt="DestinyFest"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-speaker-slam.webp" alt="Speaker Slam"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-scalehr.webp" alt="ScaleHR"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-guelph-humber.webp" alt="University of Guelph-Humber"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-esdc.webp" alt="Employment and Social Development Canada"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-embark.webp" alt="Embark Student Corp"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-grouphealth.webp" alt="GroupHEALTH Benefit Solutions"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-rick-hansen.webp" alt="Rick Hansen Foundation"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-mckesson.webp" alt="McKesson Canada"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-cooperators.webp" alt="The Co-operators"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-arcteryx.webp" alt="Arc'teryx"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-health-canada.webp" alt="Health Canada"></div>
+            <!-- Duplicate for seamless loop -->
+            <div class="logo-carousel__item"><img src="assets/clients/client-monsignor-pereyma.webp" alt="Monsignor John Pereyma CSS"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-clarkson.webp" alt="Clarkson Secondary School"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-chronic-health.webp" alt="Chronic Health Advocates"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-lead.webp" alt="Canadian Multicultural LEAD Organization"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-bpw-niagara.webp" alt="BPW Niagara Falls"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-we-build-a-dream.webp" alt="We Build a Dream"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-replay-storytelling.webp" alt="Replay Storytelling"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-once-upon-a-woman.webp" alt="Once Upon a Woman"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-destinyfest.webp" alt="DestinyFest"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-speaker-slam.webp" alt="Speaker Slam"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-scalehr.webp" alt="ScaleHR"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-guelph-humber.webp" alt="University of Guelph-Humber"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-esdc.webp" alt="Employment and Social Development Canada"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-embark.webp" alt="Embark Student Corp"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-grouphealth.webp" alt="GroupHEALTH Benefit Solutions"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-rick-hansen.webp" alt="Rick Hansen Foundation"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-mckesson.webp" alt="McKesson Canada"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-cooperators.webp" alt="The Co-operators"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-arcteryx.webp" alt="Arc'teryx"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-health-canada.webp" alt="Health Canada"></div>
           </div>
         </div>
     </div>
@@ -289,6 +348,7 @@
         <h2 class="section__title">As Seen On</h2>
         <p class="section__subtitle" style="margin: 0.5rem auto 0; max-width: 600px; text-align: center;">Lauren has been featured across national television, radio, and leading publications.</p>
       </div>
+      <!-- Row 1: left to right -->
       <div class="logo-carousel" style="--logo-filter: none;">
           <div class="logo-carousel__track">
             <div class="logo-carousel__item"><img src="assets/media/breakfast-television.png" alt="Breakfast Television"></div>
@@ -336,6 +396,56 @@
             <div class="logo-carousel__item"><img src="assets/media/accessible-journeys.png" alt="Accessible Journeys Magazine"></div>
             <div class="logo-carousel__item"><img src="assets/media/oakville-news.png" alt="Oakville News"></div>
             <div class="logo-carousel__item"><img src="assets/media/accessibility-for-all-magazine.png" alt="Accessibility For All Magazine"></div>
+          </div>
+        </div>
+      <!-- Row 2: right to left (mobile only) -->
+      <div class="logo-carousel logo-carousel--reverse logo-carousel--mobile-only" style="--logo-filter: none;">
+          <div class="logo-carousel__track">
+            <div class="logo-carousel__item"><img src="assets/media/accessibility-for-all-magazine.png" alt="Accessibility For All Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/oakville-news.png" alt="Oakville News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/accessible-journeys.png" alt="Accessible Journeys Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/canvas-rebel.png" alt="CanvasRebel"></div>
+            <div class="logo-carousel__item"><img src="assets/media/rare-disease-day.png" alt="Rare Disease Day"></div>
+            <div class="logo-carousel__item"><img src="assets/media/niagara-on-the-lake-local-news.png" alt="Niagara-on-the-Lake Local News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/thorold-today.png" alt="Thorold Today"></div>
+            <div class="logo-carousel__item"><img src="assets/media/newmarket-today.png" alt="Newmarket Today"></div>
+            <div class="logo-carousel__item"><img src="assets/media/mississauga-news.png" alt="Mississauga News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/modern-mississauga-magazine.png" alt="Modern Mississauga"></div>
+            <div class="logo-carousel__item"><img src="assets/media/insauga.png" alt="insauga"></div>
+            <div class="logo-carousel__item"><img src="assets/media/ramona-magazine.png" alt="Ramona Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/awarenow-magazine.png" alt="AwareNow Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/canadian-sme.png" alt="Canadian SME Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/authority-magazine.png" alt="Authority Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/siriusxm.png" alt="SiriusXM Canada"></div>
+            <div class="logo-carousel__item"><img src="assets/media/omni-news.png" alt="OMNI News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/chch.png" alt="CHCH Morning Live"></div>
+            <div class="logo-carousel__item"><img src="assets/media/citynews.png" alt="CityNews Toronto"></div>
+            <div class="logo-carousel__item"><img src="assets/media/globalnews.png" alt="Global News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/ctv-your-morning.png" alt="CTV Your Morning"></div>
+            <div class="logo-carousel__item"><img src="assets/media/breakfast-television.png" alt="Breakfast Television"></div>
+            <!-- Duplicate for seamless loop -->
+            <div class="logo-carousel__item"><img src="assets/media/accessibility-for-all-magazine.png" alt="Accessibility For All Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/oakville-news.png" alt="Oakville News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/accessible-journeys.png" alt="Accessible Journeys Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/canvas-rebel.png" alt="CanvasRebel"></div>
+            <div class="logo-carousel__item"><img src="assets/media/rare-disease-day.png" alt="Rare Disease Day"></div>
+            <div class="logo-carousel__item"><img src="assets/media/niagara-on-the-lake-local-news.png" alt="Niagara-on-the-Lake Local News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/thorold-today.png" alt="Thorold Today"></div>
+            <div class="logo-carousel__item"><img src="assets/media/newmarket-today.png" alt="Newmarket Today"></div>
+            <div class="logo-carousel__item"><img src="assets/media/mississauga-news.png" alt="Mississauga News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/modern-mississauga-magazine.png" alt="Modern Mississauga"></div>
+            <div class="logo-carousel__item"><img src="assets/media/insauga.png" alt="insauga"></div>
+            <div class="logo-carousel__item"><img src="assets/media/ramona-magazine.png" alt="Ramona Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/awarenow-magazine.png" alt="AwareNow Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/canadian-sme.png" alt="Canadian SME Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/authority-magazine.png" alt="Authority Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/siriusxm.png" alt="SiriusXM Canada"></div>
+            <div class="logo-carousel__item"><img src="assets/media/omni-news.png" alt="OMNI News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/chch.png" alt="CHCH Morning Live"></div>
+            <div class="logo-carousel__item"><img src="assets/media/citynews.png" alt="CityNews Toronto"></div>
+            <div class="logo-carousel__item"><img src="assets/media/globalnews.png" alt="Global News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/ctv-your-morning.png" alt="CTV Your Morning"></div>
+            <div class="logo-carousel__item"><img src="assets/media/breakfast-television.png" alt="Breakfast Television"></div>
           </div>
         </div>
     </div>
