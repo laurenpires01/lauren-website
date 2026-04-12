@@ -1,6 +1,6 @@
 # Lauren Pires Website & PR Project Reference
 
-**Last updated:** March 1, 2026
+**Last updated:** April 12, 2026
 **Latest site version:** v112
 **Live URL:** https://www.laurensaysyay.com
 **Hosted on:** Netlify
@@ -187,6 +187,40 @@ Lauren coordinates the Canadian arm of the global Rare Disease Day #LightUpForRa
 ### Media Strategy
 - Leveraging Mélange & Co. coverage for couples-focused and mainstream outlets
 - Timing campaigns around awareness weeks (Rare Disease Day, Invisible Disabilities Week, NDEAM, Disability Pride Month, Mobility Awareness Month)
+
+---
+
+## Collaborative Workflow (Planned Migration)
+
+**Current state:** Dan manages the site from his Dropbox folder and manually uploads to Netlify. Only Dan can update the site.
+
+**Goal:** Both Dan and Lauren can update the website from their own computers without overwriting each other's work or dealing with outdated files.
+
+**Solution:** Migrate the site from Dropbox to GitHub, with Netlify auto-deploy connected.
+
+### Migration plan
+1. **Lauren creates a GitHub account** and a new private repository named `laurensaysyay-website`
+2. **Lauren uploads the current v112 site files** to the repo (drag and drop via github.com)
+3. **Lauren connects the repo to her existing Netlify site** — Site configuration → Build & deploy → Continuous deployment → Link repository
+4. **Lauren adds Dan as a collaborator** on the repo (Settings → Collaborators)
+5. **Dan clones the repo** using GitHub Desktop (saves to a local folder — NOT inside Dropbox, as Dropbox sync conflicts with Git and can corrupt the repo)
+6. **Lauren installs GitHub Desktop** and clones the repo on her computer too
+
+### Ongoing workflow after migration
+- Open GitHub Desktop → click "Fetch origin" to pull latest changes
+- Edit files locally in any text editor
+- In GitHub Desktop: commit with a description, push to origin
+- Netlify auto-deploys within ~30 seconds
+- Dropbox becomes archive only — no longer used for live site files
+
+### Key notes
+- Lauren owns the repo since it's her site. Dan is a collaborator. Clean separation if the working relationship ever changes.
+- Dan already uses GitHub Desktop for Speaker Slam — Lauren's repo sits alongside it, completely separate.
+- Always Fetch origin before editing to avoid merge conflicts.
+- If both edit the same file simultaneously, GitHub Desktop will flag a conflict and prompt to choose a version.
+- Dan can access the repo from any computer by installing GitHub Desktop and cloning.
+
+**Status:** Not yet executed. Planned for next session.
 
 ---
 
