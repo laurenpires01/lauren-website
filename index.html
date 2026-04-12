@@ -48,11 +48,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <style>
-    .hero-full { background-image: url(assets/photos/lauren-pires-hero.png) !important; background-position: center center !important; background-size: contain !important; background-repeat: no-repeat !important; background-color: #111111 !important; }
+    .hero-full { background-image: url(assets/photos/lauren-pires-hero.png) !important; background-position: center center !important; background-size: cover !important; background-repeat: no-repeat !important; }
+    @media (min-width: 1600px) {
+      .hero-full { background-size: 100% auto !important; background-position: center top !important; }
+    }
     @media (max-width: 768px) {
       .hero-full { background-image: url(assets/photos/lauren-pires-hero-mobile.png) !important; background-position: top center !important; }
       .hero-full__content { padding-top: 38% !important; }
-    }
     }
   </style>
   <link rel="preload" href="assets/photos/lauren-pires-hero.png" as="image" type="image/png">
