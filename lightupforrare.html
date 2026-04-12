@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EY0YQH5DC2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EY0YQH5DC2');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicons/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/favicons/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <meta name="theme-color" content="#10524F">
+  <title>#LightUpForRare 2026 | Lauren Pires – Rare Disease Day Campaign Across Canada</title>
+  <meta name="description" content="For Rare Disease Day 2026, 26 Canadian landmarks across 18 cities and 4 provinces are lighting up as part of the global #LightUpForRare campaign, coordinated in Canada with the support of CORD and Lauren Pires.">
+  <meta name="keywords" content="LightUpForRare, Rare Disease Day 2026, rare disease awareness Canada, landmark illumination, Lauren Pires rare disease, CORD, invisible disabilities, rare disease advocate">
+  <meta name="author" content="Lauren Pires">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.laurensaysyay.com/lightupforrare">
+  <link rel="alternate" hreflang="en" href="https://www.laurensaysyay.com/lightupforrare">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="#LightUpForRare 2026 | 26 Canadian Landmarks Lighting Up for Rare Disease Day">
+  <meta property="og:description" content="For Rare Disease Day 2026, 26 Canadian landmarks across 18 cities and 4 provinces are lighting up as part of the global #LightUpForRare campaign.">
+  <meta property="og:url" content="https://www.laurensaysyay.com/lightupforrare">
+  <meta property="og:image" content="https://www.laurensaysyay.com/assets/photos/lightupforrare-hero.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Lauren Pires | Invisible Disability Speaker">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="#LightUpForRare 2026 | 26 Canadian Landmarks Lighting Up for Rare Disease Day">
+  <meta name="twitter:description" content="For Rare Disease Day 2026, 26 Canadian landmarks across 18 cities and 4 provinces are lighting up as part of the global #LightUpForRare campaign.">
+  <meta name="twitter:image" content="https://www.laurensaysyay.com/assets/photos/lightupforrare-hero.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.laurensaysyay.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "#LightUpForRare",
+        "item": "https://www.laurensaysyay.com/lightupforrare"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .campaign-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 700px;
+      margin: 3rem auto;
+      text-align: center;
+    }
+    .campaign-stat__number {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      color: var(--teal);
+      line-height: 1;
+    }
+    .campaign-stat__label {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 0.25rem;
+      letter-spacing: 0.03em;
+    }
+    .landmark-group {
+      margin-bottom: 2.5rem;
+    }
+    .landmark-group__date {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: var(--plum);
+      letter-spacing: 0.04em;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 1rem;
+    }
+    .landmark-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+      color: var(--charcoal);
+    }
+    .landmark-item__name {
+      flex: 1;
+    }
+    .landmark-item__city {
+      color: var(--text-light);
+      font-size: 0.85rem;
+      text-align: right;
+      margin-left: 1rem;
+    }
+    .landmark-item__colors {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      margin-left: 1rem;
+      flex-shrink: 0;
+    }
+    .color-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .color-dot--blue { background: #4A90D9; }
+    .color-dot--pink { background: #E75480; }
+    .color-dot--green { background: #4CAF50; }
+    .color-dot--purple { background: #7B4BA3; }
+    .landmark-item--tbc {
+      opacity: 0.6;
+      font-style: italic;
+    }
+    .growth-timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 700px;
+      margin: 2.5rem auto;
+    }
+    .growth-year {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      background: var(--warm-gray);
+      border-radius: 12px;
+    }
+    .growth-year__year {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: var(--teal);
+    }
+    .growth-year__stats {
+      font-size: 0.85rem;
+      color: var(--charcoal);
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+    .rare-quote {
+      max-width: 640px;
+      margin: 3rem auto;
+      padding: 2rem 2.5rem;
+      background: var(--plum-subtle);
+      border-left: 4px solid var(--plum);
+      border-radius: 0 12px 12px 0;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--charcoal);
+      font-style: italic;
+    }
+    .rare-quote cite {
+      display: block;
+      margin-top: 0.75rem;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--plum);
+    }
+    .lightup-carousel {
+      position: relative;
+      max-width: 900px;
+      margin: 3rem auto 0;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+    .lightup-carousel__track {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .lightup-carousel__slide {
+      min-width: 100%;
+      position: relative;
+    }
+    .lightup-carousel__slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 3/2;
+      object-fit: cover;
+    }
+    .lightup-carousel__caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem 1.25rem 1rem;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    .lightup-carousel__btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.85);
+      border: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: var(--charcoal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      z-index: 2;
+    }
+    .lightup-carousel__btn:hover {
+      background: white;
+    }
+    .lightup-carousel__btn--prev { left: 0.75rem; }
+    .lightup-carousel__btn--next { right: 0.75rem; }
+    .lightup-carousel__dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .lightup-carousel__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--border);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.2s;
+    }
+    .lightup-carousel__dot.active {
+      background: var(--plum);
+    }
+    @media (max-width: 640px) {
+      .campaign-stats { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+      .growth-timeline { grid-template-columns: 1fr; max-width: 280px; }
+      .landmark-item { flex-direction: column; gap: 0.2rem; }
+      .landmark-item__city { text-align: left; margin-left: 0; }
+      .landmark-item__colors { margin-left: 0; margin-top: 0.2rem; }
+    }
+    @media (max-width: 768px) {
+      .lightup-intro {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/logo.svg" alt="Lauren Pires – Invisible Disability Speaker">
+      </a>
+      <div class="nav__links">
+        <a href="about.html" class="nav__link">About</a>
+        <a href="speaking.html" class="nav__link">Speaking</a>
+        <a href="media.html" class="nav__link">Media</a>
+        <a href="lightupforrare.html" class="nav__link nav__link--active">Advocacy</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="contact.html" class="nav__cta">Contact Lauren</a>
+      <div class="nav__social">
+        <a href="https://www.instagram.com/laurensaysyay" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="https://www.youtube.com/@laurensaysyay" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://www.linkedin.com/in/laurensaysyay" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      </div>
+      </div>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- Hero -->
+  <section style="padding: 8rem 0 4rem; background: var(--off-white);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;" class="lightup-intro fade-in">
+        <div>
+          <p class="section-label">#LightUpForRare</p>
+          <h1 class="section__title" style="font-size: clamp(2rem, 4vw, 3rem);">26 Canadian Landmarks. 18 Cities. 4 Provinces.</h1>
+          <p style="color: var(--charcoal); line-height: 1.8; font-size: 0.95rem; margin-top: 1.5rem;">
+            Every year, landmarks around the world light up for Rare Disease Day. After going undiagnosed for two decades, Lauren Pires wanted to make sure Canada was part of that movement. This is her third year bringing #LightUpForRare to Canadian communities so that others living with rare diseases don't have to feel invisible.
+          </p>
+        </div>
+        <div>
+          <img src="assets/photos/lightupforrare-hero.png" alt="Lauren Pires celebrating in front of the illuminated Mississauga Civic Centre for Rare Disease Day" style="width: 100%; border-radius: 12px;" loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Campaign Stats -->
+  <section class="section" style="padding-bottom: 1rem;">
+    <div class="container fade-in">
+      <div class="campaign-stats">
+        <div>
+          <div class="campaign-stat__number">26</div>
+          <div class="campaign-stat__label">Landmarks</div>
+        </div>
+        <div>
+          <div class="campaign-stat__number">18</div>
+          <div class="campaign-stat__label">Cities</div>
+        </div>
+        <div>
+          <div class="campaign-stat__number">4</div>
+          <div class="campaign-stat__label">Provinces</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About the Campaign -->
+  <section class="section" style="padding-top: 1rem;">
+    <div class="container fade-in" style="max-width: 800px;">
+      <div class="section__header">
+        <p class="section-label">About the Campaign</p>
+        <h2 class="section__title">Lighting Up Canada for Rare Disease Day</h2>
+      </div>
+      <p style="color: var(--charcoal); line-height: 1.8; font-size: 0.95rem; margin-top: 1.5rem;">
+        Rare Disease Day is observed annually on the last day of February, highlighting the urgent need for research, healthcare equity, and community support for the 300 million people worldwide living with rare diseases. This year's global theme is "Moving Forward. Looking Ahead."
+      </p>
+      <p style="color: var(--charcoal); line-height: 1.8; font-size: 0.95rem; margin-top: 1rem;">
+        #LightUpForRare is a global initiative where landmarks around the world illuminate in blue, pink, green, and purple to create visibility and solidarity for the rare disease community. Hundreds of landmarks participate internationally each year, from city halls and bridges to airports and science centres.
+      </p>
+      <p style="color: var(--charcoal); line-height: 1.8; font-size: 0.95rem; margin-top: 1rem;">
+        Lauren went undiagnosed with a rare neuromuscular disorder for the first two decades of her life and spent 30 years hiding her disability. That experience is what drives her to bring #LightUpForRare to Canadian communities. In 2024, she was selected as one of the faces of the official global Rare Disease Day campaign. Working with the Canadian Organization for Rare Disorders (CORD), Lauren has secured 26 Canadian landmarks this year, stretching from Moncton, New Brunswick to Coquitlam, British Columbia, so that others living with rare diseases don't have to feel invisible.
+      </p>
+
+      <div style="max-width: 360px; margin: 2.5rem auto; text-align: center;">
+        <img src="assets/photos/rare-disease-day-poster-2024.jpg" alt="Lauren Pires featured as one of the faces of the global Rare Disease Day 2024 campaign poster" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" loading="lazy">
+        <p style="font-size: 0.8rem; color: var(--text-light); margin-top: 0.75rem; line-height: 1.5;">Lauren was selected as one of the faces of the global Rare Disease Day 2024 campaign by EURORDIS–Rare Diseases Europe.</p>
+      </div>
+
+      <div class="rare-quote">
+        "Rare Disease Day is about creating visibility and community for the 1 in 12 Canadians living with a rare disorder. Living with a rare disease can feel like a pretty niche experience. But connecting with others, even with different conditions than your own, is a reminder that a community that understands is out there."
+        <cite>— Lauren Pires</cite>
+      </div>
+
+      <div class="lightup-carousel" aria-label="Photos of landmarks lit up for Rare Disease Day">
+        <div class="lightup-carousel__track">
+          <div class="lightup-carousel__slide">
+            <img src="assets/lightup/lightup-niagara.webp" alt="Niagara Sign illuminated in pink and green for Rare Disease Day" loading="lazy" width="1200" height="800">
+            <div class="lightup-carousel__caption">Niagara Sign — Niagara Falls, ON</div>
+          </div>
+          <div class="lightup-carousel__slide">
+            <img src="assets/lightup/lightup-peace-bridge.webp" alt="Peace Bridge illuminated in green and purple for Rare Disease Day" loading="lazy" width="1200" height="800">
+            <div class="lightup-carousel__caption">Peace Bridge — Fort Erie, ON</div>
+          </div>
+          <div class="lightup-carousel__slide">
+            <img src="assets/lightup/lightup-mississauga.webp" alt="Mississauga Civic Centre illuminated in purple and blue for Rare Disease Day" loading="lazy" width="1200" height="800">
+            <div class="lightup-carousel__caption">Mississauga Civic Centre — Mississauga, ON</div>
+          </div>
+          <div class="lightup-carousel__slide">
+            <img src="assets/lightup/lightup-rbc-london.webp" alt="RBC Place London illuminated in purple and blue for Rare Disease Day" loading="lazy" width="1200" height="800">
+            <div class="lightup-carousel__caption">RBC Place — London, ON</div>
+          </div>
+          <div class="lightup-carousel__slide">
+            <img src="assets/lightup/lightup-pearson.webp" alt="Pearson Airport Apron Tower illuminated in blue for Rare Disease Day" loading="lazy" width="1200" height="800">
+            <div class="lightup-carousel__caption">Apron Tower — Pearson Airport, Mississauga, ON</div>
+          </div>
+          <div class="lightup-carousel__slide">
+            <img src="assets/lightup/lightup-brampton.webp" alt="Brampton Clock Tower illuminated in blue and pink for Rare Disease Day" loading="lazy" width="1200" height="800">
+            <div class="lightup-carousel__caption">Clock Tower — Brampton, ON</div>
+          </div>
+          <div class="lightup-carousel__slide">
+            <img src="assets/lightup/lightup-guelph.webp" alt="Guelph Market Square illuminated in purple for Rare Disease Day" loading="lazy" width="1200" height="800">
+            <div class="lightup-carousel__caption">Market Square — Guelph, ON</div>
+          </div>
+          <div class="lightup-carousel__slide">
+            <img src="assets/lightup/lightup-waterloo.webp" alt="Waterloo King Street Lights illuminated in pink and blue for Rare Disease Day" loading="lazy" width="1200" height="800">
+            <div class="lightup-carousel__caption">King Street Lights — Waterloo, ON</div>
+          </div>
+        </div>
+        <button class="lightup-carousel__btn lightup-carousel__btn--prev" aria-label="Previous photo">&#8249;</button>
+        <button class="lightup-carousel__btn lightup-carousel__btn--next" aria-label="Next photo">&#8250;</button>
+        <div class="lightup-carousel__dots"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Landmark List -->
+  <section class="section" style="background: var(--warm-gray);">
+    <div class="container fade-in" style="max-width: 800px;">
+      <div class="section__header">
+        <p class="section-label">2026 Canadian Illuminations</p>
+        <h2 class="section__title">Participating Landmarks</h2>
+      </div>
+
+      <div style="margin-top: 2.5rem;">
+
+        <div class="landmark-group">
+          <div class="landmark-group__date">February 23 – March 1</div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Belleville Sign</span>
+            <span class="landmark-item__city">Belleville, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span><span class="color-dot color-dot--pink"></span><span class="color-dot color-dot--green"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Bridge Street Bridge</span>
+            <span class="landmark-item__city">Belleville, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span><span class="color-dot color-dot--pink"></span><span class="color-dot color-dot--green"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Fire Station 1 Memorial</span>
+            <span class="landmark-item__city">Belleville, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span><span class="color-dot color-dot--pink"></span><span class="color-dot color-dot--green"></span></span>
+          </div>
+        </div>
+
+        <div class="landmark-group">
+          <div class="landmark-group__date">February 26</div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Mississauga Civic Centre</span>
+            <span class="landmark-item__city">Mississauga, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span><span class="color-dot color-dot--pink"></span><span class="color-dot color-dot--green"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Oakville Town Hall</span>
+            <span class="landmark-item__city">Oakville, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span></span>
+          </div>
+        </div>
+
+        <div class="landmark-group">
+          <div class="landmark-group__date">February 27</div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">City Hall Clock Tower</span>
+            <span class="landmark-item__city">Brampton, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span><span class="color-dot color-dot--pink"></span><span class="color-dot color-dot--green"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Market Square</span>
+            <span class="landmark-item__city">Guelph, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span><span class="color-dot color-dot--pink"></span><span class="color-dot color-dot--green"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">London City Hall</span>
+            <span class="landmark-item__city">London, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span><span class="color-dot color-dot--pink"></span><span class="color-dot color-dot--green"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">J. Allyn Taylor Building</span>
+            <span class="landmark-item__city">London, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span><span class="color-dot color-dot--pink"></span><span class="color-dot color-dot--green"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">RBC Place</span>
+            <span class="landmark-item__city">London, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span><span class="color-dot color-dot--pink"></span><span class="color-dot color-dot--green"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Fred A. Lundy Bridge</span>
+            <span class="landmark-item__city">Newmarket, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span></span>
+          </div>
+        </div>
+
+        <div class="landmark-group">
+          <div class="landmark-group__date">February 27 – 28</div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Avenir Centre</span>
+            <span class="landmark-item__city">Moncton, NB</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--pink"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Downing Street</span>
+            <span class="landmark-item__city">Moncton, NB</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--pink"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Downtown Place</span>
+            <span class="landmark-item__city">Moncton, NB</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--pink"></span></span>
+          </div>
+        </div>
+
+        <div class="landmark-group">
+          <div class="landmark-group__date">February 28 — Rare Disease Day</div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Moncton City Hall</span>
+            <span class="landmark-item__city">Moncton, NB</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">King Street Lights / Waterluminate</span>
+            <span class="landmark-item__city">Waterloo, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span><span class="color-dot color-dot--pink"></span><span class="color-dot color-dot--green"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Hamilton Sign</span>
+            <span class="landmark-item__city">Hamilton, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span><span class="color-dot color-dot--pink"></span><span class="color-dot color-dot--green"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Niagara Sign</span>
+            <span class="landmark-item__city">Niagara Region, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span><span class="color-dot color-dot--pink"></span><span class="color-dot color-dot--green"></span><span class="color-dot color-dot--purple"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Peace Bridge</span>
+            <span class="landmark-item__city">Fort Erie, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span><span class="color-dot color-dot--pink"></span><span class="color-dot color-dot--green"></span><span class="color-dot color-dot--purple"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Peterborough City Hall</span>
+            <span class="landmark-item__city">Peterborough, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span><span class="color-dot color-dot--pink"></span><span class="color-dot color-dot--green"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Apron Tower — Toronto Pearson International Airport</span>
+            <span class="landmark-item__city">Mississauga, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">TELUS Spark Science Centre</span>
+            <span class="landmark-item__city">Calgary, AB</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span><span class="color-dot color-dot--pink"></span><span class="color-dot color-dot--green"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Gateway Angels</span>
+            <span class="landmark-item__city">Penetanguishene, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">LED Light Poles</span>
+            <span class="landmark-item__city">Coquitlam, BC</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Vaughan City Hall</span>
+            <span class="landmark-item__city">Vaughan, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span><span class="color-dot color-dot--pink"></span><span class="color-dot color-dot--green"></span><span class="color-dot color-dot--purple"></span></span>
+          </div>
+          <div class="landmark-item">
+            <span class="landmark-item__name">Clock Tower</span>
+            <span class="landmark-item__city">Campbellford, ON</span>
+            <span class="landmark-item__colors"><span class="color-dot color-dot--blue"></span><span class="color-dot color-dot--pink"></span><span class="color-dot color-dot--green"></span></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Campaign Growth -->
+  <section class="section">
+    <div class="container fade-in" style="max-width: 800px;">
+      <div class="section__header">
+        <p class="section-label">Lauren's Journey</p>
+        <h2 class="section__title">Three Years of Showing Up</h2>
+      </div>
+
+      <div class="growth-timeline">
+        <div class="growth-year">
+          <div class="growth-year__year">2024</div>
+          <div class="growth-year__stats">7 landmarks<br>7 cities<br>1 province</div>
+        </div>
+        <div class="growth-year">
+          <div class="growth-year__year">2025</div>
+          <div class="growth-year__stats">21 landmarks<br>14 cities<br>3 provinces</div>
+        </div>
+        <div class="growth-year">
+          <div class="growth-year__year">2026</div>
+          <div class="growth-year__stats">26 landmarks<br>18 cities<br>4 provinces</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why It Matters -->
+  <section class="section" style="background: var(--warm-gray);">
+    <div class="container fade-in" style="max-width: 800px;">
+      <div class="section__header">
+        <p class="section-label">The Impact</p>
+        <h2 class="section__title">Why It Matters</h2>
+      </div>
+      <p style="color: var(--charcoal); line-height: 1.8; font-size: 0.95rem; margin-top: 1.5rem;">
+        One in 12 Canadians lives with a rare disease, yet many wait years, sometimes decades, for a diagnosis. Over 300 million people worldwide are affected by one of the 7,000+ known rare diseases. More than 70% of rare diseases are genetic in origin, and approximately 72% affect children. Greater awareness leads to improved research funding, better healthcare access, earlier diagnoses, and increased inclusion for those whose conditions remain invisible.
+      </p>
+    </div>
+  </section>
+
+  <!-- Get Involved -->
+  <section class="section">
+    <div class="container fade-in" style="max-width: 800px;">
+      <div class="section__header">
+        <p class="section-label">Take Action</p>
+        <h2 class="section__title">How You Can Get Involved</h2>
+      </div>
+      <p style="color: var(--charcoal); line-height: 1.8; font-size: 0.95rem; margin-top: 1.5rem;">
+        Visit a participating landmark to see it illuminated in Rare Disease Day colours. Capture the moment and share your photos on social media using <strong>#LightUpForRare</strong> and <strong>#RareDiseaseDay</strong> to spread awareness. You can also show your support from home by lighting or decorating your space in Rare Disease Day colours at 7 PM on February 28. Snap a photo and post it to join the global movement.
+      </p>
+      <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="https://www.rarediseaseday.org" target="_blank" rel="noopener" class="btn btn--primary">Learn More at RareDiseaseDay.org</a>
+        <a href="https://www.instagram.com/laurensaysyay" target="_blank" rel="noopener" class="btn btn--outline">Follow @LaurenSaysYay</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section class="section" style="background: var(--warm-gray); padding-top: 3rem; padding-bottom: 3rem;">
+    <div class="container fade-in" style="max-width: 800px;">
+      <p class="section-label">In Partnership With</p>
+      <p style="color: var(--charcoal); font-size: 0.95rem; margin-top: 1rem; line-height: 1.8;">
+        <strong>Canadian Organization for Rare Disorders (CORD)</strong> — Canada's national network for organizations representing all those with rare disorders. CORD provides a strong common voice to advocate for health policy and a healthcare system that works for those with rare disorders.
+        <br><a href="https://www.raredisorders.ca" target="_blank" rel="noopener" style="color: var(--teal);">RareDisorders.ca</a>
+      </p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo.svg" alt="Lauren Pires">
+      </div>
+      <div class="footer__links">
+        <a href="index.html" class="footer__link">Home</a>
+        <a href="about.html" class="footer__link">About</a>
+        <a href="speaking.html" class="footer__link">Speaking</a>
+        <a href="media.html" class="footer__link">Media</a>
+        <a href="lightupforrare.html" class="footer__link">Advocacy</a>
+        <a href="blog.html" class="footer__link">Blog</a>
+        <a href="contact.html" class="footer__link">Contact</a>
+      </div>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/laurensaysyay" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="https://www.youtube.com/@laurensaysyay" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://www.linkedin.com/in/laurensaysyay" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      </div>
+      <p class="footer__text" class="footer__seo-text">
+          Lauren Pires is an award-winning invisible disability keynote speaker, Certified Professional Speaker, and Canada's first Invisible Disabilities Association Ambassador. She delivers keynotes on resilience, disability inclusion, and joy for corporations, government agencies, ERGs, and educational institutions across North America.
+        </p>
+        <p class="footer__text">&copy; 2026 Lauren Pires. All rights reserved.</p>
+        <p class="footer__text" style="margin-top: 0.5rem; font-size: 0.75rem;"><a href="privacy.html" style="color: rgba(255,255,255,0.7);">Privacy Policy</a> &nbsp;·&nbsp; <a href="accessibility.html" style="color: rgba(255,255,255,0.7);">Accessibility</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    const toggle = document.querySelector('.nav__toggle');
+    const navLinks = document.querySelector('.nav__links');
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        toggle.classList.toggle('open');
+      });
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          toggle.classList.remove('open');
+        });
+      });
+    }
+
+    // Carousel
+    const track = document.querySelector('.lightup-carousel__track');
+    const slides = document.querySelectorAll('.lightup-carousel__slide');
+    const prevBtn = document.querySelector('.lightup-carousel__btn--prev');
+    const nextBtn = document.querySelector('.lightup-carousel__btn--next');
+    const dotsContainer = document.querySelector('.lightup-carousel__dots');
+    let current = 0;
+    const total = slides.length;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.classList.add('lightup-carousel__dot');
+      if (i === 0) dot.classList.add('active');
+      dot.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    function goTo(index) {
+      current = index;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+      document.querySelectorAll('.lightup-carousel__dot').forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    prevBtn.addEventListener('click', () => goTo((current - 1 + total) % total));
+    nextBtn.addEventListener('click', () => goTo((current + 1) % total));
+
+    let autoplay = setInterval(() => goTo((current + 1) % total), 5000);
+    const carousel = document.querySelector('.lightup-carousel');
+    carousel.addEventListener('mouseenter', () => clearInterval(autoplay));
+    carousel.addEventListener('mouseleave', () => {
+      autoplay = setInterval(() => goTo((current + 1) % total), 5000);
+    });
+
+    let touchStartX = 0;
+    carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+    carousel.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) goTo((current + 1) % total);
+        else goTo((current - 1 + total) % total);
+      }
+    });
+  </script>
+
+</body>
+</html>
