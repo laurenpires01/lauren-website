@@ -190,37 +190,84 @@ Lauren coordinates the Canadian arm of the global Rare Disease Day #LightUpForRa
 
 ---
 
-## Collaborative Workflow (Planned Migration)
+## Collaborative Workflow (GitHub + Netlify)
 
-**Current state:** Dan manages the site from his Dropbox folder and manually uploads to Netlify. Only Dan can update the site.
+**Status:** ✅ LIVE as of April 12, 2026
 
-**Goal:** Both Dan and Lauren can update the website from their own computers without overwriting each other's work or dealing with outdated files.
+**Setup:** Lauren's website is now version-controlled on GitHub with automatic Netlify deployment. Both Lauren and Dan can make changes from their own computers.
 
-**Solution:** Migrate the site from Dropbox to GitHub, with Netlify auto-deploy connected.
+### Repository Details
+- **GitHub repository:** `laurenpires01/lauren-website` (private)
+- **Owner:** Lauren Pires (laurenpires01)
+- **Collaborator:** Dan (thedanshaikh101)
+- **Connected to:** Netlify (auto-deploy enabled)
+- **Branch:** main
 
-### Migration plan
-1. **Lauren creates a GitHub account** and a new private repository named `laurensaysyay-website`
-2. **Lauren uploads the current v112 site files** to the repo (drag and drop via github.com)
-3. **Lauren connects the repo to her existing Netlify site** — Site configuration → Build & deploy → Continuous deployment → Link repository
-4. **Lauren adds Dan as a collaborator** on the repo (Settings → Collaborators)
-5. **Dan clones the repo** using GitHub Desktop (saves to a local folder — NOT inside Dropbox, as Dropbox sync conflicts with Git and can corrupt the repo)
-6. **Lauren installs GitHub Desktop** and clones the repo on her computer too
+### Dan's Setup (Complete)
+- **Location:** `C:\Users\Daniy\Speaker Slam Dropbox\Speaker Slam\8. Clients\Client - Lauren Pires\Website\lauren-master-website`
+- **Git connection:** Initialized and connected to Lauren's GitHub repository
+- **Workflow:** Dan continues editing files in his Dropbox folder, but now uses GitHub Desktop to commit and push changes
+- **Note:** Dropbox folder is now a Git repository, but Dropbox sync continues to work normally
 
-### Ongoing workflow after migration
-- Open GitHub Desktop → click "Fetch origin" to pull latest changes
-- Edit files locally in any text editor
-- In GitHub Desktop: commit with a description, push to origin
-- Netlify auto-deploys within ~30 seconds
-- Dropbox becomes archive only — no longer used for live site files
+### Lauren's Setup (In Progress)
+- **GitHub Desktop:** Installed and signed in with laurenpires01 account
+- **Repository:** Visible in GitHub Desktop, ready to clone
+- **Next step:** Clone repository to a location on her computer (e.g., Documents/lauren-website)
 
-### Key notes
-- Lauren owns the repo since it's her site. Dan is a collaborator. Clean separation if the working relationship ever changes.
-- Dan already uses GitHub Desktop for Speaker Slam — Lauren's repo sits alongside it, completely separate.
-- Always Fetch origin before editing to avoid merge conflicts.
-- If both edit the same file simultaneously, GitHub Desktop will flag a conflict and prompt to choose a version.
-- Dan can access the repo from any computer by installing GitHub Desktop and cloning.
+### Migration Process (Completed April 12, 2026)
+1. ✅ Lauren created GitHub account (laurenpires01)
+2. ✅ Lauren created repository `lauren-website` (private)
+3. ✅ Dan initialized Git in his Dropbox folder containing the website
+4. ✅ Dan connected local folder to Lauren's GitHub repository via command line:
+   ```
+   git remote add origin https://github.com/laurenpires01/lauren-website.git
+   git branch -M main
+   git push -u origin main
+   ```
+5. ✅ All 216 website files uploaded to GitHub
+6. ✅ Netlify connected to GitHub repository for auto-deployment
+7. ✅ Auto-publishing enabled (deploys from main branch automatically)
+8. ⏳ Lauren to clone repository to her computer when ready
 
-**Status:** Not yet executed. Planned for next session.
+### Ongoing Workflow
+**Before making changes:**
+1. Open GitHub Desktop
+2. Click **"Fetch origin"** (top right) to check for updates
+3. If updates exist, click **"Pull origin"** to download them
+
+**After making changes:**
+1. Edit files in your local folder
+2. Open GitHub Desktop — changes will appear automatically
+3. Write a commit message (e.g., "Updated blog post" or "Fixed typo on homepage")
+4. Click **"Commit to main"**
+5. Click **"Push origin"**
+6. Netlify auto-deploys within ~7 seconds
+7. Changes appear live at laurensaysyay.com
+
+### Key Benefits
+✅ **Version history** — Complete record of every change with ability to revert
+✅ **No overwrites** — Git merges changes automatically when working on different files
+✅ **Auto-deployment** — Push to GitHub → Netlify rebuilds automatically
+✅ **Both can work** — Lauren and Dan can make changes independently
+✅ **Conflict resolution** — If both edit the same line, GitHub Desktop shows both versions and prompts to choose
+✅ **Backup** — Complete website backed up on GitHub
+✅ **Lauren owns it** — Repository under Lauren's account, Dan is collaborator
+
+### Important Notes
+- **Always Fetch/Pull before editing** to get the latest changes
+- **Communicate when working** — "I'm updating the blog page" prevents conflicts
+- **Dan's Dropbox folder** — Still works as his local workspace, just now also a Git repository
+- **Dropbox + Git** — Generally works fine, but if sync issues occur, Dan may need to move working copy outside Dropbox
+- **GitHub Desktop** — Visual interface, no command line needed for daily work
+
+### First-Time Setup for Lauren
+When Lauren is ready to work on the website from her computer:
+1. Open GitHub Desktop (already installed and signed in)
+2. Click on `laurenpires01/lauren-website` in the repository list
+3. Choose a location to save it (e.g., `Documents/lauren-website`)
+4. Click "Clone"
+5. All website files will download to her computer
+6. She can then edit, commit, and push just like Dan
 
 ---
 
