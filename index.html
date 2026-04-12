@@ -48,6 +48,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <style>
+    @keyframes daily-yay-sparkle {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    .hero-daily-yay {
+      background: linear-gradient(90deg, #c9a6e8 0%, #ffffff 30%, #ffe066 50%, #ffffff 70%, #c9a6e8 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: daily-yay-sparkle 2.5s linear infinite;
+    }
     .hero-full { background-image: url(assets/photos/lauren-pires-hero.png) !important; background-position: center top !important; background-size: cover !important; background-repeat: no-repeat !important; }
     @media (min-width: 1600px) {
       .hero-full { background-size: 100% auto !important; background-position: center top !important; }
@@ -150,7 +162,7 @@
           <span class="sparkle sparkle--small" style="background: rgba(255,255,255,0.6);"></span>
           Invisible Disability Keynote Speaker
         </p>
-        <h1 class="hero__title" style="color: var(--white);">Find Your<br><span style="color: #c9a6e8;">Daily Yay.</span></h1>
+        <h1 class="hero__title" style="color: var(--white);">Find Your<br><span class="hero-daily-yay">Daily Yay.</span></h1>
         <p class="hero__description" style="color: rgba(255,255,255,0.9);">
           Lauren Pires helps organizations explore disability-related biases and beliefs to create inclusive cultures and build resilience through joy.
         </p>
