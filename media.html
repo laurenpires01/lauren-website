@@ -118,32 +118,61 @@
   </section>
 
   <!-- TV & Broadcast -->
-  <section class="section">
+  <style>
+    .media-tv .logo-carousel__item img, .media-print .logo-carousel__item img { filter: none !important; opacity: 1 !important; }
+    .media-tv .logo-carousel::before, .media-tv .logo-carousel::after,
+    .media-print .logo-carousel::before, .media-print .logo-carousel::after { display: none !important; }
+    .media-tv .logo-carousel, .media-print .logo-carousel { mask-image: none !important; -webkit-mask-image: none !important; }
+    .logo-carousel--reverse .logo-carousel__track { animation-direction: reverse; }
+    .logo-carousel--mobile-only { display: none; }
+    @media (max-width: 768px) { .logo-carousel--mobile-only { display: block; margin-top: 1rem; } }
+  </style>
+  <section class="section media-tv">
     <div class="container">
       <div class="section__header fade-in" style="text-align: center; margin-bottom: 2rem;">
         <p class="section-label" style="justify-content: center;">As Seen On</p>
         <h2 class="section__title">Television & Broadcast</h2>
       </div>
+      <!-- Row 1: left to right -->
       <div class="logo-carousel logo-carousel--alt">
-          <div class="logo-carousel__track">
-            <div class="logo-carousel__item"><img src="assets/media/media-breakfast-tv.webp" alt="Breakfast Television"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-citynews.webp" alt="CityNews Toronto"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-ctv.webp" alt="CTV Your Morning"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-global-news.webp" alt="Global News"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-chch.webp" alt="CHCH Morning Live"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-siriusxm.webp" alt="SiriusXM Canada"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-omni.webp" alt="OMNI Television"></div>
+          <div class="logo-carousel__track" style="animation-duration: 45s;">
+            <div class="logo-carousel__item"><img src="assets/media/breakfast-television.png" alt="Breakfast Television"></div>
+            <div class="logo-carousel__item"><img src="assets/media/ctv-your-morning.png" alt="CTV Your Morning"></div>
+            <div class="logo-carousel__item"><img src="assets/media/globalnews.png" alt="Global News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/citynews.png" alt="CityNews Toronto"></div>
+            <div class="logo-carousel__item"><img src="assets/media/chch.png" alt="CHCH Morning Live"></div>
+            <div class="logo-carousel__item"><img src="assets/media/omni-news.png" alt="OMNI News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/siriusxm.png" alt="SiriusXM Canada"></div>
             <!-- Duplicate -->
-            <div class="logo-carousel__item"><img src="assets/media/media-breakfast-tv.webp" alt="Breakfast Television"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-citynews.webp" alt="CityNews Toronto"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-ctv.webp" alt="CTV Your Morning"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-global-news.webp" alt="Global News"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-chch.webp" alt="CHCH Morning Live"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-siriusxm.webp" alt="SiriusXM Canada"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-omni.webp" alt="OMNI Television"></div>
+            <div class="logo-carousel__item"><img src="assets/media/breakfast-television.png" alt="Breakfast Television"></div>
+            <div class="logo-carousel__item"><img src="assets/media/ctv-your-morning.png" alt="CTV Your Morning"></div>
+            <div class="logo-carousel__item"><img src="assets/media/globalnews.png" alt="Global News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/citynews.png" alt="CityNews Toronto"></div>
+            <div class="logo-carousel__item"><img src="assets/media/chch.png" alt="CHCH Morning Live"></div>
+            <div class="logo-carousel__item"><img src="assets/media/omni-news.png" alt="OMNI News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/siriusxm.png" alt="SiriusXM Canada"></div>
           </div>
         </div>
-
+      <!-- Row 2: right to left (mobile only) -->
+      <div class="logo-carousel logo-carousel--alt logo-carousel--reverse logo-carousel--mobile-only">
+          <div class="logo-carousel__track" style="animation-duration: 45s; animation-delay: -22.5s;">
+            <div class="logo-carousel__item"><img src="assets/media/siriusxm.png" alt="SiriusXM Canada"></div>
+            <div class="logo-carousel__item"><img src="assets/media/omni-news.png" alt="OMNI News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/chch.png" alt="CHCH Morning Live"></div>
+            <div class="logo-carousel__item"><img src="assets/media/citynews.png" alt="CityNews Toronto"></div>
+            <div class="logo-carousel__item"><img src="assets/media/globalnews.png" alt="Global News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/ctv-your-morning.png" alt="CTV Your Morning"></div>
+            <div class="logo-carousel__item"><img src="assets/media/breakfast-television.png" alt="Breakfast Television"></div>
+            <!-- Duplicate -->
+            <div class="logo-carousel__item"><img src="assets/media/siriusxm.png" alt="SiriusXM Canada"></div>
+            <div class="logo-carousel__item"><img src="assets/media/omni-news.png" alt="OMNI News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/chch.png" alt="CHCH Morning Live"></div>
+            <div class="logo-carousel__item"><img src="assets/media/citynews.png" alt="CityNews Toronto"></div>
+            <div class="logo-carousel__item"><img src="assets/media/globalnews.png" alt="Global News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/ctv-your-morning.png" alt="CTV Your Morning"></div>
+            <div class="logo-carousel__item"><img src="assets/media/breakfast-television.png" alt="Breakfast Television"></div>
+          </div>
+        </div>
     </div>
   </section>
 
@@ -186,7 +215,7 @@
 
       <div class="tv-appearances-list fade-in">
         <a href="https://www.youtube.com/watch?v=AiGTZJe3VII" target="_blank" class="media-link-item">
-          <img src="assets/media/media-citynews.webp" alt="CityNews Toronto" class="media-link-item__logo">
+          <img src="assets/media/citynews.png" alt="CityNews Toronto" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">CityNews Toronto — Rare Disease Day</p>
             <p class="media-link-item__outlet">CityNews Toronto — Feb 2024</p>
@@ -194,7 +223,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://toronto.citynews.ca/video/2023/11/21/top-three-inspirational-speakers-honoured-at-national-competition/" target="_blank" class="media-link-item">
-          <img src="assets/media/media-citynews.webp" alt="CityNews Toronto" class="media-link-item__logo">
+          <img src="assets/media/citynews.png" alt="CityNews Toronto" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">CityNews Toronto — Speaker Slam Grand Slam Winners</p>
             <p class="media-link-item__outlet">CityNews Toronto — Nov 2023</p>
@@ -202,7 +231,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://www.youtube.com/watch?v=tS3-EFg1nEk&t" target="_blank" class="media-link-item">
-          <img src="assets/media/media-omni.webp" alt="OMNI Television" class="media-link-item__logo">
+          <img src="assets/media/omni-news.png" alt="OMNI Television" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">OMNI News: Focus Punjabi — Invisible Disabilities Week</p>
             <p class="media-link-item__outlet">OMNI Television — Oct 2023</p>
@@ -210,7 +239,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://toronto.citynews.ca/video/2023/05/18/raising-awareness-and-money-during-national-mobility-awareness-month/" target="_blank" class="media-link-item">
-          <img src="assets/media/media-citynews.webp" alt="CityNews Toronto" class="media-link-item__logo">
+          <img src="assets/media/citynews.png" alt="CityNews Toronto" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">CityNews Toronto — Walk &amp; Roll for Mobility Awareness Month</p>
             <p class="media-link-item__outlet">CityNews Toronto — May 2023</p>
@@ -222,42 +251,86 @@
   </section>
 
   <!-- Print, Digital, Radio & Podcasts -->
-  <section class="section">
+  <section class="section media-print">
     <div class="container">
       <div class="section__header fade-in" style="text-align: center; margin-bottom: 2rem;">
         <p class="section-label" style="justify-content: center;">As Seen On</p>
         <h2 class="section__title">Print, Digital, Radio & Podcasts</h2>
       </div>
+      <!-- Row 1: left to right -->
       <div class="logo-carousel logo-carousel--alt">
-          <div class="logo-carousel__track">
-            <div class="logo-carousel__item"><img src="assets/media/media-canadian-sme.webp" alt="Canadian SME Magazine"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-awarenow.webp" alt="AwareNow Magazine"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-ramona.webp" alt="Ramona Magazine"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-insauga.webp" alt="insauga"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-modern-mississauga.webp" alt="Modern Mississauga"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-mississauga-news.webp" alt="Mississauga News"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-newmarket-today.webp" alt="Newmarket Today"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-thorold-today.webp" alt="Thorold Today"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-notl-local.webp" alt="Niagara-on-the-Lake Local"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-rarediseaseday.webp" alt="RareDiseaseDay.org"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-canvasrebel.webp" alt="CanvasRebel"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-accessible-journeys.webp" alt="Accessible Journeys Magazine"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-siriusxm.webp" alt="SiriusXM Canada"></div>
+          <div class="logo-carousel__track" style="animation-duration: 45s;">
+            <div class="logo-carousel__item"><img src="assets/media/authority-magazine.png" alt="Authority Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/canadian-sme.png" alt="Canadian SME Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/awarenow-magazine.png" alt="AwareNow Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/ramona-magazine.png" alt="Ramona Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/insauga.png" alt="insauga"></div>
+            <div class="logo-carousel__item"><img src="assets/media/modern-mississauga-magazine.png" alt="Modern Mississauga"></div>
+            <div class="logo-carousel__item"><img src="assets/media/mississauga-news.png" alt="Mississauga News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/newmarket-today.png" alt="Newmarket Today"></div>
+            <div class="logo-carousel__item"><img src="assets/media/thorold-today.png" alt="Thorold Today"></div>
+            <div class="logo-carousel__item"><img src="assets/media/niagara-on-the-lake-local-news.png" alt="Niagara-on-the-Lake Local News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/rare-disease-day.png" alt="Rare Disease Day"></div>
+            <div class="logo-carousel__item"><img src="assets/media/canvas-rebel.png" alt="CanvasRebel"></div>
+            <div class="logo-carousel__item"><img src="assets/media/accessible-journeys.png" alt="Accessible Journeys Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/oakville-news.png" alt="Oakville News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/accessibility-for-all-magazine.png" alt="Accessibility For All Magazine"></div>
             <!-- Duplicate -->
-            <div class="logo-carousel__item"><img src="assets/media/media-canadian-sme.webp" alt="Canadian SME Magazine"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-awarenow.webp" alt="AwareNow Magazine"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-ramona.webp" alt="Ramona Magazine"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-insauga.webp" alt="insauga"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-modern-mississauga.webp" alt="Modern Mississauga"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-mississauga-news.webp" alt="Mississauga News"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-newmarket-today.webp" alt="Newmarket Today"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-thorold-today.webp" alt="Thorold Today"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-notl-local.webp" alt="Niagara-on-the-Lake Local"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-rarediseaseday.webp" alt="RareDiseaseDay.org"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-canvasrebel.webp" alt="CanvasRebel"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-accessible-journeys.webp" alt="Accessible Journeys Magazine"></div>
-            <div class="logo-carousel__item"><img src="assets/media/media-siriusxm.webp" alt="SiriusXM Canada"></div>
+            <div class="logo-carousel__item"><img src="assets/media/authority-magazine.png" alt="Authority Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/canadian-sme.png" alt="Canadian SME Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/awarenow-magazine.png" alt="AwareNow Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/ramona-magazine.png" alt="Ramona Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/insauga.png" alt="insauga"></div>
+            <div class="logo-carousel__item"><img src="assets/media/modern-mississauga-magazine.png" alt="Modern Mississauga"></div>
+            <div class="logo-carousel__item"><img src="assets/media/mississauga-news.png" alt="Mississauga News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/newmarket-today.png" alt="Newmarket Today"></div>
+            <div class="logo-carousel__item"><img src="assets/media/thorold-today.png" alt="Thorold Today"></div>
+            <div class="logo-carousel__item"><img src="assets/media/niagara-on-the-lake-local-news.png" alt="Niagara-on-the-Lake Local News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/rare-disease-day.png" alt="Rare Disease Day"></div>
+            <div class="logo-carousel__item"><img src="assets/media/canvas-rebel.png" alt="CanvasRebel"></div>
+            <div class="logo-carousel__item"><img src="assets/media/accessible-journeys.png" alt="Accessible Journeys Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/oakville-news.png" alt="Oakville News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/accessibility-for-all-magazine.png" alt="Accessibility For All Magazine"></div>
           </div>
+        </div>
+      <!-- Row 2: right to left (mobile only) -->
+      <div class="logo-carousel logo-carousel--alt logo-carousel--reverse logo-carousel--mobile-only">
+          <div class="logo-carousel__track" style="animation-duration: 45s; animation-delay: -22.5s;">
+            <div class="logo-carousel__item"><img src="assets/media/accessibility-for-all-magazine.png" alt="Accessibility For All Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/oakville-news.png" alt="Oakville News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/accessible-journeys.png" alt="Accessible Journeys Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/canvas-rebel.png" alt="CanvasRebel"></div>
+            <div class="logo-carousel__item"><img src="assets/media/rare-disease-day.png" alt="Rare Disease Day"></div>
+            <div class="logo-carousel__item"><img src="assets/media/niagara-on-the-lake-local-news.png" alt="Niagara-on-the-Lake Local News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/thorold-today.png" alt="Thorold Today"></div>
+            <div class="logo-carousel__item"><img src="assets/media/newmarket-today.png" alt="Newmarket Today"></div>
+            <div class="logo-carousel__item"><img src="assets/media/mississauga-news.png" alt="Mississauga News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/modern-mississauga-magazine.png" alt="Modern Mississauga"></div>
+            <div class="logo-carousel__item"><img src="assets/media/insauga.png" alt="insauga"></div>
+            <div class="logo-carousel__item"><img src="assets/media/ramona-magazine.png" alt="Ramona Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/awarenow-magazine.png" alt="AwareNow Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/canadian-sme.png" alt="Canadian SME Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/authority-magazine.png" alt="Authority Magazine"></div>
+            <!-- Duplicate -->
+            <div class="logo-carousel__item"><img src="assets/media/accessibility-for-all-magazine.png" alt="Accessibility For All Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/oakville-news.png" alt="Oakville News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/accessible-journeys.png" alt="Accessible Journeys Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/canvas-rebel.png" alt="CanvasRebel"></div>
+            <div class="logo-carousel__item"><img src="assets/media/rare-disease-day.png" alt="Rare Disease Day"></div>
+            <div class="logo-carousel__item"><img src="assets/media/niagara-on-the-lake-local-news.png" alt="Niagara-on-the-Lake Local News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/thorold-today.png" alt="Thorold Today"></div>
+            <div class="logo-carousel__item"><img src="assets/media/newmarket-today.png" alt="Newmarket Today"></div>
+            <div class="logo-carousel__item"><img src="assets/media/mississauga-news.png" alt="Mississauga News"></div>
+            <div class="logo-carousel__item"><img src="assets/media/modern-mississauga-magazine.png" alt="Modern Mississauga"></div>
+            <div class="logo-carousel__item"><img src="assets/media/insauga.png" alt="insauga"></div>
+            <div class="logo-carousel__item"><img src="assets/media/ramona-magazine.png" alt="Ramona Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/awarenow-magazine.png" alt="AwareNow Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/canadian-sme.png" alt="Canadian SME Magazine"></div>
+            <div class="logo-carousel__item"><img src="assets/media/authority-magazine.png" alt="Authority Magazine"></div>
+          </div>
+        </div>
+    </div>
+  </section>
         </div>
     </div>
   </section>
@@ -270,7 +343,7 @@
       </div>
       <div class="media-links-list fade-in">
         <a href="https://www.instagram.com/p/DQCbWDoDWBp/" target="_blank" class="media-link-item">
-          <img src="assets/media/media-siriusxm.webp" alt="SiriusXM Canada" class="media-link-item__logo">
+          <img src="assets/media/siriusxm.png" alt="SiriusXM Canada" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">SiriusXM Canada — Invisible Disabilities Week Interview</p>
             <p class="media-link-item__outlet">SiriusXM Canada — Oct 2025</p>
@@ -278,7 +351,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://canadiansme.ca/building-inclusion-through-empathy/" target="_blank" class="media-link-item">
-          <img src="assets/media/media-canadian-sme.webp" alt="Canadian SME" class="media-link-item__logo">
+          <img src="assets/media/canadian-sme.png" alt="Canadian SME" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">Building Inclusion Through Empathy</p>
             <p class="media-link-item__outlet">Canadian SME Magazine — Jun 2025</p>
@@ -286,7 +359,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://www.notllocal.com/local-news/niagara-joins-global-movement-to-honour-canadians-living-with-a-rare-disease-10222437" target="_blank" class="media-link-item">
-          <img src="assets/media/media-notl-local.webp" alt="NOTL Local" class="media-link-item__logo">
+          <img src="assets/media/niagara-on-the-lake-local-news.png" alt="NOTL Local" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">Niagara Joins Global Movement to Honour Canadians Living with a Rare Disease</p>
             <p class="media-link-item__outlet">Niagara-on-the-Lake Local — Feb 2025</p>
@@ -294,7 +367,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://www.thoroldtoday.ca/local-news/niagara-joins-global-movement-to-honour-canadians-living-with-a-rare-disease-10222470" target="_blank" class="media-link-item">
-          <img src="assets/media/media-thorold-today.webp" alt="Thorold Today" class="media-link-item__logo">
+          <img src="assets/media/thorold-today.png" alt="Thorold Today" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">Niagara Joins Global Movement to Honour Canadians Living with a Rare Disease</p>
             <p class="media-link-item__outlet">Thorold Today — Feb 2025</p>
@@ -302,7 +375,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://www.newmarkettoday.ca/local-news/newmarket-bridge-will-light-up-for-rare-disease-day-10187178" target="_blank" class="media-link-item">
-          <img src="assets/media/media-newmarket-today.webp" alt="Newmarket Today" class="media-link-item__logo">
+          <img src="assets/media/newmarket-today.png" alt="Newmarket Today" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">Newmarket Bridge Will Light Up for Rare Disease Day</p>
             <p class="media-link-item__outlet">Newmarket Today — Feb 2025</p>
@@ -310,7 +383,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://ramonamag.com/2024/11/my-muscle-weakness-is-also-my-strength-life-with-an-invisible-disability/" target="_blank" class="media-link-item">
-          <img src="assets/media/media-ramona.webp" alt="Ramona Magazine" class="media-link-item__logo">
+          <img src="assets/media/ramona-magazine.png" alt="Ramona Magazine" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">My (Muscle) Weakness Is Also My Strength: Life with an Invisible Disability</p>
             <p class="media-link-item__outlet">Ramona Magazine — Nov 2024</p>
@@ -318,7 +391,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://www.mississauga.com/news/mississauga-residents-living-with-disabilities-hit-hard-by-higher-cost-of-living-report-finds/article_b28a923e-dad2-5d54-a58a-66bea231368e.html" target="_blank" class="media-link-item">
-          <img src="assets/media/media-mississauga-news.webp" alt="Mississauga News" class="media-link-item__logo">
+          <img src="assets/media/mississauga-news.png" alt="Mississauga News" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">Mississauga Residents Living with Disabilities Hit Hard by Higher Cost of Living</p>
             <p class="media-link-item__outlet">Mississauga News — Oct 2024</p>
@@ -326,7 +399,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://www.insauga.com/30-global-leaders-in-disability-awareness-and-this-mississauga-woman-is-among-them/" target="_blank" class="media-link-item">
-          <img src="assets/media/media-insauga.webp" alt="InSauga" class="media-link-item__logo">
+          <img src="assets/media/insauga.png" alt="InSauga" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">30 Global Leaders in Disability Awareness — and This Mississauga Woman Is Among Them</p>
             <p class="media-link-item__outlet">InSauga — Jul 2024</p>
@@ -334,7 +407,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://www.flipsnack.com/C7B55E88B7A/march-2024-tmqxfa5unf/full-view.html" target="_blank" class="media-link-item">
-          <img src="assets/media/media-accessible-journeys.webp" alt="Accessible Journeys Magazine" class="media-link-item__logo">
+          <img src="assets/media/accessible-journeys.png" alt="Accessible Journeys Magazine" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">On The Move With Invisible Disabilities</p>
             <p class="media-link-item__outlet">Accessible Journeys Magazine — Apr 2024</p>
@@ -342,7 +415,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://www.newmarkettoday.ca/local-news/global-chain-of-lights-coming-to-newmarket-for-rare-disease-day-8300643" target="_blank" class="media-link-item">
-          <img src="assets/media/media-newmarket-today.webp" alt="Newmarket Today" class="media-link-item__logo">
+          <img src="assets/media/newmarket-today.png" alt="Newmarket Today" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">Global Chain of Lights Coming to Newmarket for Rare Disease Day</p>
             <p class="media-link-item__outlet">Newmarket Today — Feb 2024</p>
@@ -350,7 +423,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://awarenow.us/from-scars-to-stars" target="_blank" class="media-link-item">
-          <img src="assets/media/media-awarenow.webp" alt="AwareNow Magazine" class="media-link-item__logo">
+          <img src="assets/media/awarenow-magazine.png" alt="AwareNow Magazine" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">From Scars to Stars — Issue 47</p>
             <p class="media-link-item__outlet">AwareNow Magazine — Feb 2024</p>
@@ -358,7 +431,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://www.notllocal.com/local-news/niagara-sign-shines-in-support-of-rare-disease-day-8281769" target="_blank" class="media-link-item">
-          <img src="assets/media/media-notl-local.webp" alt="NOTL Local" class="media-link-item__logo">
+          <img src="assets/media/niagara-on-the-lake-local-news.png" alt="NOTL Local" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">Niagara Sign Shines in Support of Rare Disease Day</p>
             <p class="media-link-item__outlet">Niagara-on-the-Lake Local — Feb 2024</p>
@@ -366,7 +439,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://www.insauga.com/international-speaking-contest-sees-second-place-finish-for-mississauga-woman/" target="_blank" class="media-link-item">
-          <img src="assets/media/media-insauga.webp" alt="InSauga" class="media-link-item__logo">
+          <img src="assets/media/insauga.png" alt="InSauga" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">International Speaking Contest Sees Second-Place Finish for Mississauga Woman</p>
             <p class="media-link-item__outlet">InSauga — Nov 2023</p>
@@ -374,7 +447,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://www.insauga.com/worldwide-speaking-contest-features-two-mississauga-women-vying-for-top-spot/" target="_blank" class="media-link-item">
-          <img src="assets/media/media-insauga.webp" alt="InSauga" class="media-link-item__logo">
+          <img src="assets/media/insauga.png" alt="InSauga" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">Worldwide Speaking Contest Features Two Mississauga Women Vying for Top Spot</p>
             <p class="media-link-item__outlet">InSauga — Nov 2023</p>
@@ -382,7 +455,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://globalnews.ca/news/10026454/invisible-disability-awareness-week/" target="_blank" class="media-link-item">
-          <img src="assets/media/media-global-news.webp" alt="Global News" class="media-link-item__logo">
+          <img src="assets/media/globalnews.png" alt="Global News" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">A Decade of Disability Awareness: Invisible Disabilities Association Marks Anniversary</p>
             <p class="media-link-item__outlet">Global News — Oct 2023</p>
@@ -390,7 +463,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://canvasrebel.com/meet-lauren-pires/" target="_blank" class="media-link-item">
-          <img src="assets/media/media-canvasrebel.webp" alt="CanvasRebel" class="media-link-item__logo">
+          <img src="assets/media/canvas-rebel.png" alt="CanvasRebel" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">Meet Lauren Pires</p>
             <p class="media-link-item__outlet">CanvasRebel — Oct 2023</p>
@@ -398,7 +471,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://www.modernmississauga.com/main/2023/9/27/mississauga-woman-named-first-ever-canadian-recipient-of-invisible-disabilities-association-award" target="_blank" class="media-link-item">
-          <img src="assets/media/media-modern-mississauga.webp" alt="Modern Mississauga" class="media-link-item__logo">
+          <img src="assets/media/modern-mississauga-magazine.png" alt="Modern Mississauga" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">Mississauga Woman Named First-Ever Canadian Recipient of IDA Award</p>
             <p class="media-link-item__outlet">Modern Mississauga — Oct 2023</p>
@@ -406,7 +479,7 @@
           <span class="media-link-item__arrow">→</span>
         </a>
         <a href="https://www.rarediseaseday.org/heroes/being-your-own-powerhouse/" target="_blank" class="media-link-item">
-          <img src="assets/media/media-rarediseaseday.webp" alt="RareDiseaseDay.org" class="media-link-item__logo">
+          <img src="assets/media/rare-disease-day.png" alt="RareDiseaseDay.org" class="media-link-item__logo">
           <div>
             <p class="media-link-item__title">Being Your Own Powerhouse: The Story of Lauren</p>
             <p class="media-link-item__outlet">RareDiseaseDay.org — Feb 2023</p>
