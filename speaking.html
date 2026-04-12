@@ -229,14 +229,24 @@
   </section>
 
   <!-- Past Clients -->
-  <section class="section section--alt">
+  <style>
+    .client-logos-speaking .logo-carousel__item img, .client-logos-speaking .logo-carousel--alt .logo-carousel__item img { filter: none !important; opacity: 1 !important; }
+    .client-logos-speaking .logo-carousel::before, .client-logos-speaking .logo-carousel::after,
+    .client-logos-speaking .logo-carousel--alt::before, .client-logos-speaking .logo-carousel--alt::after { display: none !important; }
+    .client-logos-speaking .logo-carousel, .client-logos-speaking .logo-carousel--alt { mask-image: none !important; -webkit-mask-image: none !important; }
+    .logo-carousel--reverse .logo-carousel__track { animation-direction: reverse; }
+    .logo-carousel--mobile-only { display: none; }
+    @media (max-width: 768px) { .logo-carousel--mobile-only { display: block; margin-top: 1rem; } }
+  </style>
+  <section class="section section--alt client-logos-speaking">
     <div class="container">
       <div class="section__header fade-in" style="text-align: center;">
         <p class="section-label" style="justify-content: center;">Trusted By</p>
         <h2 class="section__title">Past Clients & Speaking Engagements</h2>
       </div>
+      <!-- Row 1: left to right -->
       <div class="logo-carousel logo-carousel--alt">
-          <div class="logo-carousel__track">
+          <div class="logo-carousel__track" style="animation-duration: 45s;">
             <div class="logo-carousel__item"><img src="assets/clients/client-health-canada.webp" alt="Health Canada"></div>
             <div class="logo-carousel__item"><img src="assets/clients/client-arcteryx.webp" alt="Arc'teryx"></div>
             <div class="logo-carousel__item"><img src="assets/clients/client-cooperators.webp" alt="The Co-operators"></div>
@@ -278,6 +288,52 @@
             <div class="logo-carousel__item"><img src="assets/clients/client-chronic-health.webp" alt="Chronic Health Advocates"></div>
             <div class="logo-carousel__item"><img src="assets/clients/client-clarkson.webp" alt="Clarkson Secondary School"></div>
             <div class="logo-carousel__item"><img src="assets/clients/client-monsignor-pereyma.webp" alt="Monsignor John Pereyma CSS"></div>
+          </div>
+        </div>
+      <!-- Row 2: right to left (mobile only) -->
+      <div class="logo-carousel logo-carousel--alt logo-carousel--reverse logo-carousel--mobile-only">
+          <div class="logo-carousel__track" style="animation-duration: 45s; animation-delay: -22.5s;">
+            <div class="logo-carousel__item"><img src="assets/clients/client-monsignor-pereyma.webp" alt="Monsignor John Pereyma CSS"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-clarkson.webp" alt="Clarkson Secondary School"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-chronic-health.webp" alt="Chronic Health Advocates"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-lead.webp" alt="Canadian Multicultural LEAD Organization"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-bpw-niagara.webp" alt="BPW Niagara Falls"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-we-build-a-dream.webp" alt="We Build a Dream"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-replay-storytelling.webp" alt="Replay Storytelling"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-once-upon-a-woman.webp" alt="Once Upon a Woman"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-destinyfest.webp" alt="DestinyFest"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-speaker-slam.webp" alt="Speaker Slam"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-scalehr.webp" alt="ScaleHR"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-guelph-humber.webp" alt="University of Guelph-Humber"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-esdc.webp" alt="Employment and Social Development Canada"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-embark.webp" alt="Embark Student Corp"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-grouphealth.webp" alt="GroupHEALTH Benefit Solutions"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-rick-hansen.webp" alt="Rick Hansen Foundation"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-mckesson.webp" alt="McKesson Canada"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-cooperators.webp" alt="The Co-operators"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-arcteryx.webp" alt="Arc'teryx"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-health-canada.webp" alt="Health Canada"></div>
+            <!-- Duplicate for seamless loop -->
+            <div class="logo-carousel__item"><img src="assets/clients/client-monsignor-pereyma.webp" alt="Monsignor John Pereyma CSS"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-clarkson.webp" alt="Clarkson Secondary School"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-chronic-health.webp" alt="Chronic Health Advocates"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-lead.webp" alt="Canadian Multicultural LEAD Organization"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-bpw-niagara.webp" alt="BPW Niagara Falls"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-we-build-a-dream.webp" alt="We Build a Dream"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-replay-storytelling.webp" alt="Replay Storytelling"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-once-upon-a-woman.webp" alt="Once Upon a Woman"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-destinyfest.webp" alt="DestinyFest"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-speaker-slam.webp" alt="Speaker Slam"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-scalehr.webp" alt="ScaleHR"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-guelph-humber.webp" alt="University of Guelph-Humber"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-esdc.webp" alt="Employment and Social Development Canada"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-embark.webp" alt="Embark Student Corp"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-grouphealth.webp" alt="GroupHEALTH Benefit Solutions"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-rick-hansen.webp" alt="Rick Hansen Foundation"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-mckesson.webp" alt="McKesson Canada"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-cooperators.webp" alt="The Co-operators"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-arcteryx.webp" alt="Arc'teryx"></div>
+            <div class="logo-carousel__item"><img src="assets/clients/client-health-canada.webp" alt="Health Canada"></div>
           </div>
         </div>
     </div>
