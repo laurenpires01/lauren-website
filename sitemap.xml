@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://www.laurensaysyay.com/blog</loc>
-    <lastmod>2026-02-08</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -59,6 +59,18 @@
     <lastmod>2026-02-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.laurensaysyay.com/blog/lighting-up-for-rare-disease-awareness-month</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.laurensaysyay.com/blog/life-lessons-from-my-best-friends-funeral-i-mean-her-birthday-party</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.laurensaysyay.com/blog/achievement-unlocked-im-a-certified-professional-speaker</loc>
