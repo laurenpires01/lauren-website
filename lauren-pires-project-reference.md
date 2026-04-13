@@ -171,12 +171,16 @@ Lauren coordinates the Canadian arm of the global Rare Disease Day #LightUpForRa
 
 ### As Seen On Carousel (index.html)
 - Section is now prominent: `padding: 4rem 0`, section label "Media Coverage", heading "As Seen On", centered subtitle
+- Section background is **white** (`#ffffff`) — `section--alt` removed so it stands out from adjacent cream sections
 - Media logos display **in colour**
 - All old `.webp` filenames replaced with new `.png` filenames (no `media-` prefix)
 - 22 logos total including new additions: `oakville-news.png`, `accessibility-for-all-magazine.png`, `authority-magazine.png`
 - Carousel edge fades removed
 - Animation speed: `45s`
 - Mobile: second reverse row added with `-22.5s` offset
+
+### Keynote Preview Cards (index.html)
+- "Seeking Strength: How to Build Resilience Through Small Moments of Joy" card image updated to `assets/photos/stage-resilience.webp`
 
 ---
 
@@ -345,4 +349,4 @@ When Lauren is ready to work on the website from her computer:
 | v110 | Removed TBC Campbellford entry |
 | v111 | Full file reorganization — assets into subfolders, favicons folder |
 | v112 | Added Campbellford Clock Tower, updated to 26 landmarks / 18 cities |
-| v113 | Full media logo overhaul (new PNG filenames, colour display, no-fade carousels, mobile double rows); homepage new hero images (desktop + mobile) with responsive breakpoints; "Daily Yay." shimmer animation; As Seen On and Past Clients sections made prominent with headings and subtitles; speaking page new hero image + keynote #04 added; media page 5 new articles added; VideoObject schema thumbnailUrl updated for Google Search |
+| v113 | Full media logo overhaul (new PNG filenames, colour display, no-fade carousels, mobile double rows); homepage new hero images (desktop + mobile) with responsive breakpoints; "Daily Yay." shimmer animation; As Seen On and Past Clients sections made prominent with headings, subtitles, and white backgrounds; speaking page new hero image + keynote #04 added; media page 5 new articles added; VideoObject schema thumbnailUrl updated for Google Search; Seeking Strength keynote card image updated to stage-resilience.webp |
