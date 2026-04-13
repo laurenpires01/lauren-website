@@ -1,7 +1,7 @@
 # Lauren Pires Website & PR Project Reference
 
 **Last updated:** April 12, 2026
-**Latest site version:** v114
+**Latest site version:** v115
 **Live URL:** https://www.laurensaysyay.com
 **Hosted on:** Netlify
 **Domain registrar:** GoDaddy
@@ -36,6 +36,7 @@ Lauren Pires is an award-winning keynote speaker and invisible disability advoca
 - `media.html` — Media coverage & logos
 - `lightupforrare.html` — #LightUpForRare advocacy/campaign page
 - `blog.html` — Blog listing
+- `testimonials.html` — Testimonials page (added v114)
 - `contact.html` — Contact form (Netlify Forms)
 - `privacy.html` — Privacy policy
 - `accessibility.html` — Accessibility statement
@@ -45,7 +46,7 @@ Lauren Pires is an award-winning keynote speaker and invisible disability advoca
 - `robots.txt` / `sitemap.xml` — SEO
 
 ### Folders
-- `blog/` — 46 individual blog post HTML files
+- `blog/` — 57 individual blog post HTML files
 - `assets/` — Organized into subfolders (reorganized in v111):
   - `assets/photos/` — headshots, stage shots, hero images
     - Includes: `lauren-pires-hero.png` (desktop hero), `lauren-pires-hero-mobile.png` (mobile hero), `lauren-talk-destiny-fest.jpg` (keynote #04 photo)
@@ -54,16 +55,20 @@ Lauren Pires is an award-winning keynote speaker and invisible disability advoca
   - `assets/awards/` (7) — award badge images
   - `assets/lightup/` (8) — #LightUpForRare campaign photos
   - `assets/og/` (6) — Open Graph social sharing images
-  - `assets/blog/` (46) — blog post featured images
+  - `assets/blog/` (57) — blog post featured images
   - `assets/logo.png` / `assets/logo.svg` — site logo
 - `favicons/` — All favicon & app icon files, browserconfig.xml, site.webmanifest
+
+### Blog image format note
+- Older blog post images are `.webp`
+- New blog post images (from February 2026 onward) are `.jpg`
 
 ### Media logo filenames (assets/media/ — all .png)
 All media logos were renamed in v113 from the old `media-[name].webp` convention to clean `[name].png` files:
 `breakfast-television.png`, `ctv-your-morning.png`, `globalnews.png`, `citynews.png`, `chch.png`, `omni-news.png`, `siriusxm.png`, `authority-magazine.png`, `canadian-sme.png`, `awarenow-magazine.png`, `ramona-magazine.png`, `insauga.png`, `modern-mississauga-magazine.png`, `mississauga-news.png`, `newmarket-today.png`, `thorold-today.png`, `niagara-on-the-lake-local-news.png`, `rare-disease-day.png`, `canvas-rebel.png`, `accessible-journeys.png`, `oakville-news.png`, `accessibility-for-all-magazine.png`
 
 ### Navigation order
-About → Speaking → Media → Advocacy → Blog → Contact Lauren (button)
+About → Speaking → Media → Advocacy → Blog → Testimonials → Contact Lauren (button)
 
 The "Advocacy" nav link currently points to `lightupforrare.html`. Long-term plan is to expand to an advocacy hub covering #LightUpForRare, Invisible Disabilities Week, Mobility Awareness Month.
 
@@ -71,7 +76,7 @@ The "Advocacy" nav link currently points to `lightupforrare.html`. Long-term pla
 
 ## #LightUpForRare Campaign (2026)
 
-Lauren coordinates the Canadian arm of the global Rare Disease Day #LightUpForRare campaign, working with the Canadian Organization for Rare Disorders (CORD).
+Lauren coordinates the Canadian arm of the global Rare Disease Day #LightUpForRare campaign, working with the Canadian Organization for Rare Disorders (CORD). CORD URL: https://www.raredisorders.ca/
 
 **2026 confirmed: 26 locations, 18 cities, 4 provinces**
 
@@ -126,6 +131,11 @@ Lauren coordinates the Canadian arm of the global Rare Disease Day #LightUpForRa
 - DKIM was regenerated for the correct domain (laurensaysyay.com, not laurenpires.ca)
 - Initial spam issues caused by Mixmax email tracking — resolved after disabling Mixmax and DKIM authentication
 - Domain reputation building over time; no issues as of late Feb 2026
+
+### Analytics & Tracking
+- **Google Analytics** — tag `G-EY0YQH5DC2` installed on all pages
+- **Google Search Console** — verification and sitemap submitted
+- **No Facebook Pixel** installed
 
 ### DNS Records (GoDaddy)
 - SPF TXT record: `v=spf1 include:_spf.google.com ~all`
@@ -232,7 +242,7 @@ Lauren coordinates the Canadian arm of the global Rare Disease Day #LightUpForRa
 
 ### Writing Rules
 - No parallel sentence structures
-- No "it's not x, it's y" constructions
+- No "it's not x, it's y" constructions (or any variation thereof)
 - No em dashes in professional communications
 - Always verify facts from primary sources
 
@@ -334,8 +344,6 @@ When Lauren is ready to work on the website from her computer:
 
 ---
 
----
-
 ## Testimonials Page (testimonials.html) — v114 NEW PAGE
 
 Built new testimonials page following the structure of Karen Craggs' testimonials page, adapted to Lauren's brand.
@@ -369,6 +377,7 @@ Built new testimonials page following the structure of Karen Craggs' testimonial
 
 ### Added to nav & footer
 - Testimonials link added to nav and footer on all pages: index, about, speaking, media, lightupforrare, blog, contact, privacy, accessibility, thank-you, 404
+- New blog posts also include Testimonials in nav and footer
 
 ---
 
@@ -405,6 +414,36 @@ Prevents footer links from bleeding off-screen on mobile when there are many ite
 
 ---
 
+## Blog (v115 Changes)
+
+### Blog post conventions
+- All new blog posts use `.jpg` images (older posts use `.webp`)
+- Blog post files live in the `blog/` folder
+- Image files live in `assets/blog/`
+- No "Follow Lauren's journey on Instagram" text in `blog-post__share` div (empty div kept for the dividing line)
+- All new posts include Testimonials in nav and footer
+
+### New blog posts added (v115) — 11 posts total
+| Date | Title | Filename | Image |
+|------|-------|----------|-------|
+| Apr 9, 2026 | Speaking Event: Rick Hansen Foundation School Program in Etobicoke | `speaking-event-rick-hansen-foundation-school-program-in-etobicoke.html` | `rick-hansen-foundation-event-april-10.jpg` |
+| Mar 20, 2026 | The Daily Yay Experiment for the International Day of Happiness | `the-daily-yay-experiment-for-the-international-day-of-happiness.html` | `international-day-of-happiness-2026.jpg` |
+| Mar 16, 2026 | The First TEDx Talk to Make Me Cry | `the-first-tedx-talk-to-make-me-cry.html` | `first-tedx-to-make-me-cry.jpg` |
+| Mar 7, 2026 | How to Find Your Carrie | `how-to-find-your-carrie.html` | `finding-your-carrie.jpg` |
+| Feb 28, 2026 | I'm Lighting Up Canada for Rare Disease Day | `im-lighting-up-canada-for-rare-disease-day.html` | `rare-disease-day-lightings-2026.jpg` |
+| Feb 25, 2026 | Recap of Attending the Disability Leadership Summit by Disability Lead | `recap-of-attending-the-disability-leadership-summit-by-disability-lead.html` | `disability-leadership-summit.jpg` |
+| Feb 24, 2026 | Accessibility For All Magazine Feature: What Interabled Relationships Teach Us About Communication | `accessibility-for-all-magazine-feature-what-interabled-relationships-teach-us-about-communication.html` | `accessibility-for-all-magazine-feature.jpg` |
+| Feb 19, 2026 | Let's Learn a Little About Central Core Disease | `lets-learn-a-little-about-central-core-disease.html` | `learn-about-central-core-disease.jpg` |
+| Feb 11, 2026 | Lighting Up for Rare Disease Awareness Month | `lighting-up-for-rare-disease-awareness-month.html` | `selfie-for-rare-disease-awareness-month.jpg` |
+| Feb 6, 2026 | Life Lessons From My Best Friend's Funeral. I Mean, Her Birthday Party. | `life-lessons-from-my-best-friends-funeral-i-mean-her-birthday-party.html` | `Shajia-birthday-funeral.jpg` |
+| Feb 2, 2026 | Achievement Unlocked: I'm a Certified Professional Speaker! | `achievement-unlocked-im-a-certified-professional-speaker.html` | `achievement-unlocked-im-a-certified-professional-speaker.webp` |
+
+### Sitemap updated
+- Blog page `lastmod` updated to `2026-04-09`
+- All 11 new posts added to sitemap.xml with `priority 0.6` and `changefreq yearly`
+
+---
+
 ## Version History Highlights
 
 | Version | Key Changes |
@@ -422,3 +461,4 @@ Prevents footer links from bleeding off-screen on mobile when there are many ite
 | v112 | Added Campbellford Clock Tower, updated to 26 landmarks / 18 cities |
 | v113 | Full media logo overhaul (new PNG filenames, colour display, no-fade carousels, mobile double rows); homepage new hero images (desktop + mobile) with responsive breakpoints; "Daily Yay." shimmer animation; As Seen On and Past Clients sections made prominent with headings, subtitles, and white backgrounds; speaking page new hero image + keynote #04 added; media page 5 new articles added; VideoObject schema thumbnailUrl updated for Google Search; Seeking Strength keynote card image updated to stage-resilience.webp |
 | v114 | New testimonials.html page (10 testimonials, 3 filter categories, added to sitemap); Testimonials added to nav + footer site-wide; Samsung overflow fix in styles.css; footer mobile wrap fix in styles.css; Cloudflare truncation fixed on contact/accessibility/privacy pages; redundant Contact nav link removed from all pages; obfuscated emails restored or redirected to contact page |
+| v115 | 11 new blog posts added (Feb 2 – Apr 9, 2026); blog.html and sitemap.xml updated; new blog image format is .jpg; all new posts include Testimonials in nav and footer; CORD URL corrected to raredisorders.ca |
