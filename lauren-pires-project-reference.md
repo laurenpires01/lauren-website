@@ -1,7 +1,7 @@
 # Lauren Pires Website & PR Project Reference
 
 **Last updated:** April 12, 2026
-**Latest site version:** v112
+**Latest site version:** v113
 **Live URL:** https://www.laurensaysyay.com
 **Hosted on:** Netlify
 **Domain registrar:** GoDaddy
@@ -23,7 +23,7 @@ Lauren Pires is an award-winning keynote speaker and invisible disability advoca
 
 **Past speaking clients include:** Health Canada, Arc'teryx, McKesson, The Co-operators, Rick Hansen Foundation, Employment and Social Development Canada (ESDC), GreenShield, Embark, GroupHealth, Guelph-Humber, ScaleHR, and others.
 
-**Media coverage:** CTV Your Morning, Breakfast Television, CHCH, CityNews Toronto, OMNI News, Global News, SiriusXM Canada, insauga, Newmarket Today, Canadian SME, CanvasRebel, Ramona Magazine, Thorold Today, NOTL Local, Modern Mississauga, Mélange & Co.
+**Media coverage:** CTV Your Morning, Breakfast Television, CHCH, CityNews Toronto, OMNI News, Global News, SiriusXM Canada, insauga, Newmarket Today, Canadian SME, CanvasRebel, Ramona Magazine, Thorold Today, NOTL Local, Modern Mississauga, Mélange & Co., Oakville News, Accessibility For All Magazine, Mississauga.com, Rick Hansen Foundation Blog.
 
 ---
 
@@ -47,15 +47,20 @@ Lauren Pires is an award-winning keynote speaker and invisible disability advoca
 ### Folders
 - `blog/` — 46 individual blog post HTML files
 - `assets/` — Organized into subfolders (reorganized in v111):
-  - `assets/photos/` (25) — headshots, stage shots, hero images
-  - `assets/clients/` (20) — client/org logos
-  - `assets/media/` (23) — media outlet logos
+  - `assets/photos/` — headshots, stage shots, hero images
+    - Includes: `lauren-pires-hero.png` (desktop hero), `lauren-pires-hero-mobile.png` (mobile hero), `lauren-talk-destiny-fest.jpg` (keynote #04 photo)
+  - `assets/clients/` (20) — client/org logos (.webp)
+  - `assets/media/` — media outlet logos, now all `.png` format with new naming convention (no `media-` prefix)
   - `assets/awards/` (7) — award badge images
   - `assets/lightup/` (8) — #LightUpForRare campaign photos
   - `assets/og/` (6) — Open Graph social sharing images
   - `assets/blog/` (46) — blog post featured images
   - `assets/logo.png` / `assets/logo.svg` — site logo
 - `favicons/` — All favicon & app icon files, browserconfig.xml, site.webmanifest
+
+### Media logo filenames (assets/media/ — all .png)
+All media logos were renamed in v113 from the old `media-[name].webp` convention to clean `[name].png` files:
+`breakfast-television.png`, `ctv-your-morning.png`, `globalnews.png`, `citynews.png`, `chch.png`, `omni-news.png`, `siriusxm.png`, `authority-magazine.png`, `canadian-sme.png`, `awarenow-magazine.png`, `ramona-magazine.png`, `insauga.png`, `modern-mississauga-magazine.png`, `mississauga-news.png`, `newmarket-today.png`, `thorold-today.png`, `niagara-on-the-lake-local-news.png`, `rare-disease-day.png`, `canvas-rebel.png`, `accessible-journeys.png`, `oakville-news.png`, `accessibility-for-all-magazine.png`
 
 ### Navigation order
 About → Speaking → Media → Advocacy → Blog → Contact Lauren (button)
@@ -113,6 +118,7 @@ Lauren coordinates the Canadian arm of the global Rare Disease Day #LightUpForRa
 - **Netlify** — site hosted, forms handled natively via Netlify Forms
 - **GoDaddy** — domain registrar for laurensaysyay.com
 - DNS pointed to Netlify with SSL active
+- **Netlify plan note:** Free plan allows only one Git contributor on private repos. Dan's pushes were blocked until the repo was made public. Fix: make the GitHub repo public (site is public anyway), OR upgrade Netlify to Pro, OR manage Git contributors in Netlify settings.
 
 ### Email
 - **Google Workspace** — yay@laurensaysyay.com
@@ -133,13 +139,81 @@ Lauren coordinates the Canadian arm of the global Rare Disease Day #LightUpForRa
 - Structured data (JSON-LD) on key pages
 - Open Graph and Twitter Card meta tags on all pages
 - Sitemap.xml includes all pages with priority weighting
+- VideoObject JSON-LD `thumbnailUrl` updated to `assets/photos/lauren-pires-hero.png` (was showing YouTube video thumbnail in Google search results)
 
 ### Performance
 - Desktop PageSpeed: ~93 Performance / 92 Accessibility / 77 Best Practices / 100 SEO
 - Mobile optimizations applied: removed lazy loading from LCP hero image, added fetchpriority="high", preload for hero image, preconnect for Google Fonts, width/height attributes to prevent layout shift
-- All images in .webp format (except logo SVG and a few PNGs)
+- Most images in .webp format; media logos and new hero images are .png
 - WCAG contrast fixes applied to footer and text-light elements
 - `<main>` landmark added to all pages for accessibility
+
+---
+
+## Homepage (index.html) — v113 Changes
+
+### Hero Section
+- **Desktop hero image:** `assets/photos/lauren-pires-hero.png` (landscape, Lauren in pink dress with bokeh lights)
+  - `background-size: cover`, `background-position: center top`
+  - At 1600px+ wide screens: `background-size: 100% auto` to prevent over-zoom
+- **Mobile hero image:** `assets/photos/lauren-pires-hero-mobile.png` (portrait crop, same shoot)
+  - Triggered at `max-width: 768px`
+  - `.hero-full__content` has `padding-top: 38%` to push text below her face
+  - `.hero__tagline` ("Invisible Disability Keynote Speaker") is hidden on mobile to avoid covering her face
+- **"Daily Yay." shimmer effect:** Animated CSS gradient sweeping purple → white → teal → pink → white, on a 5-second loop. Implemented via `.hero-daily-yay` class with `background-clip: text` and `@keyframes daily-yay-sparkle`.
+
+### Past Clients Carousel (index.html)
+- Section is now prominent: `padding: 4rem 0`, full heading "Trusted By Organizations Across North America", centered subtitle
+- Client logos display **in colour** (filter: none override)
+- Carousel edge fades removed (`mask-image: none`, `::before`/`::after` display: none)
+- Animation speed: `45s`
+- Mobile: second reverse row added (`animation-direction: reverse`, `animation-delay: -22.5s`) so different logos show in each row simultaneously
+
+### As Seen On Carousel (index.html)
+- Section is now prominent: `padding: 4rem 0`, section label "Media Coverage", heading "As Seen On", centered subtitle
+- Media logos display **in colour**
+- All old `.webp` filenames replaced with new `.png` filenames (no `media-` prefix)
+- 22 logos total including new additions: `oakville-news.png`, `accessibility-for-all-magazine.png`, `authority-magazine.png`
+- Carousel edge fades removed
+- Animation speed: `45s`
+- Mobile: second reverse row added with `-22.5s` offset
+
+---
+
+## Speaking Page (speaking.html) — v113 Changes
+
+- **Hero image:** `assets/og/og-home.webp` (stage shot from behind, looking out at audience). Preload added in `<head>`.
+- **Client logos:** Same colour, no-fade, 45s, double mobile row treatment as index.html. Section background changed to `#ffffff` (was `section--alt` cream) so white logo backgrounds don't show.
+- **Keynote #04 added:** "Everyday Ableism and How to Recognize It"
+  - Badge: High School Students · Education
+  - Photo: `assets/photos/lauren-talk-destiny-fest.jpg`
+  - Three takeaways: Recognize Everyday Ableism / Challenge Biases Around Disability / Build Empathy and Awareness
+
+---
+
+## Media Page (media.html) — v113 Changes
+
+### Carousels
+- **TV & Broadcast carousel:** Updated to new PNG filenames, colour display, fades removed, 45s speed. Single row only (7 logos — too few for double row on mobile).
+- **Print, Digital, Radio & Podcasts carousel:** Updated to new PNG filenames, colour display, fades removed, 45s speed. Added new logos: `authority-magazine.png`, `oakville-news.png`, `accessibility-for-all-magazine.png`. Removed SiriusXM from this section (it's in TV). Mobile double row: row 2 runs at 35s with `-10s` delay for stagger.
+- All `media-link-item__logo` inline images updated to new PNG filenames and display in colour.
+
+### New Articles Added (top of print/digital list)
+1. **Accessibility For All Magazine** — Feb 2026 — https://www.flipsnack.com/C7B55E88B7A/afa-february-2026/full-view.html?p=32
+2. **Oakville News** — Town Hall Set to Be Lit Up for Rare Disease Day — Feb 2026 — https://www.oakvillenews.org/local-news/town-hall-set-to-be-lit-up-on-february-26-for-rare-disease-day-11923438
+3. **Mississauga.com** — Rare Disease Day Lights Up Brampton and Mississauga — Feb 2026 — https://www.mississauga.com/news/rare-disease-day-brampton-mississauga/article_9ddca1bd-f336-525e-80c8-c5a288257fc8.html
+4. **Newmarket Today** — Newmarket Bridge Going Blue for Rare Disease Day — Feb 2026 — https://www.newmarkettoday.ca/local-news/newmarket-bridge-going-blue-for-todays-rare-disease-day-11935917
+5. **Rick Hansen Foundation** — Lauren Pires: RHFSP Ambassador Hopes to Bring Disability Representation to Youth — 2025 — https://www.rickhansen.com/news-stories/blog/lauren-pires-rhfsp-ambassador-hopes-bring-disability-representation-youth
+
+---
+
+## Carousel Implementation Notes (lessons learned)
+
+- **Colour override pattern:** Use a scoped section class (e.g. `.client-logos`, `.media-logos-colour`) with `filter: none !important; opacity: 1 !important` on the `img` elements. Also override `mask-image: none !important` and `::before`/`::after { display: none !important }` to remove edge fades.
+- **Edge fade mismatch:** The global carousel CSS applies gradient fades via `::before`/`::after` pseudo-elements and/or `mask-image`. When section background differs from the fade colour, the seam shows. Solution: disable the fade with the above overrides rather than trying to colour-match.
+- **Animation speed:** `animation-duration` override on `.logo-carousel__track` element. Current standard: `45s` for all main carousels.
+- **Mobile double row:** Add a second `.logo-carousel` with classes `logo-carousel--reverse logo-carousel--mobile-only`. The reverse row uses `animation-direction: reverse` on the track. Set `animation-delay: -22.5s` (half cycle) for offset. For the second row to diverge visually, use a different duration (e.g. `35s`) with a different delay (e.g. `-10s`). Only use double row when there are 10+ logos — 7 logos is not enough and creates overlap.
+- **Background-clip shimmer text:** Works with `-webkit-background-clip: text` and `-webkit-text-fill-color: transparent`. The animated gradient gives a jewel-like shimmer. Current palette: purple (`#c9a6e8`) + white + teal (`#7de8e2`) + pink (`#f9a8d4`).
 
 ---
 
@@ -197,7 +271,7 @@ Lauren coordinates the Canadian arm of the global Rare Disease Day #LightUpForRa
 **Setup:** Lauren's website is now version-controlled on GitHub with automatic Netlify deployment. Both Lauren and Dan can make changes from their own computers.
 
 ### Repository Details
-- **GitHub repository:** `laurenpires01/lauren-website` (private)
+- **GitHub repository:** `laurenpires01/lauren-website` (was private — needed to be made public for Netlify free plan to allow multiple contributors)
 - **Owner:** Lauren Pires (laurenpires01)
 - **Collaborator:** Dan (thedanshaikh101)
 - **Connected to:** Netlify (auto-deploy enabled)
@@ -213,21 +287,6 @@ Lauren coordinates the Canadian arm of the global Rare Disease Day #LightUpForRa
 - **GitHub Desktop:** Installed and signed in with laurenpires01 account
 - **Repository:** Visible in GitHub Desktop, ready to clone
 - **Next step:** Clone repository to a location on her computer (e.g., Documents/lauren-website)
-
-### Migration Process (Completed April 12, 2026)
-1. ✅ Lauren created GitHub account (laurenpires01)
-2. ✅ Lauren created repository `lauren-website` (private)
-3. ✅ Dan initialized Git in his Dropbox folder containing the website
-4. ✅ Dan connected local folder to Lauren's GitHub repository via command line:
-   ```
-   git remote add origin https://github.com/laurenpires01/lauren-website.git
-   git branch -M main
-   git push -u origin main
-   ```
-5. ✅ All 216 website files uploaded to GitHub
-6. ✅ Netlify connected to GitHub repository for auto-deployment
-7. ✅ Auto-publishing enabled (deploys from main branch automatically)
-8. ⏳ Lauren to clone repository to her computer when ready
 
 ### Ongoing Workflow
 **Before making changes:**
@@ -286,3 +345,4 @@ When Lauren is ready to work on the website from her computer:
 | v110 | Removed TBC Campbellford entry |
 | v111 | Full file reorganization — assets into subfolders, favicons folder |
 | v112 | Added Campbellford Clock Tower, updated to 26 landmarks / 18 cities |
+| v113 | Full media logo overhaul (new PNG filenames, colour display, no-fade carousels, mobile double rows); homepage new hero images (desktop + mobile) with responsive breakpoints; "Daily Yay." shimmer animation; As Seen On and Past Clients sections made prominent with headings and subtitles; speaking page new hero image + keynote #04 added; media page 5 new articles added; VideoObject schema thumbnailUrl updated for Google Search |
