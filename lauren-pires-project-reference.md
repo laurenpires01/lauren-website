@@ -1,7 +1,7 @@
 # Lauren Pires Website & PR Project Reference
 
 **Last updated:** April 12, 2026
-**Latest site version:** v113
+**Latest site version:** v114
 **Live URL:** https://www.laurensaysyay.com
 **Hosted on:** Netlify
 **Domain registrar:** GoDaddy
@@ -334,6 +334,77 @@ When Lauren is ready to work on the website from her computer:
 
 ---
 
+---
+
+## Testimonials Page (testimonials.html) — v114 NEW PAGE
+
+Built new testimonials page following the structure of Karen Craggs' testimonials page, adapted to Lauren's brand.
+
+### Structure
+- Hero section with `dreamer-day-fest.webp` background, plum/teal gradient overlay
+- Sticky filter bar: All / Corporate & ERG / Education / Events
+- 3-column masonry grid (2 on tablet, 1 on mobile) with live JS filtering and result count
+- Plum CTA section
+- Full Lauren nav and footer
+
+### 10 Testimonials
+**Corporate & ERG (5):**
+- Shine Jiyoun Chung, MSW, RSW — Impact Strategist, IDEA & Wellbeing Partner, The Co-operators
+- Melissa Di Paola — Communications Professional, McKesson Canada
+- Lisa Paterson — VP, Operations & Pre-Claim Services, GroupHEALTH Benefit Solutions
+- Kurtis Chow — Senior Specialist, People Operations, Arc'teryx Equipment
+- Olivia L. — Fraud Prevention Specialist, Arc'teryx Equipment
+
+**Education (4):**
+- Lilly S. — Honors Student, Milken Institute School of Public Health, GWU
+- Urmila Puran — Student Life Coordinator, University of Guelph-Humber
+- Estelle Gonzalez-Fadel, OCT — Curriculum Head & Teacher, Peel District School Board
+- Somto Onyewuchi-Ohiri — Workshop Series Organizer, Monsignor John Pereyma CSS
+
+**Events (1):**
+- Mary "Madette" Mendoza — Award-Winning Inspirational Speaker (Archangel Summit)
+
+### Added to sitemap.xml
+- `testimonials` added with priority `0.8` and date `2026-04-12`
+
+### Added to nav & footer
+- Testimonials link added to nav and footer on all pages: index, about, speaking, media, lightupforrare, blog, contact, privacy, accessibility, thank-you, 404
+
+---
+
+## File Health Issues Discovered (v114)
+
+### Cloudflare Truncation Problem
+Files downloaded from the live site (laurensaysyay.com) are processed by Cloudflare which:
+1. **Obfuscates email addresses** — replaces `yay@laurensaysyay.com` with encoded gibberish (`/cdn-cgi/l/email-protection#...`)
+2. **Truncates files mid-script** — cuts off the JavaScript at the end, leaving `</script>`, `</body>`, `</html>` missing. This causes all `fade-in` content to stay at `opacity: 0`, making pages appear blank.
+
+**Affected files fixed in v114:** contact.html, accessibility.html, privacy.html
+
+**Rule going forward:** ALWAYS upload files from the local Git folder (`C:\Users\Daniy\Speaker Slam Dropbox\...\lauren-master-website\`), NEVER from the live site.
+
+### Fixes applied
+- **contact.html:** Completed truncated FAQ accordion script, restored `</body></html>`, replaced both Cloudflare-obfuscated email instances with real `yay@laurensaysyay.com` mailto links, removed redundant "Contact" nav link (was showing alongside "Contact Lauren" CTA)
+- **accessibility.html:** Completed truncated script, replaced obfuscated email with link to `contact.html` ("get in touch")
+- **privacy.html:** Completed truncated script, replaced obfuscated email with link to `contact.html` ("get in touch")
+- **404.html, thank-you.html, blog.html:** Removed redundant "Contact" nav link from all pages that had it
+
+### Samsung horizontal overflow fix
+Added `overflow-x: hidden` to `html` element in `styles.css`. The `body` already had it but Samsung's browser required it on `html` as well. Caused by carousel `width: max-content` tracks expanding the page width on Samsung Internet.
+
+### Footer mobile wrap fix (styles.css)
+Added to `@media (max-width: 900px)`:
+```css
+.footer__links {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+```
+Prevents footer links from bleeding off-screen on mobile when there are many items.
+
+---
+
 ## Version History Highlights
 
 | Version | Key Changes |
@@ -350,3 +421,4 @@ When Lauren is ready to work on the website from her computer:
 | v111 | Full file reorganization — assets into subfolders, favicons folder |
 | v112 | Added Campbellford Clock Tower, updated to 26 landmarks / 18 cities |
 | v113 | Full media logo overhaul (new PNG filenames, colour display, no-fade carousels, mobile double rows); homepage new hero images (desktop + mobile) with responsive breakpoints; "Daily Yay." shimmer animation; As Seen On and Past Clients sections made prominent with headings, subtitles, and white backgrounds; speaking page new hero image + keynote #04 added; media page 5 new articles added; VideoObject schema thumbnailUrl updated for Google Search; Seeking Strength keynote card image updated to stage-resilience.webp |
+| v114 | New testimonials.html page (10 testimonials, 3 filter categories, added to sitemap); Testimonials added to nav + footer site-wide; Samsung overflow fix in styles.css; footer mobile wrap fix in styles.css; Cloudflare truncation fixed on contact/accessibility/privacy pages; redundant Contact nav link removed from all pages; obfuscated emails restored or redirected to contact page |
