@@ -1,7 +1,7 @@
 # Lauren Pires Website & PR Project Reference
 
-**Last updated:** April 12, 2026
-**Latest site version:** v115
+**Last updated:** April 20, 2026
+**Latest site version:** v116
 **Live URL:** https://www.laurensaysyay.com
 **Hosted on:** Netlify
 **Domain registrar:** GoDaddy
@@ -444,6 +444,63 @@ Prevents footer links from bleeding off-screen on mobile when there are many ite
 
 ---
 
+## v116 — SEO Landing Pages (April 20, 2026)
+
+### 7 New SEO Pages Built
+
+All pages follow the same structure: hero with Lauren's photo, breadcrumb, intro + credentials aside, what to expect cards, keynote topics (official descriptions from speaking.html), case studies, testimonials, formats, related links, CTA. Writing rules applied throughout: no em dashes in prose, no "it's not X it's Y" constructions, no parallel sentence structures.
+
+**Booking/Speaker Pages (5):**
+
+| Page | Target Keywords | Colour Theme | Testimonials |
+|------|----------------|--------------|--------------|
+| `invisible-disability-speaker.html` | invisible disability speaker Canada | Plum | Melissa Di Paola, Olivia L., Lilly S. |
+| `resilience-keynote-speaker.html` | resilience keynote speaker Canada | Teal | Urmila Puran, Estelle Gonzalez-Fadel, Madette Mendoza |
+| `disability-keynote-speaker.html` | disability keynote speaker Canada | Plum | Shine Jiyoun Chung, Lisa Paterson, Kurtis Chow |
+| `rare-disease-speaker.html` | rare disease speaker Canada | Teal | Lilly S., Melissa Di Paola, Olivia L. |
+| `workplace-inclusion-speaker.html` | workplace inclusion speaker Canada | Plum | Melissa Di Paola, Urmila Puran, Estelle Gonzalez-Fadel |
+| `disability-pride-month-speaker.html` | disability pride month speaker, July speaker | Plum | Shine Jiyoun Chung, Estelle Gonzalez-Fadel, Madette Mendoza |
+
+**Informational Page (1):**
+
+| Page | Target Keywords | Structure |
+|------|----------------|-----------|
+| `invisible-disabilities-awareness.html` | what are invisible disabilities, invisible disability examples | Article layout with sidebar, FAQ schema, Article schema |
+
+### Content Decisions
+- **Keynote topic cards** updated across all pages to use official descriptions from speaking.html (with correct audience badges: "Corporations · Government · HR · DEIA & Employee Wellness Teams" etc.)
+- **Credentials asides** updated to include full ordered milestone list from about.html: TEDxMississauga (2026), Rick Hansen Foundation (2026), D-30 (2024), #2 Speaker Slam (2023), "But You LOOK Good" Award (2023)
+- **"Not 33% less. Just 33%."** added to intro copy on all pages (from about.html)
+- **Daily Yay origin** added to resilience page: "life is too short to not have a daily yay"
+- **11-year career pivot** added to intro copy where relevant
+- **CSP (Certified Professional Speaker)** removed from all pages — Lauren's certification is from Speaker Slam, not CAPS/NSA. Using the CAPS/NSA stat ("fewer than 800 worldwide") would be inaccurate.
+- **"Performing wellness"** replaced with plain language throughout
+- **Comparative claims** ("most speakers don't have") removed at Lauren's request
+- **OG images** varied across pages: og-speaking.webp, og-home.webp, og-about.webp assigned by page theme
+
+### Technical
+- `netlify.toml` updated with clean URL redirects for all 7 new pages
+- `sitemap.xml` updated with all 7 new pages (priority 0.9 for speaker pages, 0.8 for informational/awareness month)
+- All pages include full breadcrumb + JSON-LD BreadcrumbList schema
+- Awareness page uses Article + FAQPage schema instead of Person schema
+
+### Writing Fixes Applied
+- 26+ em dashes removed from invisible-disability-speaker and resilience-keynote-speaker pages
+- "it's not X, it's Y" constructions rewritten across all pages
+- "Not just X" parallel structures reworded
+- Quote attribution em dashes (Name — Title) kept as acceptable citation formatting
+
+### Other Fixes This Session
+- `contact.html` — truncated script completed, FAQ accordion fixed, Cloudflare email obfuscation replaced with real mailto links, redundant Contact nav link removed
+- `accessibility.html`, `privacy.html` — truncated scripts completed, obfuscated emails replaced with link to contact page
+- `blog.html`, `thank-you.html`, `404.html` — redundant Contact nav link removed
+- `netlify.toml` — domain redirect rules removed (were causing ERR_TOO_MANY_REDIRECTS); www/HTTPS canonicalization must be set in Netlify dashboard under Domain Settings, not via redirect rules
+- Second laptop setup: Lauren's repo cloned to `Documents\lauren-website` on second laptop (NOT Dropbox — avoids Git/Dropbox conflict)
+- Google Search Console analysis: 32 clicks, 891 impressions, avg position 6.8 over last 3 months. Almost all traffic branded. "disability speaker" at position 14. Speaking page 267 impressions, 0.37% CTR.
+- Logo black background on iOS Safari: fix is `mix-blend-mode: multiply` on `.nav__logo img` in styles.css, or re-export SVG without background layer
+
+---
+
 ## Version History Highlights
 
 | Version | Key Changes |
@@ -462,3 +519,4 @@ Prevents footer links from bleeding off-screen on mobile when there are many ite
 | v113 | Full media logo overhaul (new PNG filenames, colour display, no-fade carousels, mobile double rows); homepage new hero images (desktop + mobile) with responsive breakpoints; "Daily Yay." shimmer animation; As Seen On and Past Clients sections made prominent with headings, subtitles, and white backgrounds; speaking page new hero image + keynote #04 added; media page 5 new articles added; VideoObject schema thumbnailUrl updated for Google Search; Seeking Strength keynote card image updated to stage-resilience.webp |
 | v114 | New testimonials.html page (10 testimonials, 3 filter categories, added to sitemap); Testimonials added to nav + footer site-wide; Samsung overflow fix in styles.css; footer mobile wrap fix in styles.css; Cloudflare truncation fixed on contact/accessibility/privacy pages; redundant Contact nav link removed from all pages; obfuscated emails restored or redirected to contact page |
 | v115 | 11 new blog posts added (Feb 2 – Apr 9, 2026); blog.html and sitemap.xml updated; new blog image format is .jpg; all new posts include Testimonials in nav and footer; CORD URL corrected to raredisorders.ca |
+| v116 | 7 new SEO landing pages (3 speaker booking + 3 niche speaker + 1 informational awareness); netlify.toml with clean URL redirects for all pages; sitemap.xml updated; official keynote descriptions and credentials from speaking.html and about.html applied across all pages; contact/accessibility/privacy/blog/404/thank-you truncation and nav fixes; netlify.toml domain redirect loop fixed; second laptop Git setup documented; iOS logo fix identified |
