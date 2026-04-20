@@ -64,6 +64,26 @@
   status = 301
 
 [[redirects]]
+  from   = "/rare-disease-speaker.html"
+  to     = "/rare-disease-speaker"
+  status = 301
+
+[[redirects]]
+  from   = "/workplace-inclusion-speaker.html"
+  to     = "/workplace-inclusion-speaker"
+  status = 301
+
+[[redirects]]
+  from   = "/invisible-disabilities-awareness.html"
+  to     = "/invisible-disabilities-awareness"
+  status = 301
+
+[[redirects]]
+  from   = "/disability-pride-month-speaker.html"
+  to     = "/disability-pride-month-speaker"
+  status = 301
+
+[[redirects]]
   from   = "/disability-keynote-speaker.html"
   to     = "/disability-keynote-speaker"
   status = 301
