@@ -64,6 +64,11 @@
   status = 301
 
 [[redirects]]
+  from   = "/disability-keynote-speaker.html"
+  to     = "/disability-keynote-speaker"
+  status = 301
+
+[[redirects]]
   from   = "/invisible-disability-speaker.html"
   to     = "/invisible-disability-speaker"
   status = 301
