@@ -75,8 +75,11 @@
       background: var(--teal);
       padding: 0.6rem 1rem;
       text-align: center;
-      position: relative;
-      z-index: 1000;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1001;
     }
     .walk-banner__inner {
       display: flex;
@@ -110,6 +113,9 @@
     }
     .walk-banner__close:hover { color: var(--white); }
     .walk-banner.hidden { display: none; }
+    /* Shift nav down when banner is visible */
+    body.has-banner .nav { top: 38px; }
+    body.has-banner .hero-full { padding-top: 38px; }
   </style>
   <link rel="preload" href="assets/photos/lauren-pires-hero.png" as="image" type="image/png">
 
@@ -701,10 +707,13 @@
       const dismissed = sessionStorage.getItem('walkBannerDismissed');
       if (new Date() > expiry || dismissed) {
         banner.classList.add('hidden');
+      } else {
+        document.body.classList.add('has-banner');
       }
       if (closeBtn) {
         closeBtn.addEventListener('click', () => {
           banner.classList.add('hidden');
+          document.body.classList.remove('has-banner');
           sessionStorage.setItem('walkBannerDismissed', '1');
         });
       }
