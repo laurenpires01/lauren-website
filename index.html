@@ -70,6 +70,46 @@
       .hero-full__content { padding-top: 38% !important; }
       .hero__tagline { display: none !important; }
     }
+    /* Walk & Roll banner */
+    .walk-banner {
+      background: var(--teal);
+      padding: 0.6rem 1rem;
+      text-align: center;
+      position: relative;
+      z-index: 1000;
+    }
+    .walk-banner__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .walk-banner__text {
+      font-size: 0.85rem;
+      color: var(--white);
+      font-weight: 500;
+    }
+    .walk-banner__text a {
+      color: var(--white);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .walk-banner__text a:hover { opacity: 0.85; }
+    .walk-banner__close {
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      cursor: pointer;
+      padding: 0.2rem 0.4rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .walk-banner__close:hover { color: var(--white); }
+    .walk-banner.hidden { display: none; }
   </style>
   <link rel="preload" href="assets/photos/lauren-pires-hero.png" as="image" type="image/png">
 
@@ -127,6 +167,14 @@
   </script>
 </head>
 <body>
+
+  <!-- Walk & Roll announcement banner — expires May 26, 2026 -->
+  <div class="walk-banner" id="walkBanner">
+    <div class="walk-banner__inner">
+      <span class="walk-banner__text">🦽 Lauren is walking for Muscular Dystrophy Canada on May 24. <a href="https://muscle.akaraisin.com/ui/WalkRollMDC26/p/laurenpires" target="_blank" rel="noopener">Donate to The Yay Team →</a></span>
+      <button class="walk-banner__close" id="walkBannerClose" aria-label="Close banner">✕</button>
+    </div>
+  </div>
 
   <!-- Navigation -->
   <nav class="nav">
@@ -644,6 +692,24 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     // Mobile nav toggle
+    // Walk & Roll banner — expires May 26 2026, dismissible per session
+    (function() {
+      const banner = document.getElementById('walkBanner');
+      const closeBtn = document.getElementById('walkBannerClose');
+      if (!banner) return;
+      const expiry = new Date('2026-05-26T23:59:59');
+      const dismissed = sessionStorage.getItem('walkBannerDismissed');
+      if (new Date() > expiry || dismissed) {
+        banner.classList.add('hidden');
+      }
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          banner.classList.add('hidden');
+          sessionStorage.setItem('walkBannerDismissed', '1');
+        });
+      }
+    })();
+
     const toggle = document.querySelector('.nav__toggle');
     const navLinks = document.querySelector('.nav__links');
     if (toggle && navLinks) {
