@@ -9,6 +9,16 @@
 
 # ---- Clean URLs: strip .html extension ----
 [[redirects]]
+  from   = "/walk"
+  to     = "/walk.html"
+  status = 200
+
+[[redirects]]
+  from   = "/walk.html"
+  to     = "/walk"
+  status = 301
+
+[[redirects]]
   from   = "/index.html"
   to     = "/"
   status = 301

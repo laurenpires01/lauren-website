@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EY0YQH5DC2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EY0YQH5DC2');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicons/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/favicons/site.webmanifest">
+  <meta name="theme-color" content="#10524F">
+  <title>Walk & Roll for Muscular Dystrophy Canada | Lauren Pires – The Yay Team</title>
+  <meta name="description" content="Lauren Pires is walking for Muscular Dystrophy Canada on May 24 at Ashbridges Bay Park in Toronto. She lives with Central Core Disease, a rare neuromuscular condition. Join The Yay Team or donate today.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.laurensaysyay.com/walk">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Walk & Roll for MDC | Lauren Pires – The Yay Team">
+  <meta property="og:description" content="Lauren Pires is walking for Muscular Dystrophy Canada on May 24 at Ashbridges Bay Park. She lives with Central Core Disease. Donate to The Yay Team.">
+  <meta property="og:url" content="https://www.laurensaysyay.com/walk">
+  <meta property="og:image" content="https://www.laurensaysyay.com/assets/og/og-about.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Lauren Pires | Invisible Disability Speaker">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Walk & Roll for MDC | Lauren Pires – The Yay Team">
+  <meta name="twitter:description" content="Lauren Pires is walking for Muscular Dystrophy Canada on May 24. Donate to The Yay Team.">
+  <meta name="twitter:image" content="https://www.laurensaysyay.com/assets/og/og-about.webp">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .walk-hero {
+      padding-top: 80px;
+      background: linear-gradient(rgba(16,82,79,0.6), rgba(90,45,130,0.55)), url(assets/photos/lauren-pires-hero.png) center top/cover no-repeat;
+      color: var(--white);
+    }
+    .walk-hero__inner { padding: 5rem 0 4.5rem; max-width: 680px; }
+    .walk-hero__event {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 100px;
+      padding: 0.35rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 1.5rem;
+    }
+    .walk-hero__heading {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      line-height: 1.05;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+    .walk-hero__heading span { color: #7de8e2; }
+    .walk-hero__body {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.85;
+      max-width: 540px;
+      margin-bottom: 2rem;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.3);
+    }
+    .walk-hero__btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .walk-hero__details {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .walk-hero__detail { display: flex; flex-direction: column; gap: 0.2rem; }
+    .walk-hero__detail-label { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    .walk-hero__detail-value { font-family: var(--font-display); font-size: 1rem; color: var(--white); }
+
+    /* Progress bar */
+    .progress-section { background: var(--teal); padding: 2.5rem 0; }
+    .progress-inner { display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; }
+    .progress-goal { flex-shrink: 0; }
+    .progress-goal__amount { font-family: var(--font-display); font-size: 2.5rem; color: var(--white); line-height: 1; }
+    .progress-goal__label { font-size: 0.75rem; color: rgba(255,255,255,0.6); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.3rem; }
+    .progress-bar-wrap { flex: 1; min-width: 200px; }
+    .progress-bar-bg { background: rgba(255,255,255,0.2); border-radius: 100px; height: 12px; }
+    .progress-bar-fill { background: #7de8e2; border-radius: 100px; height: 12px; width: 60%; }
+    .progress-bar-label { font-size: 0.8rem; color: rgba(255,255,255,0.7); margin-top: 0.5rem; }
+    .progress-cta { flex-shrink: 0; }
+
+    /* Story */
+    .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .story__heading { font-family: var(--font-display); font-size: clamp(2rem,3.5vw,2.8rem); line-height: 1.15; color: var(--plum); margin-bottom: 1.25rem; }
+    .story__body { font-size: 0.98rem; color: var(--charcoal); line-height: 1.85; margin-bottom: 1.25rem; }
+    .story-aside { background: var(--plum); border-radius: 12px; padding: 2.5rem; color: var(--white); }
+    .story-aside__label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #c9a6e8; margin-bottom: 1.5rem; display: block; }
+    .story-aside__stat { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .story-aside__stat:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .story-aside__num { font-family: var(--font-display); font-size: 2rem; color: #c9a6e8; line-height: 1; }
+    .story-aside__text { font-size: 0.82rem; color: rgba(255,255,255,0.65); margin-top: 0.3rem; line-height: 1.5; }
+
+    /* MDC section */
+    .mdc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 2.5rem; }
+    .mdc-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 2rem; }
+    .mdc-card__icon { font-size: 1.75rem; margin-bottom: 1rem; }
+    .mdc-card__title { font-family: var(--font-display); font-size: 1.15rem; color: var(--teal); margin-bottom: 0.5rem; }
+    .mdc-card__body { font-size: 0.88rem; color: var(--text-light); line-height: 1.75; }
+
+    /* CTA */
+    .donate-cta {
+      background: var(--plum);
+      border-radius: 12px;
+      padding: 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+    .donate-cta::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      border: 1px solid rgba(201,166,232,0.15);
+    }
+    .donate-cta__label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 0.75rem; display: block; }
+    .donate-cta__heading { font-family: var(--font-display); font-size: clamp(1.8rem,3vw,2.5rem); color: var(--white); margin-bottom: 1rem; line-height: 1.15; position: relative; }
+    .donate-cta__body { font-size: 0.95rem; color: rgba(255,255,255,0.75); max-width: 480px; margin: 0 auto 2rem; line-height: 1.8; position: relative; }
+    .donate-cta__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; }
+
+    @media (max-width: 900px) {
+      .story-grid, .mdc-grid { grid-template-columns: 1fr; }
+      .progress-inner { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+    }
+    @media (max-width: 600px) {
+      .walk-hero__details { gap: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="assets/logo.svg" alt="Lauren Pires – Invisible Disability Speaker"></a>
+      <div class="nav__links">
+        <a href="about.html" class="nav__link">About</a>
+        <a href="speaking.html" class="nav__link">Speaking</a>
+        <a href="media.html" class="nav__link">Media</a>
+        <a href="lightupforrare.html" class="nav__link">Advocacy</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="testimonials.html" class="nav__link">Testimonials</a>
+        <a href="contact.html" class="nav__cta">Contact Lauren</a>
+        <div class="nav__social">
+          <a href="https://www.instagram.com/laurensaysyay" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://www.youtube.com/@laurensaysyay" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="https://www.linkedin.com/in/laurensaysyay" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
+      </div>
+      <button class="nav__toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- Hero -->
+  <section class="walk-hero">
+    <div class="container">
+      <div class="walk-hero__inner fade-in">
+        <div class="walk-hero__event">🦽 Muscular Dystrophy Canada · Walk &amp; Roll 2026</div>
+        <h1 class="walk-hero__heading">Join <span>The Yay Team</span> on May 24</h1>
+        <p class="walk-hero__body">Lauren Pires was born with Central Core Disease, a rare neuromuscular disorder. She has about 33% of the physical strength of the average person. On May 24, she is walking at Ashbridges Bay Park in Toronto as the Walk Champion for Muscular Dystrophy Canada. Every dollar raised goes directly to supporting Canadians living with neuromuscular conditions.</p>
+        <div class="walk-hero__btns">
+          <a href="https://muscle.akaraisin.com/ui/WalkRollMDC26/p/laurenpires" target="_blank" rel="noopener" class="btn btn--white btn--lg">Donate to The Yay Team</a>
+          <a href="#why" class="btn btn--outline-white btn--lg">Why This Walk Matters</a>
+        </div>
+        <div class="walk-hero__details">
+          <div class="walk-hero__detail">
+            <span class="walk-hero__detail-label">Date</span>
+            <span class="walk-hero__detail-value">May 24, 2026</span>
+          </div>
+          <div class="walk-hero__detail">
+            <span class="walk-hero__detail-label">Location</span>
+            <span class="walk-hero__detail-value">Ashbridges Bay Park, Toronto</span>
+          </div>
+          <div class="walk-hero__detail">
+            <span class="walk-hero__detail-label">Team</span>
+            <span class="walk-hero__detail-value">The Yay Team</span>
+          </div>
+          <div class="walk-hero__detail">
+            <span class="walk-hero__detail-label">Goal</span>
+            <span class="walk-hero__detail-value">$2,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Progress bar -->
+  <section class="progress-section">
+    <div class="container">
+      <div class="progress-inner">
+        <div class="progress-goal">
+          <div class="progress-goal__amount">$2,000</div>
+          <div class="progress-goal__label">Fundraising Goal</div>
+        </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-bg"><div class="progress-bar-fill"></div></div>
+          <div class="progress-bar-label">Help Lauren reach her goal before May 24</div>
+        </div>
+        <div class="progress-cta">
+          <a href="https://muscle.akaraisin.com/ui/WalkRollMDC26/p/laurenpires" target="_blank" rel="noopener" class="btn btn--white">Donate Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lauren's story -->
+  <section class="section" id="why">
+    <div class="container">
+      <div class="story-grid">
+        <div>
+          <p class="section-label fade-in">Why Lauren is Walking</p>
+          <h2 class="story__heading fade-in">This one is personal</h2>
+          <p class="story__body fade-in">Central Core Disease is a rare neuromuscular condition that affects the muscles. It is part of the same family of disorders that Muscular Dystrophy Canada supports. Lauren has lived with it her entire life, though she wasn't formally diagnosed until she was 21.</p>
+          <p class="story__body fade-in">For over 30 years, she hid it. She never talked about the fatigue, the body pain, or the quiet calculations she made every single day about how to spend the physical energy she had. Hiding it took more out of her than the condition itself.</p>
+          <p class="story__body fade-in">Walking for MDC is a way of walking toward everything she used to hide from. The Yay Team is named after the Daily Yay — Lauren's practice of finding small moments of joy that make it possible to carry the harder things. Your donation helps fund research, community programs, and support services for Canadians living with neuromuscular conditions like hers.</p>
+          <p class="story__body fade-in">Danielle Campo McLeod, Paralympic gold medalist and MDC's National Ambassador, recommended Lauren for the Toronto Walk Champion role. Lauren is walking in that spirit: with gratitude, and with her whole 33%.</p>
+          <a href="https://muscle.akaraisin.com/ui/WalkRollMDC26/p/laurenpires" target="_blank" rel="noopener" class="btn btn--primary fade-in" style="margin-top: 0.5rem;">Donate to The Yay Team</a>
+        </div>
+        <div class="story-aside fade-in">
+          <span class="story-aside__label">About Lauren's Condition</span>
+          <div class="story-aside__stat">
+            <div class="story-aside__num">33%</div>
+            <div class="story-aside__text">of average physical strength. Not 33% less. Just 33%. Central Core Disease affects muscle fiber development, limiting strength and endurance.</div>
+          </div>
+          <div class="story-aside__stat">
+            <div class="story-aside__num">30+</div>
+            <div class="story-aside__text">years Lauren spent hiding her diagnosis before speaking publicly about it. She was born with CCD and not formally diagnosed until age 21.</div>
+          </div>
+          <div class="story-aside__stat">
+            <div class="story-aside__num">1,500</div>
+            <div class="story-aside__text">people in the global Central Core Disease community. Lauren connects with many of them through her advocacy work.</div>
+          </div>
+          <div class="story-aside__stat">
+            <div class="story-aside__num">$5K+</div>
+            <div class="story-aside__text">raised for the Invisible Disabilities Association. Fundraising for organizations that support her community is core to who Lauren is.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What MDC does -->
+  <section class="section section--alt">
+    <div class="container">
+      <p class="section-label fade-in">About Muscular Dystrophy Canada</p>
+      <h2 class="section__title fade-in">Where your donation goes</h2>
+      <p class="section__subtitle fade-in" style="margin-top: 0.75rem;">Muscular Dystrophy Canada supports Canadians living with over 150 neuromuscular conditions, including muscular dystrophy, ALS, and rare disorders like Lauren's Central Core Disease.</p>
+      <div class="mdc-grid">
+        <div class="mdc-card fade-in">
+          <div class="mdc-card__icon">🔬</div>
+          <h3 class="mdc-card__title">Research funding</h3>
+          <p class="mdc-card__body">MDC funds research into treatments and cures for neuromuscular conditions. Central Core Disease currently has no cure. Research is the path to changing that.</p>
+        </div>
+        <div class="mdc-card fade-in">
+          <div class="mdc-card__icon">🤝</div>
+          <h3 class="mdc-card__title">Community support</h3>
+          <p class="mdc-card__body">MDC provides equipment loans, peer support programs, and connections to the broader neuromuscular community for Canadians who are often navigating their conditions without anyone nearby who shares them.</p>
+        </div>
+        <div class="mdc-card fade-in">
+          <div class="mdc-card__icon">📣</div>
+          <h3 class="mdc-card__title">Advocacy</h3>
+          <p class="mdc-card__body">MDC advocates for accessible healthcare, government support, and policies that improve the lives of people with neuromuscular conditions across Canada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="donate-cta fade-in">
+        <span class="donate-cta__label">Walk &amp; Roll · May 24 · Toronto</span>
+        <h2 class="donate-cta__heading">Every donation moves us forward</h2>
+        <p class="donate-cta__body">Lauren is walking at Ashbridges Bay Park on May 24 with The Yay Team. If you can't be there, donating is the next best thing. Any amount helps, and 100% goes to Muscular Dystrophy Canada.</p>
+        <div class="donate-cta__btns">
+          <a href="https://muscle.akaraisin.com/ui/WalkRollMDC26/p/laurenpires" target="_blank" rel="noopener" class="btn btn--white btn--lg">Donate to The Yay Team</a>
+          <a href="about.html" class="btn btn--outline-white btn--lg">About Lauren</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand"><img src="assets/logo.svg" alt="Lauren Pires"></div>
+      <div class="footer__links">
+        <a href="index.html" class="footer__link">Home</a>
+        <a href="about.html" class="footer__link">About</a>
+        <a href="speaking.html" class="footer__link">Speaking</a>
+        <a href="media.html" class="footer__link">Media</a>
+        <a href="lightupforrare.html" class="footer__link">Advocacy</a>
+        <a href="blog.html" class="footer__link">Blog</a>
+        <a href="testimonials.html" class="footer__link">Testimonials</a>
+        <a href="contact.html" class="footer__link">Contact</a>
+      </div>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/laurensaysyay" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="https://www.youtube.com/@laurensaysyay" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://www.linkedin.com/in/laurensaysyay" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      </div>
+      <p class="footer__text">&copy; 2026 Lauren Pires. All rights reserved.</p>
+      <p class="footer__text" style="margin-top: 0.5rem; font-size: 0.75rem;"><a href="privacy.html" style="color: rgba(255,255,255,0.7);">Privacy Policy</a> &nbsp;·&nbsp; <a href="accessibility.html" style="color: rgba(255,255,255,0.7);">Accessibility</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    const toggle = document.querySelector('.nav__toggle');
+    const navLinks = document.querySelector('.nav__links');
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', () => { navLinks.classList.toggle('open'); toggle.classList.toggle('open'); });
+      navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('open'); toggle.classList.remove('open'); }); });
+    }
+  </script>
+</body>
+</html>
