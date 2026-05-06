@@ -19,6 +19,11 @@
   status = 301
 
 [[redirects]]
+  from   = "/advocacy.html"
+  to     = "/advocacy"
+  status = 301
+
+[[redirects]]
   from   = "/index.html"
   to     = "/"
   status = 301
