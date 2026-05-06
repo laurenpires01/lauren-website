@@ -529,9 +529,14 @@ ul { list-style: none; }
 .hero__description {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--charcoal);
+  color: rgba(255,255,255,0.9);
   margin-bottom: 2rem;
   max-width: 520px;
+  background: rgba(10,10,20,0.52);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
 }
 
 .hero__actions {
