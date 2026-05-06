@@ -35,9 +35,13 @@
   <meta name="twitter:image" content="https://www.laurensaysyay.com/assets/og/og-about.webp">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Walk hero uses about-hero class — styles come from styles.css */
+    /* Walk hero — about-hero class wide screen */
     @media (min-width: 1200px) {
       .about-hero { background-size: auto, auto 100% !important; }
+    }
+    /* Walk hero — shift image left on mobile so Lauren on stage is visible */
+    @media (max-width: 900px) {
+      .about-hero { background-position: 25% 40% !important; }
     }
 
     /* Progress bar */
