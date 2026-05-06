@@ -114,8 +114,12 @@
     .walk-banner__close:hover { color: var(--white); }
     .walk-banner.hidden { display: none; }
     /* Shift nav down when banner is visible */
-    body.has-banner .nav { top: 38px; }
-    body.has-banner .hero-full { padding-top: 38px; }
+    body.has-banner .nav { top: var(--banner-h, 38px); }
+    body.has-banner .hero-full { padding-top: var(--banner-h, 38px); }
+    @media (max-width: 768px) {
+      body.has-banner .nav { top: 62px; }
+      body.has-banner .hero-full { padding-top: 62px; }
+    }
   </style>
   <link rel="preload" href="assets/photos/lauren-pires-hero.png" as="image" type="image/png">
 
@@ -709,11 +713,17 @@
         banner.classList.add('hidden');
       } else {
         document.body.classList.add('has-banner');
+        const setHeight = () => {
+          document.documentElement.style.setProperty('--banner-h', banner.offsetHeight + 'px');
+        };
+        setHeight();
+        window.addEventListener('resize', setHeight);
       }
       if (closeBtn) {
         closeBtn.addEventListener('click', () => {
           banner.classList.add('hidden');
           document.body.classList.remove('has-banner');
+          document.documentElement.style.removeProperty('--banner-h');
           sessionStorage.setItem('walkBannerDismissed', '1');
         });
       }
