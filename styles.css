@@ -532,6 +532,7 @@ ul { list-style: none; }
   color: rgba(255,255,255,0.9);
   margin-bottom: 2rem;
   max-width: 520px;
+  display: inline-block;
   background: rgba(10,10,20,0.52);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
