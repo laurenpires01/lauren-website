@@ -35,55 +35,10 @@
   <meta name="twitter:image" content="https://www.laurensaysyay.com/assets/og/og-about.webp">
   <link rel="stylesheet" href="styles.css">
   <style>
-    .walk-hero {
-      padding-top: 80px;
-      background: linear-gradient(rgba(16,82,79,0.6), rgba(90,45,130,0.55)), url(assets/photos/lauren-pires-hero.png) center top/cover no-repeat;
-      color: var(--white);
+    /* Walk hero uses about-hero class — styles come from styles.css */
+    @media (min-width: 1200px) {
+      .about-hero { background-size: auto, auto 100% !important; }
     }
-    .walk-hero__inner { padding: 5rem 0 4.5rem; max-width: 680px; }
-    .walk-hero__event {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 100px;
-      padding: 0.35rem 1rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.9);
-      margin-bottom: 1.5rem;
-    }
-    .walk-hero__heading {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-      line-height: 1.05;
-      color: var(--white);
-      margin-bottom: 1.25rem;
-      text-shadow: 0 2px 12px rgba(0,0,0,0.4);
-    }
-    .walk-hero__heading span { color: #7de8e2; }
-    .walk-hero__body {
-      font-size: 1.05rem;
-      color: rgba(255,255,255,0.85);
-      line-height: 1.85;
-      max-width: 540px;
-      margin-bottom: 2rem;
-      text-shadow: 0 1px 6px rgba(0,0,0,0.3);
-    }
-    .walk-hero__btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
-    .walk-hero__details {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.15);
-    }
-    .walk-hero__detail { display: flex; flex-direction: column; gap: 0.2rem; }
-    .walk-hero__detail-label { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
-    .walk-hero__detail-value { font-family: var(--font-display); font-size: 1rem; color: var(--white); }
 
     /* Progress bar */
     .progress-section { background: var(--teal); padding: 2.5rem 0; }
@@ -173,33 +128,21 @@
   <main>
 
   <!-- Hero -->
-  <section class="walk-hero">
+  <section class="about-hero" style="background-image: linear-gradient(rgba(16,82,79,0.6), rgba(90,45,130,0.55)), url(assets/photos/lauren-pires-hero.png); background-position: center top; background-size: cover; background-repeat: no-repeat; background-color: #0c0608;">
     <div class="container">
-      <div class="walk-hero__inner fade-in">
-        <div class="walk-hero__event">🦽 Muscular Dystrophy Canada · Walk &amp; Roll 2026</div>
-        <h1 class="walk-hero__heading">"Time is <span>muscle.</span>"</h1>
-        <p class="walk-hero__body">When treatments for neuromuscular disorders aren't available in Canada until years after they're accessible in the US and Europe, patients lose muscle function while they wait. Lauren Pires is walking on May 24 to help change that, and to finally walk a 5K surrounded by people who share her journey for the very first time.</p>
-        <div class="walk-hero__btns">
+      <div class="section__header fade-in">
+        <p class="section-label" style="color: rgba(255,255,255,0.8);">🦽 Muscular Dystrophy Canada · Walk &amp; Roll 2026</p>
+        <h1 class="section__title" style="font-size: clamp(2.5rem, 4.5vw, 3.5rem); color: var(--white);">"Time is muscle."</h1>
+        <p class="section__subtitle" style="max-width: 600px; color: rgba(255,255,255,0.9);">When treatments for neuromuscular disorders aren't available in Canada until years after they're accessible in the US and Europe, patients lose muscle function while they wait. Lauren Pires is walking on May 24 to help change that, and to finally walk a 5K surrounded by people who share her journey for the very first time.</p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
           <a href="https://muscle.akaraisin.com/ui/WalkRollMDC26/p/laurenpires" target="_blank" rel="noopener" class="btn btn--white btn--lg">Donate to The Yay Team</a>
           <a href="#why" class="btn btn--outline-white btn--lg">Why This Walk Matters</a>
         </div>
-        <div class="walk-hero__details">
-          <div class="walk-hero__detail">
-            <span class="walk-hero__detail-label">Date</span>
-            <span class="walk-hero__detail-value">May 24, 2026</span>
-          </div>
-          <div class="walk-hero__detail">
-            <span class="walk-hero__detail-label">Location</span>
-            <span class="walk-hero__detail-value">Ashbridges Bay Park, Toronto</span>
-          </div>
-          <div class="walk-hero__detail">
-            <span class="walk-hero__detail-label">Team</span>
-            <span class="walk-hero__detail-value">The Yay Team</span>
-          </div>
-          <div class="walk-hero__detail">
-            <span class="walk-hero__detail-label">Lauren's Goal</span>
-            <span class="walk-hero__detail-value">$2,000</span>
-          </div>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap; padding-top: 2rem; margin-top: 1rem; border-top: 1px solid rgba(255,255,255,0.15);">
+          <div><div style="font-family: var(--font-display); font-size: 1rem; color: var(--white);">May 24, 2026</div><div style="font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5);">Date</div></div>
+          <div><div style="font-family: var(--font-display); font-size: 1rem; color: var(--white);">Ashbridges Bay Park, Toronto</div><div style="font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5);">Location</div></div>
+          <div><div style="font-family: var(--font-display); font-size: 1rem; color: var(--white);">The Yay Team</div><div style="font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5);">Team</div></div>
+          <div><div style="font-family: var(--font-display); font-size: 1rem; color: var(--white);">$2,000</div><div style="font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5);">Lauren's Goal</div></div>
         </div>
       </div>
     </div>
