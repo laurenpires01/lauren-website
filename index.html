@@ -62,8 +62,8 @@
       text-shadow: none;
     }
     .hero-full { background-image: url(assets/photos/lauren-pires-hero.png) !important; background-position: center top !important; background-size: cover !important; background-repeat: no-repeat !important; }
-    @media (min-width: 1600px) {
-      .hero-full { background-size: cover !important; background-position: center top !important; }
+    @media (min-width: 1400px) {
+      .hero-full { background-position: 60% top !important; background-size: 75% auto !important; }
     }
     @media (max-width: 768px) {
       .hero-full { background-image: url(assets/photos/lauren-pires-hero-mobile.png) !important; background-position: top center !important; }
@@ -115,7 +115,6 @@
     .walk-banner.hidden { display: none; }
     /* Shift nav down when banner is visible */
     body.has-banner .nav { top: var(--banner-h, 38px); }
-    body.has-banner .hero-full { padding-top: var(--banner-h, 38px); }
     @media (max-width: 768px) {
       body.has-banner .nav { top: 62px; }
       body.has-banner .hero-full { padding-top: 62px; }
