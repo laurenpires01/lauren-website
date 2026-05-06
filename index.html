@@ -66,9 +66,17 @@
       .hero-full { background-position: 60% top !important; background-size: 75% auto !important; }
     }
     @media (max-width: 768px) {
-      .hero-full { background-image: url(assets/photos/lauren-pires-hero-mobile.png) !important; background-position: top center !important; }
-      .hero-full__content { padding-top: 38% !important; }
+      .hero-full { background-image: url(assets/photos/lauren-pires-hero-mobile.png) !important; background-position: center 8% !important; background-size: cover !important; }
+      .hero-full__content { padding-top: 52% !important; }
       .hero__tagline { display: none !important; }
+      .hero__description {
+        background: rgba(10,10,20,0.52);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        border-radius: 8px;
+        padding: 0.85rem 1rem !important;
+        margin-bottom: 1.5rem;
+      }
     }
     /* Walk & Roll banner */
     .walk-banner {
