@@ -1,7 +1,7 @@
 # Lauren Pires Website & PR Project Reference
 
-**Last updated:** April 20, 2026
-**Latest site version:** v116
+**Last updated:** May 5, 2026
+**Latest site version:** v117
 **Live URL:** https://www.laurensaysyay.com
 **Hosted on:** Netlify
 **Domain registrar:** GoDaddy
@@ -501,6 +501,71 @@ All pages follow the same structure: hero with Lauren's photo, breadcrumb, intro
 
 ---
 
+## v117 — Walk & Roll, Advocacy Hub, Hero Fixes (May 5, 2026)
+
+### New Pages
+
+**`walk.html`** — MDC Walk & Roll fundraising landing page
+- URL: `laurensaysyay.com/walk`
+- Hero uses `about-hero` class with `archangel-hero.webp` at `center 40%/cover`
+- Wide screen fix: `auto 100%` at 1200px+ so image doesn't zoom in
+- Mobile: uses styles.css default `70% 40%` position (matches about page)
+- Content: "Time is muscle." headline, full story from Lauren's Facebook post, MDC stats ($80K Toronto goal, $1.2M national), What About Canada? campaign card, detail strip (date, location, team, goal)
+- Two CTAs: Donate (personal page) + Join The Yay Team (team registration link)
+- OG image: `lauren-pires-hero.png` (PNG for WhatsApp compatibility)
+- Expires: walk banner auto-hides May 26 2026
+
+**`advocacy.html`** — Advocacy hub page replacing direct nav link to lightupforrare.html
+- URL: `laurensaysyay.com/advocacy`
+- No hero — goes straight to two campaign cards
+- Walk & Roll card (teal) first, #LightUpForRare (plum) second
+- IDA Ambassador section at bottom
+- All pages nav updated: Advocacy → `advocacy.html` (was `lightupforrare.html`)
+
+### Walk & Roll Banner (index.html)
+- Teal announcement bar fixed above nav: "🦽 Lauren is walking for Muscular Dystrophy Canada on May 24. Donate to The Yay Team →"
+- `position: fixed` at top, nav shifts down via `--banner-h` CSS variable measured dynamically in JS
+- Dismissible per session (sessionStorage)
+- Auto-expires May 26, 2026 at 23:59:59
+- `has-banner` class added/removed from body on show/dismiss
+
+### Advocacy Nav Dropdown — Removed
+- Dropdown was causing mobile nav issues
+- Replaced with plain `<a href="advocacy.html">Advocacy</a>` link site-wide
+- All dropdown CSS and JS removed from styles.css and index.html
+
+### Hero Fixes (index.html + styles.css)
+- `hero__description` now has dark semi-transparent backdrop (`rgba(10,10,20,0.52)`) with `display: inline-block` so box wraps text tightly
+- Backdrop-filter blur removed (was blurring Lauren's photo behind the box)
+- Desktop hero: `background-size: auto 100%` at 1200px+ so portrait image shows without cropping, with `#0c0608` dark background on sides
+- Mobile hero: `background-position: center 8%`, content `padding-top: 52%`, title `4rem !important`
+- Text colour on description changed to `rgba(255,255,255,0.9)` for readability on dark backdrop
+
+### VideoObject Schema Fix (index.html)
+- `uploadDate` corrected to `2025-09-23T00:00:00+00:00` (actual speaker reel upload date)
+- Format fixed to full ISO 8601 with timezone — resolves two Google Search Console warnings
+
+### Writing Rule Fixes
+- Em dashes removed from `advocacy.html` and `walk.html`
+- No parallel structures or "it's not X, it's Y" constructions in new pages
+
+### sitemap.xml Updates
+- `/walk` added (priority 0.8, changefreq weekly)
+- `/advocacy` added (priority 0.8, changefreq monthly)
+
+### netlify.toml Updates
+- `/walk` → serves `walk.html` (status 200 clean URL)
+- `/walk.html` → `/walk` (301 redirect)
+- `/advocacy.html` → `/advocacy` (301 redirect)
+
+### Key Rules Reinforced
+- All files uploaded from live site are Cloudflare-processed (truncated scripts, obfuscated emails) — always use local Git folder files
+- WhatsApp OG previews require JPG/PNG, not WebP
+- Hero portrait image on wide screens: use `auto 100%` not `cover` to prevent zoom; `background-color: #0c0608` fills sides
+- Walk banner uses `sessionStorage` (not localStorage or cookies)
+
+---
+
 ## Version History Highlights
 
 | Version | Key Changes |
@@ -516,7 +581,8 @@ All pages follow the same structure: hero with Lauren's photo, breadcrumb, intro
 | v110 | Removed TBC Campbellford entry |
 | v111 | Full file reorganization — assets into subfolders, favicons folder |
 | v112 | Added Campbellford Clock Tower, updated to 26 landmarks / 18 cities |
-| v113 | Full media logo overhaul (new PNG filenames, colour display, no-fade carousels, mobile double rows); homepage new hero images (desktop + mobile) with responsive breakpoints; "Daily Yay." shimmer animation; As Seen On and Past Clients sections made prominent with headings, subtitles, and white backgrounds; speaking page new hero image + keynote #04 added; media page 5 new articles added; VideoObject schema thumbnailUrl updated for Google Search; Seeking Strength keynote card image updated to stage-resilience.webp |
-| v114 | New testimonials.html page (10 testimonials, 3 filter categories, added to sitemap); Testimonials added to nav + footer site-wide; Samsung overflow fix in styles.css; footer mobile wrap fix in styles.css; Cloudflare truncation fixed on contact/accessibility/privacy pages; redundant Contact nav link removed from all pages; obfuscated emails restored or redirected to contact page |
-| v115 | 11 new blog posts added (Feb 2 – Apr 9, 2026); blog.html and sitemap.xml updated; new blog image format is .jpg; all new posts include Testimonials in nav and footer; CORD URL corrected to raredisorders.ca |
-| v116 | 7 new SEO landing pages (3 speaker booking + 3 niche speaker + 1 informational awareness); netlify.toml with clean URL redirects for all pages; sitemap.xml updated; official keynote descriptions and credentials from speaking.html and about.html applied across all pages; contact/accessibility/privacy/blog/404/thank-you truncation and nav fixes; netlify.toml domain redirect loop fixed; second laptop Git setup documented; iOS logo fix identified |
+| v113 | Full media logo overhaul; new hero images; "Daily Yay." shimmer; As Seen On + Past Clients sections; speaking page new hero + keynote #04; media page 5 new articles; VideoObject schema thumbnailUrl updated |
+| v114 | New testimonials.html page; Testimonials in nav/footer site-wide; Samsung overflow fix; Cloudflare truncation fixes; redundant Contact nav links removed |
+| v115 | 11 new blog posts (Feb 2–Apr 9, 2026); blog.html and sitemap updated |
+| v116 | 7 new SEO landing pages; netlify.toml clean URL redirects; sitemap updated; official keynote descriptions applied; contact/accessibility/privacy/blog/404/thank-you fixes; netlify.toml redirect loop fixed |
+| v117 | walk.html + advocacy.html new pages; MDC Walk & Roll banner on index; Advocacy nav dropdown removed; hero backdrop on description; wide screen image fix; VideoObject uploadDate corrected; em dash fixes |
