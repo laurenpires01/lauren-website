@@ -586,3 +586,38 @@ All pages follow the same structure: hero with Lauren's photo, breadcrumb, intro
 | v115 | 11 new blog posts (Feb 2–Apr 9, 2026); blog.html and sitemap updated |
 | v116 | 7 new SEO landing pages; netlify.toml clean URL redirects; sitemap updated; official keynote descriptions applied; contact/accessibility/privacy/blog/404/thank-you fixes; netlify.toml redirect loop fixed |
 | v117 | walk.html + advocacy.html new pages; MDC Walk & Roll banner on index; Advocacy nav dropdown removed; hero backdrop on description; wide screen image fix; VideoObject uploadDate corrected; em dash fixes |
+
+
+---
+
+## v118 — Eleventy Conversion (July 11, 2026)
+
+The site now builds with Eleventy. Header and footer live in ONE source file each instead of being duplicated on every page.
+
+### What changed
+- **package.json** ("type": "module") with @11ty/eleventy ^3.0.0 as a devDependency. `npm run build` / `npm run serve`.
+- **eleventy.config.js**: passthrough-copies assets/, favicons/, styles.css, robots.txt, sitemap.xml. htmlTemplateEngine "njk". Output to _site/.
+- **Pages keep their .html filenames** and are processed as Nunjucks templates. Eleventy outputs about.html as /about/index.html, so clean URLs (/about) are now real paths, not a Netlify rewrite.
+- **_includes/header.njk** and **_includes/footer.njk** are the single sources for nav and footer. 15 nav variants and 8 footer variants were found across the old pages and consolidated to one canonical version each: nav includes Testimonials, Advocacy points to /advocacy (the hub), logo alt is the long "Keynote Speaker on Resilience and Joy" form; footer includes the TEDx bio, topic links row, socials, and Privacy/Accessibility links.
+- **Front matter drives per-page variation**: navActive (about/speaking/media/advocacy/blog/testimonials) for current-section highlighting; navCta / navCtaHref override the nav button (defaults "Contact Lauren" -> /contact); footerMinimal: true suppresses the topics row, socials, and bio (used on thank-you.html only). 404.html carries permalink: /404.html so Netlify serves it.
+- **All internal links are root-absolute** (/about, /blog/slug, /assets/..., /styles.css?v=YYYYMMDD). Relative paths break at directory depth under Eleventy output.
+- **netlify.toml**: build command "npm install && npx @11ty/eleventy", publish "_site". 76 forced 301s from every old /page.html URL to its clean equivalent. CSS/JS cache is now max-age=300 must-revalidate (was 1 year immutable); the stylesheet link is version-stamped so cached devices recover on deploy.
+- **.eleventyignore** excludes *.md so this doc never builds as a public page.
+- Contact form action updated from /thank-you.html to /thank-you.
+
+### New-page workflow
+1. Create the page as pagename.html in the project root (or blog/ for posts).
+2. Start it with front matter:
+   ---
+   navActive: speaking
+   ---
+   (only if a nav section should highlight; add navCta/navCtaHref or footerMinimal: true if needed)
+3. Use {% raw %}{% include "header.njk" %}{% endraw %} where the nav goes and {% raw %}{% include "footer.njk" %}{% endraw %} where the footer goes. Never paste nav or footer markup into a page.
+4. Root-absolute links ONLY: /about, /blog/slug, /assets/photos/x.webp, /styles.css?v=YYYYMMDD.
+5. Add the page to sitemap.xml and, if replacing an old URL, add a forced 301 in netlify.toml.
+6. Run npx @11ty/eleventy locally and check _site/ before pushing.
+
+### Netlify dashboard follow-ups (one-time)
+- Disable the deprecated "Pretty URLs" asset-processing option if it is still on; clean URLs are now real directories.
+- Confirm the build picks up netlify.toml (build command and publish dir come from the file, overriding dashboard settings).
+- Netlify Forms: detection re-registers at deploy time; submit a test through the contact form after the first Eleventy deploy.

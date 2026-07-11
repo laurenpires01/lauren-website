@@ -1,3 +1,6 @@
+---
+navActive: blog
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +47,7 @@
   <meta name="twitter:title" content="Blog | Lauren Pires – Invisible Disability Speaker">
   <meta name="twitter:description" content="Stories and reflections on living with an invisible disability, building resilience through joy, and creating a more inclusive world.">
   <meta name="twitter:image" content="https://www.laurensaysyay.com/assets/og/og-blog.webp">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css?v=20260711">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -69,29 +72,7 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav__inner">
-      <a href="index.html" class="nav__logo">
-        <img src="assets/logo.svg" alt="Lauren Pires – Invisible Disability Speaker">
-      </a>
-      <div class="nav__links">
-        <a href="about.html" class="nav__link">About</a>
-        <a href="speaking.html" class="nav__link">Speaking</a>
-        <a href="media.html" class="nav__link">Media</a>
-        <a href="blog.html" class="nav__link nav__link--active">Blog</a>
-        <a href="testimonials.html" class="nav__link">Testimonials</a>
-        <a href="contact.html" class="nav__cta">Contact Lauren</a>
-      <div class="nav__social">
-        <a href="https://www.instagram.com/laurensaysyay" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-        <a href="https://www.youtube.com/@laurensaysyay" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
-        <a href="https://www.linkedin.com/in/laurensaysyay" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-      </div>
-      </div>
-      <button class="nav__toggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+  {% include "header.njk" %}
 
   <main>
 
@@ -105,7 +86,7 @@
           <p class="blog-intro__desc">Thoughts on disability, resilience, joy, and the everyday moments that shape how we show up in the world.</p>
         </div>
         <div class="blog-intro__image">
-          <img src="assets/photos/sitting-green.webp" alt="Lauren Pires, invisible disability speaker" loading="lazy">
+          <img src="/assets/photos/sitting-green.webp" alt="Lauren Pires, invisible disability speaker" loading="lazy">
         </div>
       </div>
     </div>
@@ -117,9 +98,9 @@
     <div class="container">
       <div class="blog-grid">
 
-        <a href="blog/speaking-event-rick-hansen-foundation-school-program-in-etobicoke.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/speaking-event-rick-hansen-foundation-school-program-in-etobicoke" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/rick-hansen-foundation-event-april-10.jpg" alt="" loading="lazy">
+            <img src="/assets/blog/rick-hansen-foundation-event-april-10.jpg" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">April 9, 2026</p>
@@ -128,9 +109,9 @@
           </div>
         </a>
 
-        <a href="blog/the-daily-yay-experiment-for-the-international-day-of-happiness.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/the-daily-yay-experiment-for-the-international-day-of-happiness" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/international-day-of-happiness-2026.jpg" alt="" loading="lazy">
+            <img src="/assets/blog/international-day-of-happiness-2026.jpg" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">March 20, 2026</p>
@@ -139,9 +120,9 @@
           </div>
         </a>
 
-        <a href="blog/the-first-tedx-talk-to-make-me-cry.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/the-first-tedx-talk-to-make-me-cry" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/first-tedx-to-make-me-cry.jpg" alt="" loading="lazy">
+            <img src="/assets/blog/first-tedx-to-make-me-cry.jpg" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">March 16, 2026</p>
@@ -150,9 +131,9 @@
           </div>
         </a>
 
-        <a href="blog/how-to-find-your-carrie.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/how-to-find-your-carrie" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/finding-your-carrie.jpg" alt="" loading="lazy">
+            <img src="/assets/blog/finding-your-carrie.jpg" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">March 7, 2026</p>
@@ -161,9 +142,9 @@
           </div>
         </a>
 
-        <a href="blog/im-lighting-up-canada-for-rare-disease-day.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/im-lighting-up-canada-for-rare-disease-day" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/rare-disease-day-lightings-2026.jpg" alt="" loading="lazy">
+            <img src="/assets/blog/rare-disease-day-lightings-2026.jpg" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">February 28, 2026</p>
@@ -172,9 +153,9 @@
           </div>
         </a>
 
-        <a href="blog/recap-of-attending-the-disability-leadership-summit-by-disability-lead.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/recap-of-attending-the-disability-leadership-summit-by-disability-lead" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/disability-leadership-summit.jpg" alt="" loading="lazy">
+            <img src="/assets/blog/disability-leadership-summit.jpg" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">February 25, 2026</p>
@@ -183,9 +164,9 @@
           </div>
         </a>
 
-        <a href="blog/accessibility-for-all-magazine-feature-what-interabled-relationships-teach-us-about-communication.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/accessibility-for-all-magazine-feature-what-interabled-relationships-teach-us-about-communication" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/accessibility-for-all-magazine-feature.jpg" alt="" loading="lazy">
+            <img src="/assets/blog/accessibility-for-all-magazine-feature.jpg" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">February 24, 2026</p>
@@ -194,9 +175,9 @@
           </div>
         </a>
 
-        <a href="blog/lets-learn-a-little-about-central-core-disease.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/lets-learn-a-little-about-central-core-disease" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/learn-about-central-core-disease.jpg" alt="" loading="lazy">
+            <img src="/assets/blog/learn-about-central-core-disease.jpg" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">February 19, 2026</p>
@@ -205,9 +186,9 @@
           </div>
         </a>
 
-        <a href="blog/lighting-up-for-rare-disease-awareness-month.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/lighting-up-for-rare-disease-awareness-month" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/selfie-for-rare-disease-awareness-month.jpg" alt="" loading="lazy">
+            <img src="/assets/blog/selfie-for-rare-disease-awareness-month.jpg" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">February 11, 2026</p>
@@ -216,9 +197,9 @@
           </div>
         </a>
 
-        <a href="blog/life-lessons-from-my-best-friends-funeral-i-mean-her-birthday-party.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/life-lessons-from-my-best-friends-funeral-i-mean-her-birthday-party" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/Shajia-birthday-funeral.jpg" alt="" loading="lazy">
+            <img src="/assets/blog/Shajia-birthday-funeral.jpg" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">February 6, 2026</p>
@@ -227,9 +208,9 @@
           </div>
         </a>
 
-        <a href="blog/achievement-unlocked-im-a-certified-professional-speaker.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/achievement-unlocked-im-a-certified-professional-speaker" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/achievement-unlocked-im-a-certified-professional-speaker.webp" alt="" loading="lazy">
+            <img src="/assets/blog/achievement-unlocked-im-a-certified-professional-speaker.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">February 2, 2026</p>
@@ -238,9 +219,9 @@
           </div>
         </a>
 
-        <a href="blog/remote-work-is-accessibility-especially-in-winter.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/remote-work-is-accessibility-especially-in-winter" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/remote-work-is-accessibility-especially-in-winter.webp" alt="" loading="lazy">
+            <img src="/assets/blog/remote-work-is-accessibility-especially-in-winter.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">January 27, 2026</p>
@@ -249,9 +230,9 @@
           </div>
         </a>
 
-        <a href="blog/a-reminder-of-the-daily-yay-on-blue-monday.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/a-reminder-of-the-daily-yay-on-blue-monday" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/a-reminder-of-the-daily-yay-on-blue-monday.webp" alt="" loading="lazy">
+            <img src="/assets/blog/a-reminder-of-the-daily-yay-on-blue-monday.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">January 19, 2026</p>
@@ -260,9 +241,9 @@
           </div>
         </a>
 
-        <a href="blog/my-boyfriends-niece-doesnt-know-i-have-a-muscle-disability-but.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/my-boyfriends-niece-doesnt-know-i-have-a-muscle-disability-but" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/my-boyfriends-niece-doesnt-know-i-have-a-muscle-disability-but.webp" alt="" loading="lazy">
+            <img src="/assets/blog/my-boyfriends-niece-doesnt-know-i-have-a-muscle-disability-but.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">January 13, 2026</p>
@@ -271,9 +252,9 @@
           </div>
         </a>
 
-        <a href="blog/2025-a-year-of-yays.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/2025-a-year-of-yays" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/2025-a-year-of-yays.webp" alt="" loading="lazy">
+            <img src="/assets/blog/2025-a-year-of-yays.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">December 31, 2025</p>
@@ -282,9 +263,9 @@
           </div>
         </a>
 
-        <a href="blog/speaking-event-recap-mckesson-canada.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/speaking-event-recap-mckesson-canada" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/speaking-event-recap-mckesson-canada.webp" alt="" loading="lazy">
+            <img src="/assets/blog/speaking-event-recap-mckesson-canada.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">December 12, 2025</p>
@@ -293,9 +274,9 @@
           </div>
         </a>
 
-        <a href="blog/speaking-event-recap-health-canada.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/speaking-event-recap-health-canada" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/speaking-event-recap-health-canada.webp" alt="" loading="lazy">
+            <img src="/assets/blog/speaking-event-recap-health-canada.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">December 10, 2025</p>
@@ -304,9 +285,9 @@
           </div>
         </a>
 
-        <a href="blog/speaking-event-for-international-day-of-persons-with-disabilities-mckesson-canada.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/speaking-event-for-international-day-of-persons-with-disabilities-mckesson-canada" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/speaking-event-for-international-day-of-persons-with-disabilities-mckesson-canada.webp" alt="" loading="lazy">
+            <img src="/assets/blog/speaking-event-for-international-day-of-persons-with-disabilities-mckesson-canada.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">December 5, 2025</p>
@@ -315,9 +296,9 @@
           </div>
         </a>
 
-        <a href="blog/representation-on-international-day-of-persons-with-disabilities.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/representation-on-international-day-of-persons-with-disabilities" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/representation-on-international-day-of-persons-with-disabilities.webp" alt="" loading="lazy">
+            <img src="/assets/blog/representation-on-international-day-of-persons-with-disabilities.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">December 3, 2025</p>
@@ -326,9 +307,9 @@
           </div>
         </a>
 
-        <a href="blog/speaking-to-health-canada-for-international-day-of-persons-with-disabilities.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/speaking-to-health-canada-for-international-day-of-persons-with-disabilities" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/speaking-to-health-canada-for-international-day-of-persons-with-disabilities.webp" alt="" loading="lazy">
+            <img src="/assets/blog/speaking-to-health-canada-for-international-day-of-persons-with-disabilities.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">December 2, 2025</p>
@@ -337,9 +318,9 @@
           </div>
         </a>
 
-        <a href="blog/speaking-event-rick-hansen-foundation-school-program-in-east-york.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/speaking-event-rick-hansen-foundation-school-program-in-east-york" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/speaking-event-rick-hansen-foundation-school-program-in-east-york.webp" alt="" loading="lazy">
+            <img src="/assets/blog/speaking-event-rick-hansen-foundation-school-program-in-east-york.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">December 1, 2025</p>
@@ -348,9 +329,9 @@
           </div>
         </a>
 
-        <a href="blog/speaking-event-rick-hansen-foundation-school-program-in-scarborough-recap.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/speaking-event-rick-hansen-foundation-school-program-in-scarborough-recap" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/speaking-event-rick-hansen-foundation-school-program-in-scarborough-recap.webp" alt="" loading="lazy">
+            <img src="/assets/blog/speaking-event-rick-hansen-foundation-school-program-in-scarborough-recap.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">November 25, 2025</p>
@@ -359,9 +340,9 @@
           </div>
         </a>
 
-        <a href="blog/speaking-event-rick-hansen-foundation-school-program-in-scarborough.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/speaking-event-rick-hansen-foundation-school-program-in-scarborough" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/speaking-event-rick-hansen-foundation-school-program-in-scarborough.webp" alt="" loading="lazy">
+            <img src="/assets/blog/speaking-event-rick-hansen-foundation-school-program-in-scarborough.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">November 24, 2025</p>
@@ -370,9 +351,9 @@
           </div>
         </a>
 
-        <a href="blog/two-years-later-tips-from-a-speaker-slam-grand-slam-alum.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/two-years-later-tips-from-a-speaker-slam-grand-slam-alum" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/two-years-later-tips-from-a-speaker-slam-grand-slam-alum.webp" alt="" loading="lazy">
+            <img src="/assets/blog/two-years-later-tips-from-a-speaker-slam-grand-slam-alum.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">November 18, 2025</p>
@@ -381,9 +362,9 @@
           </div>
         </a>
 
-        <a href="blog/speaking-event-bullying-awareness-and-prevention-week-with-the-rick-hansen-foundation-school-program.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/speaking-event-bullying-awareness-and-prevention-week-with-the-rick-hansen-foundation-school-program" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/speaking-event-bullying-awareness-and-prevention-week-with-the-rick-hansen-foundation-school-program.webp" alt="" loading="lazy">
+            <img src="/assets/blog/speaking-event-bullying-awareness-and-prevention-week-with-the-rick-hansen-foundation-school-program.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">November 16, 2025</p>
@@ -392,9 +373,9 @@
           </div>
         </a>
 
-        <a href="blog/a-moment-of-inclusion-in-kuala-lumpur.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/a-moment-of-inclusion-in-kuala-lumpur" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/a-moment-of-inclusion-in-kuala-lumpur.webp" alt="" loading="lazy">
+            <img src="/assets/blog/a-moment-of-inclusion-in-kuala-lumpur.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">November 11, 2025</p>
@@ -403,9 +384,9 @@
           </div>
         </a>
 
-        <a href="blog/day-6-of-invisible-disabilities-week-recap-of-my-virtual-keynote-for-the-co-operators.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/day-6-of-invisible-disabilities-week-recap-of-my-virtual-keynote-for-the-co-operators" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/day-6-of-invisible-disabilities-week-recap-of-my-virtual-keynote-for-the-co-operators.webp" alt="" loading="lazy">
+            <img src="/assets/blog/day-6-of-invisible-disabilities-week-recap-of-my-virtual-keynote-for-the-co-operators.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">October 24, 2025</p>
@@ -414,9 +395,9 @@
           </div>
         </a>
 
-        <a href="blog/day-5-of-invisible-disabilities-week-my-first-time-meeting-someone-with-my-disability-in-person.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/day-5-of-invisible-disabilities-week-my-first-time-meeting-someone-with-my-disability-in-person" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/day-5-of-invisible-disabilities-week-my-first-time-meeting-someone-with-my-disability-in-person.webp" alt="" loading="lazy">
+            <img src="/assets/blog/day-5-of-invisible-disabilities-week-my-first-time-meeting-someone-with-my-disability-in-person.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">October 23, 2025</p>
@@ -425,9 +406,9 @@
           </div>
         </a>
 
-        <a href="blog/day-4-of-invisible-disabilities-week-its-national-scar-appreciation-day.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/day-4-of-invisible-disabilities-week-its-national-scar-appreciation-day" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/day-4-of-invisible-disabilities-week-its-national-scar-appreciation-day.webp" alt="" loading="lazy">
+            <img src="/assets/blog/day-4-of-invisible-disabilities-week-its-national-scar-appreciation-day.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">October 22, 2025</p>
@@ -436,9 +417,9 @@
           </div>
         </a>
 
-        <a href="blog/day-3-of-invisible-disabilities-week-sirius-xm-canada-interview-and-brunch-thoughts.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/day-3-of-invisible-disabilities-week-sirius-xm-canada-interview-and-brunch-thoughts" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/day-3-of-invisible-disabilities-week-sirius-xm-canada-interview-and-brunch-thoughts.webp" alt="" loading="lazy">
+            <img src="/assets/blog/day-3-of-invisible-disabilities-week-sirius-xm-canada-interview-and-brunch-thoughts.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">October 21, 2025</p>
@@ -449,9 +430,9 @@
 
 
 
-        <a href="blog/day-2-of-invisible-disabilities-week-sirius-xm-canada-interview-on-the-boost.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/day-2-of-invisible-disabilities-week-sirius-xm-canada-interview-on-the-boost" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/day-2-of-invisible-disabilities-week-sirius-xm-canada-interview-on-the-boost.webp" alt="" loading="lazy">
+            <img src="/assets/blog/day-2-of-invisible-disabilities-week-sirius-xm-canada-interview-on-the-boost.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">October 20, 2025</p>
@@ -460,9 +441,9 @@
           </div>
         </a>
 
-        <a href="blog/day-1-of-invisible-disabilities-week-time-for-a-re-introduction.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/day-1-of-invisible-disabilities-week-time-for-a-re-introduction" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/day-1-of-invisible-disabilities-week-time-for-a-re-introduction.webp" alt="" loading="lazy">
+            <img src="/assets/blog/day-1-of-invisible-disabilities-week-time-for-a-re-introduction.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">October 19, 2025</p>
@@ -471,9 +452,9 @@
           </div>
         </a>
 
-        <a href="blog/one-invisible-disabilities-week-keynote-down-one-to-go.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/one-invisible-disabilities-week-keynote-down-one-to-go" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/one-invisible-disabilities-week-keynote-down-one-to-go.webp" alt="" loading="lazy">
+            <img src="/assets/blog/one-invisible-disabilities-week-keynote-down-one-to-go.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">October 16, 2025</p>
@@ -482,9 +463,9 @@
           </div>
         </a>
 
-        <a href="blog/catch-me-on-sirius-xm-canadas-the-boost-morning-show-to-kick-off-invisible-disabilities-week.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/catch-me-on-sirius-xm-canadas-the-boost-morning-show-to-kick-off-invisible-disabilities-week" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/catch-me-on-sirius-xm-canadas-the-boost-morning-show-to-kick-off-invisible-disabilities-week.webp" alt="" loading="lazy">
+            <img src="/assets/blog/catch-me-on-sirius-xm-canadas-the-boost-morning-show-to-kick-off-invisible-disabilities-week.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">October 15, 2025</p>
@@ -493,9 +474,9 @@
           </div>
         </a>
 
-        <a href="blog/invisible-disabilities-week-speaking-engagement-for-the-co-operators.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/invisible-disabilities-week-speaking-engagement-for-the-co-operators" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/invisible-disabilities-week-speaking-engagement-for-the-co-operators.webp" alt="" loading="lazy">
+            <img src="/assets/blog/invisible-disabilities-week-speaking-engagement-for-the-co-operators.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">October 14, 2025</p>
@@ -504,9 +485,9 @@
           </div>
         </a>
 
-        <a href="blog/two-disability-speakers-walk-into-a-restaurant-reflections-with-chris-ruden.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/two-disability-speakers-walk-into-a-restaurant-reflections-with-chris-ruden" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/two-disability-speakers-walk-into-a-restaurant-reflections-with-chris-ruden.webp" alt="" loading="lazy">
+            <img src="/assets/blog/two-disability-speakers-walk-into-a-restaurant-reflections-with-chris-ruden.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">October 7, 2025</p>
@@ -515,9 +496,9 @@
           </div>
         </a>
 
-        <a href="blog/check-out-the-13-canadian-buildings-and-monuments-lighting-up-for-invisible-disabilities-week.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/check-out-the-13-canadian-buildings-and-monuments-lighting-up-for-invisible-disabilities-week" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/check-out-the-13-canadian-buildings-and-monuments-lighting-up-for-invisible-disabilities-week.webp" alt="" loading="lazy">
+            <img src="/assets/blog/check-out-the-13-canadian-buildings-and-monuments-lighting-up-for-invisible-disabilities-week.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">October 5, 2025</p>
@@ -526,9 +507,9 @@
           </div>
         </a>
 
-        <a href="blog/national-disability-employment-awareness-month-ndeam-speaking-event-for-esdc.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/national-disability-employment-awareness-month-ndeam-speaking-event-for-esdc" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/national-disability-employment-awareness-month-ndeam-speaking-event-for-esdc.webp" alt="" loading="lazy">
+            <img src="/assets/blog/national-disability-employment-awareness-month-ndeam-speaking-event-for-esdc.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">October 2, 2025</p>
@@ -537,9 +518,9 @@
           </div>
         </a>
 
-        <a href="blog/october-is-national-disability-employment-awareness-month-heres-why-remote-work-is-a-yay.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/october-is-national-disability-employment-awareness-month-heres-why-remote-work-is-a-yay" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/october-is-national-disability-employment-awareness-month-heres-why-remote-work-is-a-yay.webp" alt="" loading="lazy">
+            <img src="/assets/blog/october-is-national-disability-employment-awareness-month-heres-why-remote-work-is-a-yay.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">October 1, 2025</p>
@@ -548,9 +529,9 @@
           </div>
         </a>
 
-        <a href="blog/its-not-difficult-for-everyone-and-thats-the-point.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/its-not-difficult-for-everyone-and-thats-the-point" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/its-not-difficult-for-everyone-and-thats-the-point.webp" alt="" loading="lazy">
+            <img src="/assets/blog/its-not-difficult-for-everyone-and-thats-the-point.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">September 23, 2025</p>
@@ -559,9 +540,9 @@
           </div>
         </a>
 
-        <a href="blog/im-a-finalist-for-the-2025-diversity-equity-inclusion-amp-belonging-award-by-the-womens-nonprofit-network.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/im-a-finalist-for-the-2025-diversity-equity-inclusion-amp-belonging-award-by-the-womens-nonprofit-network" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/im-a-finalist-for-the-2025-diversity-equity-inclusion-amp-belonging-award-by-the-womens-nonprofit-network.webp" alt="" loading="lazy">
+            <img src="/assets/blog/im-a-finalist-for-the-2025-diversity-equity-inclusion-amp-belonging-award-by-the-womens-nonprofit-network.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">September 9, 2025</p>
@@ -570,9 +551,9 @@
           </div>
         </a>
 
-        <a href="blog/chris-lucas-and-the-daily-yay.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/chris-lucas-and-the-daily-yay" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/chris-lucas-and-the-daily-yay.webp" alt="" loading="lazy">
+            <img src="/assets/blog/chris-lucas-and-the-daily-yay.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">July 29, 2025</p>
@@ -581,9 +562,9 @@
           </div>
         </a>
 
-        <a href="blog/what-happens-when-you-dont-look-disabled-ctv-your-morning-interview.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/what-happens-when-you-dont-look-disabled-ctv-your-morning-interview" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/what-happens-when-you-dont-look-disabled-ctv-your-morning-interview.webp" alt="" loading="lazy">
+            <img src="/assets/blog/what-happens-when-you-dont-look-disabled-ctv-your-morning-interview.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">July 29, 2025</p>
@@ -592,9 +573,9 @@
           </div>
         </a>
 
-        <a href="blog/for-a-long-time-i-didnt-even-know-how-to-talk-about-it.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/for-a-long-time-i-didnt-even-know-how-to-talk-about-it" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/for-a-long-time-i-didnt-even-know-how-to-talk-about-it.webp" alt="" loading="lazy">
+            <img src="/assets/blog/for-a-long-time-i-didnt-even-know-how-to-talk-about-it.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">July 28, 2025</p>
@@ -603,9 +584,9 @@
           </div>
         </a>
 
-        <a href="blog/that-time-i-accidentally-achieved-a-bucket-list-dream.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/that-time-i-accidentally-achieved-a-bucket-list-dream" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/that-time-i-accidentally-achieved-a-bucket-list-dream.webp" alt="" loading="lazy">
+            <img src="/assets/blog/that-time-i-accidentally-achieved-a-bucket-list-dream.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">July 18, 2025</p>
@@ -614,9 +595,9 @@
           </div>
         </a>
 
-        <a href="blog/catch-me-on-ctv-your-morning-on-tues-jul-22.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/catch-me-on-ctv-your-morning-on-tues-jul-22" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/catch-me-on-ctv-your-morning-on-tues-jul-22.webp" alt="" loading="lazy">
+            <img src="/assets/blog/catch-me-on-ctv-your-morning-on-tues-jul-22.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">July 17, 2025</p>
@@ -625,9 +606,9 @@
           </div>
         </a>
 
-        <a href="blog/two-of-the-best-days-of-my-life-arent-what-i-ever-expected-them-to-be.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/two-of-the-best-days-of-my-life-arent-what-i-ever-expected-them-to-be" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/two-of-the-best-days-of-my-life-arent-what-i-ever-expected-them-to-be.webp" alt="" loading="lazy">
+            <img src="/assets/blog/two-of-the-best-days-of-my-life-arent-what-i-ever-expected-them-to-be.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">July 7, 2025</p>
@@ -636,9 +617,9 @@
           </div>
         </a>
 
-        <a href="blog/did-you-know-july-is-disability-pride-month.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/did-you-know-july-is-disability-pride-month" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/did-you-know-july-is-disability-pride-month.webp" alt="" loading="lazy">
+            <img src="/assets/blog/did-you-know-july-is-disability-pride-month.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">July 3, 2025</p>
@@ -647,9 +628,9 @@
           </div>
         </a>
 
-        <a href="blog/building-inclusion-through-empathy-canadian-sme-small-business-magazine.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/building-inclusion-through-empathy-canadian-sme-small-business-magazine" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/building-inclusion-through-empathy-canadian-sme-small-business-magazine.webp" alt="" loading="lazy">
+            <img src="/assets/blog/building-inclusion-through-empathy-canadian-sme-small-business-magazine.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">June 26, 2025</p>
@@ -658,9 +639,9 @@
           </div>
         </a>
 
-        <a href="blog/my-first-rick-hansen-foundation-school-program-presentation-900-students-later.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/my-first-rick-hansen-foundation-school-program-presentation-900-students-later" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/my-first-rick-hansen-foundation-school-program-presentation-900-students-later.webp" alt="" loading="lazy">
+            <img src="/assets/blog/my-first-rick-hansen-foundation-school-program-presentation-900-students-later.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">June 3, 2025</p>
@@ -671,9 +652,9 @@
 
 
 
-        <a href="blog/the-yay-team-hit-our-ida-walk-and-roll-step-and-funding-goals.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/the-yay-team-hit-our-ida-walk-and-roll-step-and-funding-goals" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/the-yay-team-hit-our-ida-walk-and-roll-step-and-funding-goals.webp" alt="" loading="lazy">
+            <img src="/assets/blog/the-yay-team-hit-our-ida-walk-and-roll-step-and-funding-goals.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">June 1, 2025</p>
@@ -682,9 +663,9 @@
           </div>
         </a>
 
-        <a href="blog/national-accessability-week-recap.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/national-accessability-week-recap" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/national-accessability-week-recap.webp" alt="" loading="lazy">
+            <img src="/assets/blog/national-accessability-week-recap.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">June 1, 2025</p>
@@ -693,9 +674,9 @@
           </div>
         </a>
 
-        <a href="blog/new-presentation-for-schools-and-youth-everyday-ableism-and-how-to-recognize-it.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/new-presentation-for-schools-and-youth-everyday-ableism-and-how-to-recognize-it" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/new-presentation-for-schools-and-youth-everyday-ableism-and-how-to-recognize-it.webp" alt="" loading="lazy">
+            <img src="/assets/blog/new-presentation-for-schools-and-youth-everyday-ableism-and-how-to-recognize-it.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">May 29, 2025</p>
@@ -704,9 +685,9 @@
           </div>
         </a>
 
-        <a href="blog/rethinking-disabilities-toronto-at-arta-gallery.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/rethinking-disabilities-toronto-at-arta-gallery" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/rethinking-disabilities-toronto-at-arta-gallery.webp" alt="" loading="lazy">
+            <img src="/assets/blog/rethinking-disabilities-toronto-at-arta-gallery.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">May 25, 2025</p>
@@ -715,9 +696,9 @@
           </div>
         </a>
 
-        <a href="blog/national-accessability-week-and-becoming-a-rick-hansen-foundation-school-program-ambassador.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/national-accessability-week-and-becoming-a-rick-hansen-foundation-school-program-ambassador" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/national-accessability-week-and-becoming-a-rick-hansen-foundation-school-program-ambassador.webp" alt="" loading="lazy">
+            <img src="/assets/blog/national-accessability-week-and-becoming-a-rick-hansen-foundation-school-program-ambassador.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">May 25, 2025</p>
@@ -726,9 +707,9 @@
           </div>
         </a>
 
-        <a href="blog/im-walking-57-km-in-may-for-mobility-awareness-month.html" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
+        <a href="/blog/im-walking-57-km-in-may-for-mobility-awareness-month" class="blog-card fade-in" style="text-decoration:none;color:inherit;">
           <div class="blog-card__image">
-            <img src="assets/blog/im-walking-57-km-in-may-for-mobility-awareness-month.webp" alt="" loading="lazy">
+            <img src="/assets/blog/im-walking-57-km-in-may-for-mobility-awareness-month.webp" alt="" loading="lazy">
           </div>
           <div class="blog-card__content">
             <p class="blog-card__date">May 7, 2025</p>
@@ -753,41 +734,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__brand">
-        <img src="assets/logo.svg" alt="Lauren Pires">
-      </div>
-      <div class="footer__links">
-        <a href="index.html" class="footer__link">Home</a>
-        <a href="about.html" class="footer__link">About</a>
-        <a href="speaking.html" class="footer__link">Speaking</a>
-        <a href="media.html" class="footer__link">Media</a>
-        <a href="lightupforrare.html" class="footer__link">Advocacy</a>
-        <a href="blog.html" class="footer__link">Blog</a>
-        <a href="testimonials.html" class="footer__link">Testimonials</a>
-        <a href="contact.html" class="footer__link">Contact</a>
-      </div>
-      <div class="footer__links" style="margin-top: 0.5rem; font-size: 0.85em;">
-        <a href="/invisible-disability-speaker" class="footer__link">Invisible Disability Speaker</a>
-        <a href="/disability-keynote-speaker" class="footer__link">Disability Keynote Speaker</a>
-        <a href="/resilience-keynote-speaker" class="footer__link">Resilience Speaker</a>
-        <a href="/workplace-inclusion-speaker" class="footer__link">Workplace Inclusion Speaker</a>
-        <a href="/rare-disease-speaker" class="footer__link">Rare Disease Speaker</a>
-        <a href="/disability-pride-month-speaker" class="footer__link">Disability Pride Month Speaker</a>
-        <a href="/invisible-disabilities-awareness" class="footer__link">What Are Invisible Disabilities?</a>
-      </div>
-      <div class="footer__social">
-        <a href="https://www.instagram.com/laurensaysyay" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-        <a href="https://www.youtube.com/@laurensaysyay" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
-        <a href="https://www.linkedin.com/in/laurensaysyay" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-      </div>
-      <p class="footer__text" class="footer__seo-text">
-          Lauren Pires is an award-winning invisible disability keynote speaker, Certified Professional Speaker, and Canada's first Invisible Disabilities Association Ambassador. She delivers keynotes on resilience, disability inclusion, and joy for corporations, government agencies, ERGs, and educational institutions across North America.
-        </p>
-        <p class="footer__text">&copy; 2026 Lauren Pires. All rights reserved.</p>
-    </div>
-  </footer>
+  {% include "footer.njk" %}
 
   <script>
     const observer = new IntersectionObserver((entries) => {

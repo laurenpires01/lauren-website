@@ -1,119 +1,18 @@
 # ============================================================
-# Lauren Pires — netlify.toml
+# Lauren Pires — netlify.toml (Eleventy build)
 # ============================================================
 # NOTE: Do NOT add http→https or non-www→www redirects here.
-# Netlify handles HTTPS automatically. Adding domain redirects
-# conflicts with Netlify's built-in SSL and causes redirect loops.
-# The canonical www domain is set in Netlify dashboard under
-# Domain Settings → Primary domain.
+# Netlify handles HTTPS automatically; the canonical www domain
+# is set in the Netlify dashboard under Domain Settings.
 
-# ---- Clean URLs: strip .html extension ----
-[[redirects]]
-  from   = "/walk"
-  to     = "/walk.html"
-  status = 200
-
-[[redirects]]
-  from   = "/walk.html"
-  to     = "/walk"
-  status = 301
-
-[[redirects]]
-  from   = "/advocacy.html"
-  to     = "/advocacy"
-  status = 301
-
-[[redirects]]
-  from   = "/index.html"
-  to     = "/"
-  status = 301
-
-[[redirects]]
-  from   = "/about.html"
-  to     = "/about"
-  status = 301
-
-[[redirects]]
-  from   = "/speaking.html"
-  to     = "/speaking"
-  status = 301
-
-[[redirects]]
-  from   = "/media.html"
-  to     = "/media"
-  status = 301
-
-[[redirects]]
-  from   = "/lightupforrare.html"
-  to     = "/lightupforrare"
-  status = 301
-
-[[redirects]]
-  from   = "/blog.html"
-  to     = "/blog"
-  status = 301
-
-[[redirects]]
-  from   = "/contact.html"
-  to     = "/contact"
-  status = 301
-
-[[redirects]]
-  from   = "/testimonials.html"
-  to     = "/testimonials"
-  status = 301
-
-[[redirects]]
-  from   = "/privacy.html"
-  to     = "/privacy"
-  status = 301
-
-[[redirects]]
-  from   = "/accessibility.html"
-  to     = "/accessibility"
-  status = 301
-
-[[redirects]]
-  from   = "/thank-you.html"
-  to     = "/thank-you"
-  status = 301
-
-[[redirects]]
-  from   = "/rare-disease-speaker.html"
-  to     = "/rare-disease-speaker"
-  status = 301
-
-[[redirects]]
-  from   = "/workplace-inclusion-speaker.html"
-  to     = "/workplace-inclusion-speaker"
-  status = 301
-
-[[redirects]]
-  from   = "/invisible-disabilities-awareness.html"
-  to     = "/invisible-disabilities-awareness"
-  status = 301
-
-[[redirects]]
-  from   = "/disability-pride-month-speaker.html"
-  to     = "/disability-pride-month-speaker"
-  status = 301
-
-[[redirects]]
-  from   = "/disability-keynote-speaker.html"
-  to     = "/disability-keynote-speaker"
-  status = 301
-
-[[redirects]]
-  from   = "/invisible-disability-speaker.html"
-  to     = "/invisible-disability-speaker"
-  status = 301
-
-[[redirects]]
-  from   = "/resilience-keynote-speaker.html"
-  to     = "/resilience-keynote-speaker"
-  status = 301
+[build]
+  command = "npm install && npx @11ty/eleventy"
+  publish = "_site"
 
 # ---- Cache headers ----
+# HTML: always revalidate. CSS/JS: 5 minutes, never a year —
+# stylesheet links are version-stamped (?v=YYYYMMDD) so stale
+# devices recover on the next deploy.
 [[headers]]
   for = "/*.html"
   [headers.values]
@@ -122,7 +21,12 @@
 [[headers]]
   for = "/styles.css"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=300, must-revalidate"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
 
 [[headers]]
   for = "/assets/*"
@@ -141,3 +45,462 @@
     X-Frame-Options        = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy        = "strict-origin-when-cross-origin"
+
+# ---- 301s: old /page.html URLs -> clean URLs ----
+# force = true so nothing at the path can shadow the redirect.
+
+[[redirects]]
+  from   = "/about.html"
+  to     = "/about"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/accessibility.html"
+  to     = "/accessibility"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/advocacy.html"
+  to     = "/advocacy"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog.html"
+  to     = "/blog"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/contact.html"
+  to     = "/contact"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/disability-keynote-speaker.html"
+  to     = "/disability-keynote-speaker"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/disability-pride-month-speaker.html"
+  to     = "/disability-pride-month-speaker"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/index.html"
+  to     = "/"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/invisible-disabilities-awareness.html"
+  to     = "/invisible-disabilities-awareness"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/invisible-disability-speaker.html"
+  to     = "/invisible-disability-speaker"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/lightupforrare.html"
+  to     = "/lightupforrare"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/media.html"
+  to     = "/media"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/privacy.html"
+  to     = "/privacy"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/rare-disease-speaker.html"
+  to     = "/rare-disease-speaker"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/resilience-keynote-speaker.html"
+  to     = "/resilience-keynote-speaker"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/speaking.html"
+  to     = "/speaking"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/testimonials.html"
+  to     = "/testimonials"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/thank-you.html"
+  to     = "/thank-you"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/walk.html"
+  to     = "/walk"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/workplace-inclusion-speaker.html"
+  to     = "/workplace-inclusion-speaker"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/2025-a-year-of-yays.html"
+  to     = "/blog/2025-a-year-of-yays"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/a-moment-of-inclusion-in-kuala-lumpur.html"
+  to     = "/blog/a-moment-of-inclusion-in-kuala-lumpur"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/a-reminder-of-the-daily-yay-on-blue-monday.html"
+  to     = "/blog/a-reminder-of-the-daily-yay-on-blue-monday"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/accessibility-for-all-magazine-feature-what-interabled-relationships-teach-us-about-communication.html"
+  to     = "/blog/accessibility-for-all-magazine-feature-what-interabled-relationships-teach-us-about-communication"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/achievement-unlocked-im-a-certified-professional-speaker.html"
+  to     = "/blog/achievement-unlocked-im-a-certified-professional-speaker"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/building-inclusion-through-empathy-canadian-sme-small-business-magazine.html"
+  to     = "/blog/building-inclusion-through-empathy-canadian-sme-small-business-magazine"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/catch-me-on-ctv-your-morning-on-tues-jul-22.html"
+  to     = "/blog/catch-me-on-ctv-your-morning-on-tues-jul-22"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/catch-me-on-sirius-xm-canadas-the-boost-morning-show-to-kick-off-invisible-disabilities-week.html"
+  to     = "/blog/catch-me-on-sirius-xm-canadas-the-boost-morning-show-to-kick-off-invisible-disabilities-week"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/check-out-the-13-canadian-buildings-and-monuments-lighting-up-for-invisible-disabilities-week.html"
+  to     = "/blog/check-out-the-13-canadian-buildings-and-monuments-lighting-up-for-invisible-disabilities-week"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/chris-lucas-and-the-daily-yay.html"
+  to     = "/blog/chris-lucas-and-the-daily-yay"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/day-1-of-invisible-disabilities-week-time-for-a-re-introduction.html"
+  to     = "/blog/day-1-of-invisible-disabilities-week-time-for-a-re-introduction"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/day-2-of-invisible-disabilities-week-sirius-xm-canada-interview-on-the-boost.html"
+  to     = "/blog/day-2-of-invisible-disabilities-week-sirius-xm-canada-interview-on-the-boost"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/day-3-of-invisible-disabilities-week-sirius-xm-canada-interview-and-brunch-thoughts.html"
+  to     = "/blog/day-3-of-invisible-disabilities-week-sirius-xm-canada-interview-and-brunch-thoughts"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/day-4-of-invisible-disabilities-week-its-national-scar-appreciation-day.html"
+  to     = "/blog/day-4-of-invisible-disabilities-week-its-national-scar-appreciation-day"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/day-5-of-invisible-disabilities-week-my-first-time-meeting-someone-with-my-disability-in-person.html"
+  to     = "/blog/day-5-of-invisible-disabilities-week-my-first-time-meeting-someone-with-my-disability-in-person"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/day-6-of-invisible-disabilities-week-recap-of-my-virtual-keynote-for-the-co-operators.html"
+  to     = "/blog/day-6-of-invisible-disabilities-week-recap-of-my-virtual-keynote-for-the-co-operators"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/did-you-know-july-is-disability-pride-month.html"
+  to     = "/blog/did-you-know-july-is-disability-pride-month"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/for-a-long-time-i-didnt-even-know-how-to-talk-about-it.html"
+  to     = "/blog/for-a-long-time-i-didnt-even-know-how-to-talk-about-it"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/how-to-find-your-carrie.html"
+  to     = "/blog/how-to-find-your-carrie"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/im-a-finalist-for-the-2025-diversity-equity-inclusion-amp-belonging-award-by-the-womens-nonprofit-network.html"
+  to     = "/blog/im-a-finalist-for-the-2025-diversity-equity-inclusion-amp-belonging-award-by-the-womens-nonprofit-network"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/im-lighting-up-canada-for-rare-disease-day.html"
+  to     = "/blog/im-lighting-up-canada-for-rare-disease-day"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/im-walking-57-km-in-may-for-mobility-awareness-month.html"
+  to     = "/blog/im-walking-57-km-in-may-for-mobility-awareness-month"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/invisible-disabilities-week-speaking-engagement-for-the-co-operators.html"
+  to     = "/blog/invisible-disabilities-week-speaking-engagement-for-the-co-operators"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/its-not-difficult-for-everyone-and-thats-the-point.html"
+  to     = "/blog/its-not-difficult-for-everyone-and-thats-the-point"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/lets-learn-a-little-about-central-core-disease.html"
+  to     = "/blog/lets-learn-a-little-about-central-core-disease"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/life-lessons-from-my-best-friends-funeral-i-mean-her-birthday-party.html"
+  to     = "/blog/life-lessons-from-my-best-friends-funeral-i-mean-her-birthday-party"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/lighting-up-for-rare-disease-awareness-month.html"
+  to     = "/blog/lighting-up-for-rare-disease-awareness-month"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/my-boyfriends-niece-doesnt-know-i-have-a-muscle-disability-but.html"
+  to     = "/blog/my-boyfriends-niece-doesnt-know-i-have-a-muscle-disability-but"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/my-first-rick-hansen-foundation-school-program-presentation-900-students-later.html"
+  to     = "/blog/my-first-rick-hansen-foundation-school-program-presentation-900-students-later"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/national-accessability-week-and-becoming-a-rick-hansen-foundation-school-program-ambassador.html"
+  to     = "/blog/national-accessability-week-and-becoming-a-rick-hansen-foundation-school-program-ambassador"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/national-accessability-week-recap.html"
+  to     = "/blog/national-accessability-week-recap"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/national-disability-employment-awareness-month-ndeam-speaking-event-for-esdc.html"
+  to     = "/blog/national-disability-employment-awareness-month-ndeam-speaking-event-for-esdc"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/new-presentation-for-schools-and-youth-everyday-ableism-and-how-to-recognize-it.html"
+  to     = "/blog/new-presentation-for-schools-and-youth-everyday-ableism-and-how-to-recognize-it"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/october-is-national-disability-employment-awareness-month-heres-why-remote-work-is-a-yay.html"
+  to     = "/blog/october-is-national-disability-employment-awareness-month-heres-why-remote-work-is-a-yay"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/one-invisible-disabilities-week-keynote-down-one-to-go.html"
+  to     = "/blog/one-invisible-disabilities-week-keynote-down-one-to-go"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/recap-of-attending-the-disability-leadership-summit-by-disability-lead.html"
+  to     = "/blog/recap-of-attending-the-disability-leadership-summit-by-disability-lead"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/remote-work-is-accessibility-especially-in-winter.html"
+  to     = "/blog/remote-work-is-accessibility-especially-in-winter"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/representation-on-international-day-of-persons-with-disabilities.html"
+  to     = "/blog/representation-on-international-day-of-persons-with-disabilities"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/rethinking-disabilities-toronto-at-arta-gallery.html"
+  to     = "/blog/rethinking-disabilities-toronto-at-arta-gallery"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/speaking-event-bullying-awareness-and-prevention-week-with-the-rick-hansen-foundation-school-program.html"
+  to     = "/blog/speaking-event-bullying-awareness-and-prevention-week-with-the-rick-hansen-foundation-school-program"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/speaking-event-for-international-day-of-persons-with-disabilities-mckesson-canada.html"
+  to     = "/blog/speaking-event-for-international-day-of-persons-with-disabilities-mckesson-canada"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/speaking-event-recap-health-canada.html"
+  to     = "/blog/speaking-event-recap-health-canada"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/speaking-event-recap-mckesson-canada.html"
+  to     = "/blog/speaking-event-recap-mckesson-canada"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/speaking-event-rick-hansen-foundation-school-program-in-east-york.html"
+  to     = "/blog/speaking-event-rick-hansen-foundation-school-program-in-east-york"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/speaking-event-rick-hansen-foundation-school-program-in-etobicoke.html"
+  to     = "/blog/speaking-event-rick-hansen-foundation-school-program-in-etobicoke"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/speaking-event-rick-hansen-foundation-school-program-in-scarborough-recap.html"
+  to     = "/blog/speaking-event-rick-hansen-foundation-school-program-in-scarborough-recap"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/speaking-event-rick-hansen-foundation-school-program-in-scarborough.html"
+  to     = "/blog/speaking-event-rick-hansen-foundation-school-program-in-scarborough"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/speaking-to-health-canada-for-international-day-of-persons-with-disabilities.html"
+  to     = "/blog/speaking-to-health-canada-for-international-day-of-persons-with-disabilities"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/that-time-i-accidentally-achieved-a-bucket-list-dream.html"
+  to     = "/blog/that-time-i-accidentally-achieved-a-bucket-list-dream"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/the-daily-yay-experiment-for-the-international-day-of-happiness.html"
+  to     = "/blog/the-daily-yay-experiment-for-the-international-day-of-happiness"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/the-first-tedx-talk-to-make-me-cry.html"
+  to     = "/blog/the-first-tedx-talk-to-make-me-cry"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/the-yay-team-hit-our-ida-walk-and-roll-step-and-funding-goals.html"
+  to     = "/blog/the-yay-team-hit-our-ida-walk-and-roll-step-and-funding-goals"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/two-disability-speakers-walk-into-a-restaurant-reflections-with-chris-ruden.html"
+  to     = "/blog/two-disability-speakers-walk-into-a-restaurant-reflections-with-chris-ruden"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/two-of-the-best-days-of-my-life-arent-what-i-ever-expected-them-to-be.html"
+  to     = "/blog/two-of-the-best-days-of-my-life-arent-what-i-ever-expected-them-to-be"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/two-years-later-tips-from-a-speaker-slam-grand-slam-alum.html"
+  to     = "/blog/two-years-later-tips-from-a-speaker-slam-grand-slam-alum"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "/blog/what-happens-when-you-dont-look-disabled-ctv-your-morning-interview.html"
+  to     = "/blog/what-happens-when-you-dont-look-disabled-ctv-your-morning-interview"
+  status = 301
+  force  = true
