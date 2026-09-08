@@ -141,7 +141,7 @@
     "url": "https://www.laurensaysyay.com",
     "image": "https://www.laurensaysyay.com/assets/photos/hero-portrait.webp",
     "jobTitle": "Invisible Disability Keynote Speaker",
-    "description": "Award-winning TEDx speaker and invisible disability keynote speaker helping organizations build inclusive cultures and resilience through joy. Speaker at TEDxMississauga 2026: The Daily Yay. Specializing in workplace inclusion, disability awareness, and resilience.",
+    "description": "Award-winning TEDx speaker and invisible disability keynote speaker helping organizations build inclusive cultures and resilience through joy. Speaker at TEDxMississauga 2026: How can we fit in without losing who we are? Specializing in workplace inclusion, disability awareness, and resilience.",
     "knowsAbout": ["Invisible Disabilities", "Resilience", "Disability Inclusion", "Workplace Accessibility", "Central Core Disease", "Disability Awareness", "Joy and Resilience", "DEIA"],
     "award": [
       "#2 Inspirational Speaker of the Year - Speaker Slam 2023",
@@ -191,7 +191,7 @@
   <!-- Walk & Roll announcement banner — expires May 26, 2026 -->
   <div class="walk-banner" id="walkBanner">
     <div class="walk-banner__inner">
-      <span class="walk-banner__text">💜 July is Disability Pride Month. <a href="/disability-pride-month-speaker">Book Lauren for your event →</a></span>
+      <span class="walk-banner__text">🔴 Lauren's TEDx talk has passed 20,000 views. <a href="https://www.youtube.com/watch?v=SWVUgHY3ibM" target="_blank" rel="noopener">Watch it on YouTube →</a></span>
       <button class="walk-banner__close" id="walkBannerClose" aria-label="Close banner">✕</button>
     </div>
   </div>
@@ -647,12 +647,12 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     // Mobile nav toggle
-    // Walk & Roll banner — expires May 26 2026, dismissible per session
+    // Homepage banner. CHANGE THE EXPIRY whenever the copy changes or it silently disappears. Dismissible per session.
     (function() {
       const banner = document.getElementById('walkBanner');
       const closeBtn = document.getElementById('walkBannerClose');
       if (!banner) return;
-      const expiry = new Date('2026-05-26T23:59:59');
+      const expiry = new Date('2026-12-31T23:59:59');
       const dismissed = sessionStorage.getItem('walkBannerDismissed');
       if (new Date() > expiry || dismissed) {
         banner.classList.add('hidden');

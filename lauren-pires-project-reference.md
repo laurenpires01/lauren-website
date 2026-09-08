@@ -19,7 +19,7 @@ Lauren Pires is an award-winning keynote speaker and invisible disability advoca
 - Named to 2024 D-30 Disability Impact List by Diversability (30 global leaders in disability awareness)
 - Selected as one of the faces of the global Rare Disease Day 2024 campaign by EURORDIS
 - #2 Inspirational Speaker of the Year, Speaker Slam 2023
-- TEDxMississauga speaker (upcoming) — talk title: "The Daily Yay: How Small Joys Build Real Resilience"
+- TEDxMississauga speaker (delivered June 27, 2026) — published talk title: "How can we fit in without losing who we are?" — video: https://www.youtube.com/watch?v=SWVUgHY3ibM (live July 24, 2026; passed 20,000 views by Sept 4, 2026)
 
 **Past speaking clients include:** Health Canada, Arc'teryx, McKesson, The Co-operators, Rick Hansen Foundation, Employment and Social Development Canada (ESDC), GreenShield, Embark, GroupHealth, Guelph-Humber, ScaleHR, and others.
 
@@ -621,3 +621,18 @@ The site now builds with Eleventy. Header and footer live in ONE source file eac
 - Disable the deprecated "Pretty URLs" asset-processing option if it is still on; clean URLs are now real directories.
 - Confirm the build picks up netlify.toml (build command and publish dir come from the file, overriding dashboard settings).
 - Netlify Forms: detection re-registers at deploy time; submit a test through the contact form after the first Eleventy deploy.
+
+
+---
+
+## v119 — Blog Batch: 31 New Posts (September 7, 2026)
+
+Added 31 posts covering April 14 to September 4, 2026 (Walk and Roll, TEDxMississauga announcement through 20,000 views, Rick Hansen Foundation school talks, Lotus Hope Foundation finalist, AccessFest, Disability Lead mentorship, Allstate Canada booking). Posts follow the existing blog template exactly: front matter navActive: blog, header/footer includes, BlogPosting + BreadcrumbList schema, root-absolute links.
+
+- Images converted from the supplied PNGs to WebP (max 1200px wide, quality 82), named to match the post slug, in assets/blog/. The 40-image zip also contained images for 8 posts already on the site (those were left untouched) and one duplicate post (Etobicoke, April 9) that already existed.
+- blog.html listing updated, newest first. sitemap.xml gained 31 URLs; /blog lastmod bumped to 2026-09-04.
+- Lauren's post text is reproduced as written. Only Claude-written framing (titles in title case, meta descriptions, listing excerpts) follows house style.
+- PLACEHOLDER: ten posts link "YouTube link here" to Lauren's channel (https://www.youtube.com/@laurensaysyay) because the TEDx video URL was not supplied. Swap to the direct video URL when available. Two posts link "Instagram post here" to her profile for the same reason.
+- Fundraising links in the Walk and Roll posts point to https://muscle.akaraisin.com/ui/WalkRollMDC26/p/laurenpires.
+
+- Addendum (same day): TEDx video URL supplied and applied to the 9 posts that referenced it. The talk title across the site was corrected from the pre-event working title ("The Daily Yay: How Small Joys Build Real Resilience") to the published title "How can we fit in without losing who we are?" on about, media, index schema, and the five landing pages that list it. speaking.html now leads the Watch section with the TEDx embed plus a VideoObject. Homepage banner revived with the 20,000-views milestone; expiry set to 2026-12-31 (the banner JS hides it after that date, so change the date whenever the copy changes).
