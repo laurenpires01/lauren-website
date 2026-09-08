@@ -637,3 +637,26 @@ Added 31 posts covering April 14 to September 4, 2026 (Walk and Roll, TEDxMissis
 
 - Addendum (same day): TEDx video URL supplied and applied to the 9 posts that referenced it. The talk title across the site was corrected from the pre-event working title ("The Daily Yay: How Small Joys Build Real Resilience") to the published title "How can we fit in without losing who we are?" on about, media, index schema, and the five landing pages that list it. speaking.html now leads the Watch section with the TEDx embed plus a VideoObject. Homepage banner revived with the 20,000-views milestone; expiry set to 2026-12-31 (the banner JS hides it after that date, so change the date whenever the copy changes).
 - Media page (same day): added three 2026 broadcast hits. CP24 Breakfast (Walk & Roll, May 2026, youtube.com/watch?v=aFQoOfPDf9I) and CityNews Toronto (Walk & Roll / What About Canada?, May 2026, youtube.com/watch?v=fMIMTkqkIn4) lead the Television Appearances grid, now six embeds. 680 NewsRadio Athlete of the Week (Jun 2026, youtube.com/watch?v=4Xv7tZjDpF8) added as an embed at the top of Articles, Interviews & Features. CP24 added to the media page meta descriptions. TODO: CP24 and 680 NewsRadio logos are not in assets/media/, so neither is in the logo carousel yet; add cp24.png and 680-news.png and slot them into the Television & Broadcast carousel.
+
+
+---
+
+## v120 — Links Page + Media Data File (September 7, 2026)
+
+**/links** is Lauren's link-in-bio page (replaces Linktree). Standalone layout, no site nav or footer, own styles. Profile, social row, the TEDx talk as the featured card, primary buttons, then three auto-generated blocks.
+
+**Single source of truth for media: `_data/media.json`.** Every press hit lives there once. The media page's Television Appearances grid, TV link list, radio embed and Articles list all loop over it, and the links page reads it for "Latest media" (top 5) and "All media by year" (accordion). Adding a hit = one JSON object, then push. Fields:
+
+```
+{ "outlet": "CP24 Breakfast", "title": "Walk & Roll for Muscular Dystrophy Canada", "date": "2026-05-01",
+  "url": "https://www.youtube.com/watch?v=aFQoOfPDf9I", "video": "aFQoOfPDf9I", "kind": "broadcast", "logo": "/assets/media/cp24.png" }
+```
+- `date` is ISO; day is usually 01 (only month and year display). Items sort newest first automatically.
+- `kind`: broadcast (TV), radio, print, podcast. `video` (YouTube ID) makes it an embed on the media page; without `video` it renders as a link row.
+- `logo` is optional; outlets with no logo file render as a text badge. The logo carousels on the media page are still static markup.
+
+**Blog collection.** Every blog post now carries `title`, `published`, `image`, `excerpt` in front matter. `collections.blog` (newest first) feeds "Latest from the blog" on /links. blog.html itself is still hand-maintained; converting it to loop over the collection is the obvious next step.
+
+**Filters added to eleventy.config.js:** monthYear, longDate, head, groupByYear.
+
+Static sections on /links (edit by hand): the four buttons under the TEDx card, and "Talks and features". Podcast appearances that only exist on Linktree (Miss Matched, Hat Collecting, Hiding in Plain Sight, Courage in Action) are not in media.json yet because their episode URLs were not available; add them with kind "podcast".

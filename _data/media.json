@@ -1,0 +1,305 @@
+[
+  {
+    "outlet": "CityNews Toronto",
+    "title": "Mississauga woman inspires others with 5K walk for charity (680 News Athlete of the Week)",
+    "date": "2026-06-15",
+    "url": "https://toronto.citynews.ca/2026/06/15/mississauga-woman-inspires-others-with-5k-walk-for-charity",
+    "logo": "/assets/media/citynews.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "680 NewsRadio",
+    "title": "Athlete of the Week: first 5K with 33% strength",
+    "date": "2026-06-01",
+    "url": "https://www.youtube.com/watch?v=4Xv7tZjDpF8",
+    "video": "4Xv7tZjDpF8",
+    "kind": "radio",
+    "logo": "/assets/media/680-news.png"
+  },
+  {
+    "outlet": "CP24 Breakfast",
+    "title": "Walk & Roll for Muscular Dystrophy Canada",
+    "date": "2026-05-01",
+    "url": "https://www.youtube.com/watch?v=aFQoOfPDf9I",
+    "video": "aFQoOfPDf9I",
+    "kind": "broadcast",
+    "logo": "/assets/media/cp24-breakfast.png"
+  },
+  {
+    "outlet": "CityNews Toronto",
+    "title": "Walk & Roll and the What About Canada? campaign",
+    "date": "2026-05-01",
+    "url": "https://www.youtube.com/watch?v=fMIMTkqkIn4",
+    "video": "fMIMTkqkIn4",
+    "kind": "broadcast"
+  },
+  {
+    "outlet": "GTA Weekly",
+    "title": "Walk & Roll for Muscular Dystrophy Returns to Toronto",
+    "date": "2026-05-01",
+    "url": "https://www.gtaweekly.ca/walk-roll-muscular-dystrophy-canada-toronto",
+    "kind": "print"
+  },
+  {
+    "outlet": "Rick Hansen Foundation",
+    "title": "Lauren Pires: RHFSP Ambassador Hopes to Bring Disability Representation to Youth",
+    "date": "2026-04-01",
+    "url": "https://www.rickhansen.com/news-stories/blog/lauren-pires-rhfsp-ambassador-hopes-bring-disability-representation-youth",
+    "logo": "/assets/clients/client-rick-hansen.webp",
+    "kind": "print"
+  },
+  {
+    "outlet": "Accessibility For All Magazine",
+    "title": "February 2026 Feature",
+    "date": "2026-02-01",
+    "url": "https://www.flipsnack.com/C7B55E88B7A/afa-february-2026/full-view.html?p=32",
+    "logo": "/assets/media/accessibility-for-all-magazine.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "Oakville News",
+    "title": "Town Hall Set to Be Lit Up for Rare Disease Day",
+    "date": "2026-02-01",
+    "url": "https://www.oakvillenews.org/local-news/town-hall-set-to-be-lit-up-on-february-26-for-rare-disease-day-11923438",
+    "logo": "/assets/media/oakville-news.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "Mississauga.com",
+    "title": "Rare Disease Day Lights Up Brampton and Mississauga",
+    "date": "2026-02-01",
+    "url": "https://www.mississauga.com/news/rare-disease-day-brampton-mississauga/article_9ddca1bd-f336-525e-80c8-c5a288257fc8.html",
+    "logo": "/assets/media/mississauga-news.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "Newmarket Today",
+    "title": "Newmarket Bridge Going Blue for Rare Disease Day",
+    "date": "2026-02-01",
+    "url": "https://www.newmarkettoday.ca/local-news/newmarket-bridge-going-blue-for-todays-rare-disease-day-11935917",
+    "logo": "/assets/media/newmarket-today.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "SiriusXM Canada",
+    "title": "Invisible Disabilities Week Interview",
+    "date": "2025-10-01",
+    "url": "https://www.instagram.com/p/DQCbWDoDWBp/",
+    "logo": "/assets/media/siriusxm.png",
+    "kind": "radio"
+  },
+  {
+    "outlet": "CTV Your Morning",
+    "title": "Disability Pride Month",
+    "date": "2025-07-01",
+    "url": "https://www.youtube.com/watch?v=Ssn8UyB2NHM",
+    "video": "Ssn8UyB2NHM",
+    "kind": "broadcast"
+  },
+  {
+    "outlet": "Canadian SME Magazine",
+    "title": "Building Inclusion Through Empathy",
+    "date": "2025-06-01",
+    "url": "https://canadiansme.ca/building-inclusion-through-empathy/",
+    "logo": "/assets/media/canadian-sme.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "CityNews Toronto",
+    "title": "Rare Disease Day",
+    "date": "2025-02-01",
+    "url": "https://www.youtube.com/watch?v=DM_lFMvxOnE",
+    "video": "DM_lFMvxOnE",
+    "kind": "broadcast"
+  },
+  {
+    "outlet": "CHCH Morning Live",
+    "title": "Dating with an Invisible Disability",
+    "date": "2025-02-01",
+    "url": "https://www.youtube.com/watch?v=IZMCDzmOhnk",
+    "video": "IZMCDzmOhnk",
+    "kind": "broadcast"
+  },
+  {
+    "outlet": "Niagara-on-the-Lake Local",
+    "title": "Niagara Joins Global Movement to Honour Canadians Living with a Rare Disease",
+    "date": "2025-02-01",
+    "url": "https://www.notllocal.com/local-news/niagara-joins-global-movement-to-honour-canadians-living-with-a-rare-disease-10222437",
+    "logo": "/assets/media/niagara-on-the-lake-local-news.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "Thorold Today",
+    "title": "Niagara Joins Global Movement to Honour Canadians Living with a Rare Disease",
+    "date": "2025-02-01",
+    "url": "https://www.thoroldtoday.ca/local-news/niagara-joins-global-movement-to-honour-canadians-living-with-a-rare-disease-10222470",
+    "logo": "/assets/media/thorold-today.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "Newmarket Today",
+    "title": "Newmarket Bridge Will Light Up for Rare Disease Day",
+    "date": "2025-02-01",
+    "url": "https://www.newmarkettoday.ca/local-news/newmarket-bridge-will-light-up-for-rare-disease-day-10187178",
+    "logo": "/assets/media/newmarket-today.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "Ramona Magazine",
+    "title": "My (Muscle) Weakness Is Also My Strength: Life with an Invisible Disability",
+    "date": "2024-11-01",
+    "url": "https://ramonamag.com/2024/11/my-muscle-weakness-is-also-my-strength-life-with-an-invisible-disability/",
+    "logo": "/assets/media/ramona-magazine.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "Mississauga News",
+    "title": "Mississauga Residents Living with Disabilities Hit Hard by Higher Cost of Living",
+    "date": "2024-10-01",
+    "url": "https://www.mississauga.com/news/mississauga-residents-living-with-disabilities-hit-hard-by-higher-cost-of-living-report-finds/article_b28a923e-dad2-5d54-a58a-66bea231368e.html",
+    "logo": "/assets/media/mississauga-news.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "InSauga",
+    "title": "30 Global Leaders in Disability Awareness — and This Mississauga Woman Is Among Them",
+    "date": "2024-07-01",
+    "url": "https://www.insauga.com/30-global-leaders-in-disability-awareness-and-this-mississauga-woman-is-among-them/",
+    "logo": "/assets/media/insauga.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "Accessible Journeys Magazine",
+    "title": "On The Move With Invisible Disabilities",
+    "date": "2024-04-01",
+    "url": "https://www.flipsnack.com/C7B55E88B7A/march-2024-tmqxfa5unf/full-view.html",
+    "logo": "/assets/media/accessible-journeys.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "Breakfast Television",
+    "title": "Rare Disease Day",
+    "date": "2024-02-01",
+    "url": "https://www.youtube.com/watch?v=9z-gt9HmThE",
+    "video": "9z-gt9HmThE",
+    "kind": "broadcast"
+  },
+  {
+    "outlet": "CityNews Toronto",
+    "title": "Rare Disease Day",
+    "date": "2024-02-01",
+    "url": "https://www.youtube.com/watch?v=AiGTZJe3VII",
+    "logo": "/assets/media/citynews.png",
+    "kind": "broadcast"
+  },
+  {
+    "outlet": "Newmarket Today",
+    "title": "Global Chain of Lights Coming to Newmarket for Rare Disease Day",
+    "date": "2024-02-01",
+    "url": "https://www.newmarkettoday.ca/local-news/global-chain-of-lights-coming-to-newmarket-for-rare-disease-day-8300643",
+    "logo": "/assets/media/newmarket-today.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "AwareNow Magazine",
+    "title": "From Scars to Stars — Issue 47",
+    "date": "2024-02-01",
+    "url": "https://awarenow.us/from-scars-to-stars",
+    "logo": "/assets/media/awarenow-magazine.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "Niagara-on-the-Lake Local",
+    "title": "Niagara Sign Shines in Support of Rare Disease Day",
+    "date": "2024-02-01",
+    "url": "https://www.notllocal.com/local-news/niagara-sign-shines-in-support-of-rare-disease-day-8281769",
+    "logo": "/assets/media/niagara-on-the-lake-local-news.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "CityNews Toronto",
+    "title": "A global chain of lights for rare diseases",
+    "date": "2024-02-01",
+    "url": "https://youtu.be/Dy0Jw1__P9I",
+    "kind": "broadcast"
+  },
+  {
+    "outlet": "CityNews Toronto",
+    "title": "Speaker Slam Grand Slam Winners",
+    "date": "2023-11-01",
+    "url": "https://toronto.citynews.ca/video/2023/11/21/top-three-inspirational-speakers-honoured-at-national-competition/",
+    "logo": "/assets/media/citynews.png",
+    "kind": "broadcast"
+  },
+  {
+    "outlet": "InSauga",
+    "title": "International Speaking Contest Sees Second-Place Finish for Mississauga Woman",
+    "date": "2023-11-01",
+    "url": "https://www.insauga.com/international-speaking-contest-sees-second-place-finish-for-mississauga-woman/",
+    "logo": "/assets/media/insauga.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "InSauga",
+    "title": "Worldwide Speaking Contest Features Two Mississauga Women Vying for Top Spot",
+    "date": "2023-11-01",
+    "url": "https://www.insauga.com/worldwide-speaking-contest-features-two-mississauga-women-vying-for-top-spot/",
+    "logo": "/assets/media/insauga.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "OMNI Television",
+    "title": "OMNI News: Focus Punjabi — Invisible Disabilities Week",
+    "date": "2023-10-01",
+    "url": "https://www.youtube.com/watch?v=tS3-EFg1nEk&t",
+    "logo": "/assets/media/omni-news.png",
+    "kind": "broadcast"
+  },
+  {
+    "outlet": "Global News",
+    "title": "A Decade of Disability Awareness: Invisible Disabilities Association Marks Anniversary",
+    "date": "2023-10-01",
+    "url": "https://globalnews.ca/news/10026454/invisible-disability-awareness-week/",
+    "logo": "/assets/media/globalnews.png",
+    "kind": "broadcast"
+  },
+  {
+    "outlet": "CanvasRebel",
+    "title": "Meet Lauren Pires",
+    "date": "2023-10-01",
+    "url": "https://canvasrebel.com/meet-lauren-pires/",
+    "logo": "/assets/media/canvas-rebel.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "Modern Mississauga",
+    "title": "Mississauga Woman Named First-Ever Canadian Recipient of IDA Award",
+    "date": "2023-10-01",
+    "url": "https://www.modernmississauga.com/main/2023/9/27/mississauga-woman-named-first-ever-canadian-recipient-of-invisible-disabilities-association-award",
+    "logo": "/assets/media/modern-mississauga-magazine.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "Empowered In My Skin Podcast",
+    "title": "Amplifying Invisible Voices",
+    "date": "2023-10-01",
+    "url": "https://podcasts.apple.com/ca/podcast/lauren-pires-amplifying-invisible-voices/id1497740156?i=1000631813120",
+    "kind": "podcast"
+  },
+  {
+    "outlet": "CityNews Toronto",
+    "title": "Walk & Roll for Mobility Awareness Month",
+    "date": "2023-05-01",
+    "url": "https://toronto.citynews.ca/video/2023/05/18/raising-awareness-and-money-during-national-mobility-awareness-month/",
+    "logo": "/assets/media/citynews.png",
+    "kind": "broadcast"
+  },
+  {
+    "outlet": "RareDiseaseDay.org",
+    "title": "Being Your Own Powerhouse: The Story of Lauren",
+    "date": "2023-02-01",
+    "url": "https://www.rarediseaseday.org/heroes/being-your-own-powerhouse/",
+    "logo": "/assets/media/rare-disease-day.png",
+    "kind": "print"
+  }
+]

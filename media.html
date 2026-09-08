@@ -109,7 +109,8 @@ navActive: media
     @media (max-width: 768px) { .logo-carousel--mobile-only { display: block; margin-top: 1rem; } }
     .media-link-item__logo { filter: none !important; opacity: 1 !important; }
     img[src*="client-rick-hansen"] { filter: none !important; opacity: 1 !important; }
-  </style>
+      .media-link-item__logo--text { display:inline-flex; align-items:center; justify-content:center; font-family: var(--font-display); font-size: 0.85rem; letter-spacing: 0.04em; color: var(--plum); background: var(--plum-subtle); border-radius: 6px; padding: 0.25rem 0.5rem; text-align:center; }
+</style>
   <section class="section media-tv">
     <div class="container">
       <div class="section__header fade-in" style="text-align: center; margin-bottom: 2rem;">
@@ -150,77 +151,24 @@ navActive: media
       </div>
 
       <div class="video-grid video-grid--4 fade-in">
-        <div>
+{% for m in media %}{% if m.video and m.kind == "broadcast" %}        <div>
           <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/aFQoOfPDf9I" title="Lauren Pires on CP24 Breakfast" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            <iframe src="https://www.youtube.com/embed/{{ m.video }}" title="Lauren Pires on {{ m.outlet }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           </div>
-          <p class="video-caption"><strong>CP24 Breakfast</strong><br>Walk &amp; Roll for Muscular Dystrophy Canada — May 2026</p>
+          <p class="video-caption"><strong>{{ m.outlet }}</strong><br>{{ m.title }} — {{ m.date | monthYear }}</p>
         </div>
-        <div>
-          <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/fMIMTkqkIn4" title="Lauren Pires on CityNews Toronto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <p class="video-caption"><strong>CityNews Toronto</strong><br>Walk &amp; Roll and the What About Canada? campaign — May 2026</p>
-        </div>
-        <div>
-          <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/Ssn8UyB2NHM" title="Lauren Pires on CTV Your Morning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <p class="video-caption"><strong>CTV Your Morning</strong><br>Disability Pride Month — Jul 2025</p>
-        </div>
-        <div>
-          <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/DM_lFMvxOnE" title="Lauren Pires on CityNews Toronto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <p class="video-caption"><strong>CityNews Toronto</strong><br>Rare Disease Day — Feb 2025</p>
-        </div>
-        <div>
-          <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/IZMCDzmOhnk" title="Lauren Pires on CHCH Morning Live" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <p class="video-caption"><strong>CHCH Morning Live</strong><br>Dating with an Invisible Disability — Feb 2025</p>
-        </div>
-        <div>
-          <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/9z-gt9HmThE" title="Lauren Pires on Breakfast Television" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <p class="video-caption"><strong>Breakfast Television</strong><br>Rare Disease Day — Feb 2024</p>
-        </div>
-      </div>
+{% endif %}{% endfor %}      </div>
 
       <div class="tv-appearances-list fade-in">
-        <a href="https://www.youtube.com/watch?v=AiGTZJe3VII" target="_blank" class="media-link-item">
-          <img src="/assets/media/citynews.png" alt="CityNews Toronto" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">CityNews Toronto — Rare Disease Day</p>
-            <p class="media-link-item__outlet">CityNews Toronto — Feb 2024</p>
+{% for m in media %}{% if not m.video and m.kind == "broadcast" %}        <a href="{{ m.url }}" target="_blank" rel="noopener" class="media-link-item">
+          {% if m.logo %}<img src="{{ m.logo }}" alt="{{ m.outlet }}" class="media-link-item__logo">{% else %}<span class="media-link-item__logo media-link-item__logo--text">{{ m.outlet }}</span>{% endif %}
+          <div class="media-link-item__text">
+            <p class="media-link-item__title">{{ m.title }}</p>
+            <p class="media-link-item__outlet">{{ m.outlet }} — {{ m.date | monthYear }}</p>
           </div>
           <span class="media-link-item__arrow">→</span>
         </a>
-        <a href="https://toronto.citynews.ca/video/2023/11/21/top-three-inspirational-speakers-honoured-at-national-competition/" target="_blank" class="media-link-item">
-          <img src="/assets/media/citynews.png" alt="CityNews Toronto" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">CityNews Toronto — Speaker Slam Grand Slam Winners</p>
-            <p class="media-link-item__outlet">CityNews Toronto — Nov 2023</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://www.youtube.com/watch?v=tS3-EFg1nEk&t" target="_blank" class="media-link-item">
-          <img src="/assets/media/omni-news.png" alt="OMNI Television" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">OMNI News: Focus Punjabi — Invisible Disabilities Week</p>
-            <p class="media-link-item__outlet">OMNI Television — Oct 2023</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://toronto.citynews.ca/video/2023/05/18/raising-awareness-and-money-during-national-mobility-awareness-month/" target="_blank" class="media-link-item">
-          <img src="/assets/media/citynews.png" alt="CityNews Toronto" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">CityNews Toronto — Walk &amp; Roll for Mobility Awareness Month</p>
-            <p class="media-link-item__outlet">CityNews Toronto — May 2023</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
+{% endif %}{% endfor %}
       </div>
     </div>
   </section>
@@ -317,199 +265,23 @@ navActive: media
         <h2 class="section__title">Articles, Interviews &amp; Features</h2>
       </div>
       <div class="video-grid video-grid--4 fade-in" style="margin-bottom: 2.5rem;">
-        <div>
+{% for m in media %}{% if m.video and m.kind != "broadcast" %}        <div>
           <div class="video-embed">
-            <iframe src="https://www.youtube.com/embed/4Xv7tZjDpF8" title="Lauren Pires on 680 NewsRadio: Athlete of the Week" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            <iframe src="https://www.youtube.com/embed/{{ m.video }}" title="Lauren Pires on {{ m.outlet }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
           </div>
-          <p class="video-caption"><strong>680 NewsRadio</strong><br>Athlete of the Week: first 5K with 33% strength — Jun 2026</p>
+          <p class="video-caption"><strong>{{ m.outlet }}</strong><br>{{ m.title }} — {{ m.date | monthYear }}</p>
         </div>
-      </div>
+{% endif %}{% endfor %}      </div>
       <div class="media-links-list fade-in">
-        <a href="https://www.flipsnack.com/C7B55E88B7A/afa-february-2026/full-view.html?p=32" target="_blank" rel="noopener" class="media-link-item">
-          <img src="/assets/media/accessibility-for-all-magazine.png" alt="Accessibility For All Magazine" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">Accessibility For All Magazine — February 2026 Feature</p>
-            <p class="media-link-item__outlet">Accessibility For All Magazine — Feb 2026</p>
+{% for m in media %}{% if not m.video and m.kind != "broadcast" %}        <a href="{{ m.url }}" target="_blank" rel="noopener" class="media-link-item">
+          {% if m.logo %}<img src="{{ m.logo }}" alt="{{ m.outlet }}" class="media-link-item__logo">{% else %}<span class="media-link-item__logo media-link-item__logo--text">{{ m.outlet }}</span>{% endif %}
+          <div class="media-link-item__text">
+            <p class="media-link-item__title">{{ m.title }}</p>
+            <p class="media-link-item__outlet">{{ m.outlet }} — {{ m.date | monthYear }}</p>
           </div>
           <span class="media-link-item__arrow">→</span>
         </a>
-        <a href="https://www.oakvillenews.org/local-news/town-hall-set-to-be-lit-up-on-february-26-for-rare-disease-day-11923438" target="_blank" rel="noopener" class="media-link-item">
-          <img src="/assets/media/oakville-news.png" alt="Oakville News" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">Town Hall Set to Be Lit Up for Rare Disease Day</p>
-            <p class="media-link-item__outlet">Oakville News — Feb 2026</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://www.mississauga.com/news/rare-disease-day-brampton-mississauga/article_9ddca1bd-f336-525e-80c8-c5a288257fc8.html" target="_blank" rel="noopener" class="media-link-item">
-          <img src="/assets/media/mississauga-news.png" alt="Mississauga News" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">Rare Disease Day Lights Up Brampton and Mississauga</p>
-            <p class="media-link-item__outlet">Mississauga.com — Feb 2026</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://www.newmarkettoday.ca/local-news/newmarket-bridge-going-blue-for-todays-rare-disease-day-11935917" target="_blank" rel="noopener" class="media-link-item">
-          <img src="/assets/media/newmarket-today.png" alt="Newmarket Today" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">Newmarket Bridge Going Blue for Rare Disease Day</p>
-            <p class="media-link-item__outlet">Newmarket Today — Feb 2026</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://www.rickhansen.com/news-stories/blog/lauren-pires-rhfsp-ambassador-hopes-bring-disability-representation-youth" target="_blank" rel="noopener" class="media-link-item">
-          <img src="/assets/clients/client-rick-hansen.webp" alt="Rick Hansen Foundation" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">Lauren Pires: RHFSP Ambassador Hopes to Bring Disability Representation to Youth</p>
-            <p class="media-link-item__outlet">Rick Hansen Foundation — 2025</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://www.instagram.com/p/DQCbWDoDWBp/" target="_blank" class="media-link-item">
-          <img src="/assets/media/siriusxm.png" alt="SiriusXM Canada" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">SiriusXM Canada — Invisible Disabilities Week Interview</p>
-            <p class="media-link-item__outlet">SiriusXM Canada — Oct 2025</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://canadiansme.ca/building-inclusion-through-empathy/" target="_blank" class="media-link-item">
-          <img src="/assets/media/canadian-sme.png" alt="Canadian SME" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">Building Inclusion Through Empathy</p>
-            <p class="media-link-item__outlet">Canadian SME Magazine — Jun 2025</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://www.notllocal.com/local-news/niagara-joins-global-movement-to-honour-canadians-living-with-a-rare-disease-10222437" target="_blank" class="media-link-item">
-          <img src="/assets/media/niagara-on-the-lake-local-news.png" alt="NOTL Local" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">Niagara Joins Global Movement to Honour Canadians Living with a Rare Disease</p>
-            <p class="media-link-item__outlet">Niagara-on-the-Lake Local — Feb 2025</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://www.thoroldtoday.ca/local-news/niagara-joins-global-movement-to-honour-canadians-living-with-a-rare-disease-10222470" target="_blank" class="media-link-item">
-          <img src="/assets/media/thorold-today.png" alt="Thorold Today" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">Niagara Joins Global Movement to Honour Canadians Living with a Rare Disease</p>
-            <p class="media-link-item__outlet">Thorold Today — Feb 2025</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://www.newmarkettoday.ca/local-news/newmarket-bridge-will-light-up-for-rare-disease-day-10187178" target="_blank" class="media-link-item">
-          <img src="/assets/media/newmarket-today.png" alt="Newmarket Today" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">Newmarket Bridge Will Light Up for Rare Disease Day</p>
-            <p class="media-link-item__outlet">Newmarket Today — Feb 2025</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://ramonamag.com/2024/11/my-muscle-weakness-is-also-my-strength-life-with-an-invisible-disability/" target="_blank" class="media-link-item">
-          <img src="/assets/media/ramona-magazine.png" alt="Ramona Magazine" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">My (Muscle) Weakness Is Also My Strength: Life with an Invisible Disability</p>
-            <p class="media-link-item__outlet">Ramona Magazine — Nov 2024</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://www.mississauga.com/news/mississauga-residents-living-with-disabilities-hit-hard-by-higher-cost-of-living-report-finds/article_b28a923e-dad2-5d54-a58a-66bea231368e.html" target="_blank" class="media-link-item">
-          <img src="/assets/media/mississauga-news.png" alt="Mississauga News" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">Mississauga Residents Living with Disabilities Hit Hard by Higher Cost of Living</p>
-            <p class="media-link-item__outlet">Mississauga News — Oct 2024</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://www.insauga.com/30-global-leaders-in-disability-awareness-and-this-mississauga-woman-is-among-them/" target="_blank" class="media-link-item">
-          <img src="/assets/media/insauga.png" alt="InSauga" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">30 Global Leaders in Disability Awareness — and This Mississauga Woman Is Among Them</p>
-            <p class="media-link-item__outlet">InSauga — Jul 2024</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://www.flipsnack.com/C7B55E88B7A/march-2024-tmqxfa5unf/full-view.html" target="_blank" class="media-link-item">
-          <img src="/assets/media/accessible-journeys.png" alt="Accessible Journeys Magazine" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">On The Move With Invisible Disabilities</p>
-            <p class="media-link-item__outlet">Accessible Journeys Magazine — Apr 2024</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://www.newmarkettoday.ca/local-news/global-chain-of-lights-coming-to-newmarket-for-rare-disease-day-8300643" target="_blank" class="media-link-item">
-          <img src="/assets/media/newmarket-today.png" alt="Newmarket Today" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">Global Chain of Lights Coming to Newmarket for Rare Disease Day</p>
-            <p class="media-link-item__outlet">Newmarket Today — Feb 2024</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://awarenow.us/from-scars-to-stars" target="_blank" class="media-link-item">
-          <img src="/assets/media/awarenow-magazine.png" alt="AwareNow Magazine" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">From Scars to Stars — Issue 47</p>
-            <p class="media-link-item__outlet">AwareNow Magazine — Feb 2024</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://www.notllocal.com/local-news/niagara-sign-shines-in-support-of-rare-disease-day-8281769" target="_blank" class="media-link-item">
-          <img src="/assets/media/niagara-on-the-lake-local-news.png" alt="NOTL Local" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">Niagara Sign Shines in Support of Rare Disease Day</p>
-            <p class="media-link-item__outlet">Niagara-on-the-Lake Local — Feb 2024</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://www.insauga.com/international-speaking-contest-sees-second-place-finish-for-mississauga-woman/" target="_blank" class="media-link-item">
-          <img src="/assets/media/insauga.png" alt="InSauga" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">International Speaking Contest Sees Second-Place Finish for Mississauga Woman</p>
-            <p class="media-link-item__outlet">InSauga — Nov 2023</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://www.insauga.com/worldwide-speaking-contest-features-two-mississauga-women-vying-for-top-spot/" target="_blank" class="media-link-item">
-          <img src="/assets/media/insauga.png" alt="InSauga" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">Worldwide Speaking Contest Features Two Mississauga Women Vying for Top Spot</p>
-            <p class="media-link-item__outlet">InSauga — Nov 2023</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://globalnews.ca/news/10026454/invisible-disability-awareness-week/" target="_blank" class="media-link-item">
-          <img src="/assets/media/globalnews.png" alt="Global News" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">A Decade of Disability Awareness: Invisible Disabilities Association Marks Anniversary</p>
-            <p class="media-link-item__outlet">Global News — Oct 2023</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://canvasrebel.com/meet-lauren-pires/" target="_blank" class="media-link-item">
-          <img src="/assets/media/canvas-rebel.png" alt="CanvasRebel" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">Meet Lauren Pires</p>
-            <p class="media-link-item__outlet">CanvasRebel — Oct 2023</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://www.modernmississauga.com/main/2023/9/27/mississauga-woman-named-first-ever-canadian-recipient-of-invisible-disabilities-association-award" target="_blank" class="media-link-item">
-          <img src="/assets/media/modern-mississauga-magazine.png" alt="Modern Mississauga" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">Mississauga Woman Named First-Ever Canadian Recipient of IDA Award</p>
-            <p class="media-link-item__outlet">Modern Mississauga — Oct 2023</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-        <a href="https://www.rarediseaseday.org/heroes/being-your-own-powerhouse/" target="_blank" class="media-link-item">
-          <img src="/assets/media/rare-disease-day.png" alt="RareDiseaseDay.org" class="media-link-item__logo">
-          <div>
-            <p class="media-link-item__title">Being Your Own Powerhouse: The Story of Lauren</p>
-            <p class="media-link-item__outlet">RareDiseaseDay.org — Feb 2023</p>
-          </div>
-          <span class="media-link-item__arrow">→</span>
-        </a>
-      </div>
+{% endif %}{% endfor %}      </div>
     </div>
   </section>
 
