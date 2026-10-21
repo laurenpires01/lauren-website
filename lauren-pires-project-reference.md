@@ -19,7 +19,7 @@ Lauren Pires is an award-winning keynote speaker and invisible disability advoca
 - Named to 2024 D-30 Disability Impact List by Diversability (30 global leaders in disability awareness)
 - Selected as one of the faces of the global Rare Disease Day 2024 campaign by EURORDIS
 - #2 Inspirational Speaker of the Year, Speaker Slam 2023
-- TEDxMississauga speaker (delivered June 27, 2026) — published talk title: "How can we fit in without losing who we are?" — video: https://www.youtube.com/watch?v=SWVUgHY3ibM (live July 24, 2026; passed 20,000 views by Sept 4, 2026)
+- TEDxMississauga speaker (delivered June 27, 2026) — published talk title: "How can we fit in without losing who we are?" — video: https://www.youtube.com/watch?v=SWVUgHY3ibM (live July 24, 2026; passed 20,000 views by Sept 4, 2026; 40,000 views by Oct 21, 2026)
 
 **Past speaking clients include:** Health Canada, Arc'teryx, McKesson, The Co-operators, Rick Hansen Foundation, Employment and Social Development Canada (ESDC), GreenShield, Embark, GroupHealth, Guelph-Humber, ScaleHR, and others.
 
