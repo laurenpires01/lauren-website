@@ -1,4 +1,6 @@
 ---
+navCta: "Check Availability"
+navCtaHref: "/contact"
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +27,7 @@
   <meta name="theme-color" content="#10524F">
   <title>Lauren Pires | Invisible Disability Speaker | Keynote Speaker on Resilience & Joy</title>
   <meta name="description" content="Lauren Pires is an award-winning TEDx speaker and invisible disability keynote speaker helping organizations build inclusive cultures and resilience through joy. Book Lauren for your next event.">
-  <meta name="keywords" content="invisible disability speaker, keynote speaker on resilience, disability keynote speaker, invisible disabilities, resilience speaker, certified professional speaker disability, disability awareness speaker, inclusion keynote speaker, joy and resilience speaker, Lauren Pires speaker, book disability speaker, corporate disability speaker Canada, DEIA keynote speaker">
+  <meta name="keywords" content="invisible disability speaker, keynote speaker on resilience, disability keynote speaker, invisible disabilities, resilience speaker, TEDx disability speaker, disability awareness speaker, inclusion keynote speaker, joy and resilience speaker, Lauren Pires speaker, book disability speaker, corporate disability speaker Canada, DEIA keynote speaker">
   <meta name="author" content="Lauren Pires">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.laurensaysyay.com/">
@@ -49,39 +51,115 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/styles.css?v=20260711">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
   <style>
-    @keyframes daily-yay-sparkle {
-      0% { background-position: -200% center; }
-      100% { background-position: 200% center; }
-    }
-    .hero-daily-yay {
-      background: linear-gradient(90deg, #c9a6e8 0%, #ffffff 12%, #7de8e2 22%, #f9a8d4 33%, #ffffff 45%, #c9a6e8 55%, #7de8e2 65%, #ffffff 75%, #f9a8d4 85%, #c9a6e8 100%);
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: daily-yay-sparkle 5s linear infinite;
-      text-shadow: none;
-    }
-    .hero-full { background-image: url(/assets/photos/lauren-pires-hero.webp) !important; background-position: center top !important; background-size: cover !important; background-repeat: no-repeat !important; background-color: #0c0608 !important; }
-    @media (min-width: 1200px) {
-      .hero-full { background-size: auto 100% !important; background-position: center top !important; }
+    /* ---------- Homepage (2026-10 redesign) ---------- */
+    :root { --pink: #FF5FA2; --pink-dark: #E8438A; --sun: #FFD23F; --night: #160A22; }
+
+    /* Hero: silent stage loop + headline */
+    .hp-hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: center;
+      overflow: hidden; background: var(--night) url(/assets/video/lauren-hero-poster.webp) center / cover no-repeat;
+      padding: 120px 0 80px; color: var(--white); }
+    .hp-hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+    .hp-hero::after { content: ""; position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(90deg, rgba(22,10,34,.92) 0%, rgba(22,10,34,.66) 42%, rgba(22,10,34,.06) 76%); }
+    .hp-hero .container { position: relative; z-index: 2; width: 100%; }
+    .hp-hero__content { max-width: 600px; }
+    .hp-hero__kicker { font-family: 'Caveat', cursive; font-size: clamp(2rem, 3.4vw, 2.8rem); color: var(--sun); line-height: 1; }
+    .hp-hero__title { font-family: var(--font-display); font-size: clamp(4.5rem, 9vw, 8.5rem); line-height: .86;
+      letter-spacing: .01em; color: var(--white); margin: .15em 0 .3em; }
+    .hp-hero__title span { color: var(--pink); }
+    .hp-hero__lede { font-size: 1.15rem; line-height: 1.6; color: rgba(255,255,255,.9); max-width: 500px; }
+    .hp-hero__lede b { color: var(--white); }
+    .hp-hero__actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 2rem; }
+    .hp-btn-watch { display: inline-flex; align-items: center; gap: .8rem; background: var(--pink); color: var(--white);
+      font-weight: 700; font-size: .95rem; letter-spacing: .06em; text-transform: uppercase; padding: 1rem 1.7rem 1rem 1.1rem;
+      border-radius: 999px; text-decoration: none; transition: background var(--transition), transform var(--transition); }
+    .hp-btn-watch:hover { background: var(--pink-dark); transform: translateY(-2px); }
+    .hp-btn-watch__icon { width: 34px; height: 34px; border-radius: 50%; background: var(--white); display: grid; place-items: center; }
+    .hp-btn-watch__icon::before { content: ""; border-left: 11px solid var(--pink); border-top: 7px solid transparent; border-bottom: 7px solid transparent; margin-left: 3px; }
+    .hp-link-light { color: var(--white); font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+    .hp-link-light:hover { color: var(--sun); }
+
+    /* Shared homepage pieces */
+    .hp-h2 { font-family: var(--font-display); font-size: clamp(2.4rem, 4.5vw, 3.6rem); line-height: 1; color: var(--plum); letter-spacing: .01em; }
+    .hp-split { display: grid; grid-template-columns: 1.05fr 1fr; gap: 4rem; align-items: center; }
+    .hp-split img { width: 100%; display: block; border-radius: 6px; }
+    .hp-split p { font-size: 1.08rem; line-height: 1.75; margin-top: 1.1rem; color: var(--charcoal); }
+    .hp-split .hp-stat { font-family: var(--font-display); font-size: clamp(4.5rem, 8vw, 7rem); line-height: .85; color: var(--pink); margin: 0; }
+    .hp-link { color: var(--plum); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--pink); padding-bottom: 2px; }
+    .hp-link:hover { color: var(--pink-dark); }
+    .hp-logos-line { text-align: center; font-weight: 600; color: var(--charcoal); margin-bottom: 1.6rem; }
+    .hp-section-head { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+
+    /* TEDx */
+    .hp-tedx { background: var(--night); color: var(--white); }
+    .hp-tedx .hp-h2 { color: var(--white); }
+    .hp-tedx p { color: rgba(255,255,255,.85); }
+    .hp-tedx .hp-tedx__views { font-family: var(--font-display); font-size: 2.2rem; letter-spacing: .03em; color: var(--sun); margin-top: 1.5rem; }
+    .hp-tedx .hp-hero__kicker { margin: 0 0 .4rem; }
+    .hp-video-thumb { position: relative; display: block; border-radius: 6px; overflow: hidden; }
+    .hp-video-thumb img { transition: transform .5s ease; }
+    .hp-video-thumb:hover img { transform: scale(1.03); }
+    .hp-video-thumb__play { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 84px; height: 84px;
+      border-radius: 50%; background: var(--pink); display: grid; place-items: center; box-shadow: 0 10px 30px rgba(0,0,0,.4); }
+    .hp-video-thumb__play::before { content: ""; border-left: 24px solid var(--white); border-top: 15px solid transparent; border-bottom: 15px solid transparent; margin-left: 6px; }
+
+    /* Big testimonial band */
+    .hp-quote-band { position: relative; color: var(--white); padding: 7rem 0;
+      background: url(/assets/photos/hero-stage.webp) center 30% / cover no-repeat; }
+    .hp-quote-band::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(42,18,64,.25), rgba(42,18,64,.92) 55%); }
+    .hp-quote-band .container { position: relative; display: flex; justify-content: flex-end; }
+    .hp-quote-band blockquote { max-width: 620px; }
+    .hp-quote-band__text { font-family: var(--font-display); font-size: clamp(2.2rem, 3.8vw, 3.2rem); line-height: 1.05; letter-spacing: .01em; }
+    .hp-quote-band__who { margin-top: 1.4rem; font-size: 1rem; color: rgba(255,255,255,.85); }
+    .hp-quote-band__who strong { color: var(--white); display: block; }
+
+    /* Testimonial cards */
+    .hp-quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+    .hp-quote h3 { font-family: var(--font-display); font-size: 1.7rem; line-height: 1.05; color: var(--plum); letter-spacing: .01em; }
+    .hp-quote p { margin-top: .8rem; line-height: 1.65; color: var(--charcoal); }
+    .hp-quote footer { margin-top: 1rem; font-size: .9rem; color: var(--text-light); }
+    .hp-quote footer strong { color: var(--charcoal); display: block; }
+
+    /* Recognition list */
+    .hp-recognition { list-style: none; margin: 1.5rem 0 0; padding: 0; border-top: 1px solid var(--border); }
+    .hp-recognition li { padding: .7rem 0; border-bottom: 1px solid var(--border); font-size: .98rem; color: var(--charcoal); }
+    .hp-recognition li strong { color: var(--plum); }
+
+    /* Closing CTA */
+    .hp-cta { background: var(--plum); color: var(--white); text-align: center; padding: 6rem 0; }
+    .hp-cta .hp-h2 { color: var(--white); }
+    .hp-cta p { font-size: 1.15rem; margin: 1rem auto 2rem; max-width: 560px; color: rgba(255,255,255,.88); }
+    .hp-btn-solid { display: inline-block; background: var(--pink); color: var(--white); font-weight: 700; letter-spacing: .06em;
+      text-transform: uppercase; padding: 1.05rem 2.2rem; border-radius: 999px; text-decoration: none; transition: background var(--transition), transform var(--transition); }
+    .hp-btn-solid:hover { background: var(--pink-dark); transform: translateY(-2px); }
+
+    /* Video lightbox */
+    .hp-lightbox { position: fixed; inset: 0; z-index: 2000; background: rgba(10,4,16,.94); display: grid; place-items: center; padding: 4vw; }
+    .hp-lightbox[hidden] { display: none; }
+    .hp-lightbox__inner { width: min(1100px, 100%); }
+    .hp-lightbox__frame { aspect-ratio: 16 / 9; background: #000; box-shadow: 0 30px 80px rgba(0,0,0,.6); }
+    .hp-lightbox__frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .hp-lightbox__cta { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;
+      margin-top: 1.1rem; color: var(--white); font-size: 1.05rem; }
+    .hp-lightbox__close { position: absolute; top: 14px; right: 22px; background: none; border: 0; color: var(--white); font-size: 2.6rem; line-height: 1; cursor: pointer; }
+
+    @media (prefers-reduced-motion: reduce) { .hp-hero__video { display: none; } }
+    @media (max-width: 900px) {
+      .hp-split { grid-template-columns: 1fr; gap: 2rem; }
+      .hp-split--flip > :first-child { order: 2; }
+      .hp-quotes { grid-template-columns: 1fr; }
+      .hp-quote-band { padding: 5rem 0; background-position: 30% center; }
+      .hp-quote-band::before { background: rgba(42,18,64,.82); }
     }
     @media (max-width: 768px) {
-      .hero-full { background-image: url(/assets/photos/lauren-pires-hero-mobile.webp) !important; background-position: center 8% !important; background-size: cover !important; }
-      .hero-full__content { padding-top: 52% !important; }
-      .hero__tagline { display: none !important; }
-      .hero__title { font-size: 4rem !important; line-height: 1 !important; }
-      .hero__description {
-        background: rgba(10,10,20,0.52);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
-        border-radius: 8px;
-        padding: 0.85rem 1rem !important;
-        margin-bottom: 1.5rem;
-      }
+      .hp-hero { align-items: flex-end; background-position: 72% center; padding-bottom: 3.5rem; }
+      .hp-hero::after { background: linear-gradient(0deg, rgba(22,10,34,.95) 0%, rgba(22,10,34,.7) 45%, rgba(22,10,34,.1) 80%); }
+      .hp-hero__title { font-size: 4.6rem; }
     }
-    /* Walk & Roll banner */
+
+    /* Announcement banner */
     .walk-banner {
       background: var(--teal);
       padding: 0.6rem 1rem;
@@ -131,7 +209,7 @@
       body.has-banner .hero-full { padding-top: 62px; }
     }
   </style>
-  <link rel="preload" href="/assets/photos/lauren-pires-hero.webp" as="image" type="image/webp">
+  <link rel="preload" href="/assets/video/lauren-hero-poster.webp" as="image" type="image/webp">
 
   <script type="application/ld+json">
   {
@@ -188,10 +266,10 @@
 </head>
 <body>
 
-  <!-- Walk & Roll announcement banner — expires May 26, 2026 -->
+  <!-- Announcement banner. Expiry is set in the script at the bottom of the page. -->
   <div class="walk-banner" id="walkBanner">
     <div class="walk-banner__inner">
-      <span class="walk-banner__text">🔴 Lauren's TEDx talk has passed 20,000 views. <a href="https://www.youtube.com/watch?v=SWVUgHY3ibM" target="_blank" rel="noopener">Watch it on YouTube →</a></span>
+      <span class="walk-banner__text">Lauren's TEDx talk has passed 40,000 views. <a href="https://www.youtube.com/watch?v=SWVUgHY3ibM" class="js-video" data-video="SWVUgHY3ibM" data-title="Lauren Pires at TEDxMississauga">Watch it here →</a></span>
       <button class="walk-banner__close" id="walkBannerClose" aria-label="Close banner">✕</button>
     </div>
   </div>
@@ -201,21 +279,18 @@
 
   <main>
 
-  <!-- Hero -->
-  <section class="hero-full">
+  <!-- Hero: silent stage loop (TEDxMississauga + speaker reel). Sources are added by JS on larger screens only. -->
+  <section class="hp-hero">
+    <video class="hp-hero__video" muted loop playsinline preload="none" poster="/assets/video/lauren-hero-poster.webp" aria-hidden="true"
+           data-webm="/assets/video/lauren-hero-loop.webm" data-mp4="/assets/video/lauren-hero-loop.mp4"></video>
     <div class="container">
-      <div class="hero-full__content fade-in">
-        <p class="hero__tagline" style="color: rgba(255,255,255,0.8);">
-          <span class="sparkle sparkle--small" style="background: rgba(255,255,255,0.6);"></span>
-          Invisible Disability Keynote Speaker
-        </p>
-        <h1 class="hero__title" style="color: var(--white);">Find Your<br><span class="hero-daily-yay">Daily Yay.</span></h1>
-        <p class="hero__description" style="color: rgba(255,255,255,0.9);">
-          Lauren Pires helps organizations explore disability-related biases and beliefs to create inclusive cultures and build resilience through joy.
-        </p>
-        <div class="hero__actions">
-          <a href="#speaker-reel" class="btn btn--white btn--lg">Watch Speaker Reel</a>
-          <a href="/contact" class="btn btn--outline-white btn--lg">Contact Lauren</a>
+      <div class="hp-hero__content">
+        <p class="hp-hero__kicker">find your</p>
+        <h1 class="hp-hero__title">Daily <span>Yay.</span></h1>
+        <p class="hp-hero__lede">Invisible disability keynote speaker. Lauren helps organizations see <b>invisible disabilities</b>, rewrite <b>bias</b>, and build <b>resilience through joy</b>.</p>
+        <div class="hp-hero__actions">
+          <a href="https://www.youtube.com/watch?v=vkrUMCPjKL0" class="hp-btn-watch js-video" data-video="vkrUMCPjKL0" data-title="Lauren Pires speaker reel"><span class="hp-btn-watch__icon"></span>Watch Lauren Speak</a>
+          <a href="/contact" class="hp-link-light">or check her availability →</a>
         </div>
       </div>
     </div>
@@ -235,13 +310,9 @@
     .logo-carousel--mobile-only { display: none; }
     @media (max-width: 768px) { .logo-carousel--mobile-only { display: block; margin-top: 1rem; } }
   </style>
-  <section class="section client-logos" style="padding: 4rem 0;">
+  <section class="section client-logos" style="padding: 3rem 0;">
     <div class="container">
-      <div class="section__header fade-in" style="text-align: center; margin-bottom: 2rem;">
-        <p class="section-label" style="justify-content: center;">Past Clients</p>
-        <h2 class="section__title">Trusted By Organizations Across North America</h2>
-        <p class="section__subtitle" style="margin: 0.5rem auto 0; max-width: 600px; text-align: center;">From government agencies and Fortune 500 companies to nonprofits and educational institutions.</p>
-      </div>
+      <p class="hp-logos-line">Trusted by organizations across North America</p>
       <!-- Row 1: left to right -->
       <div class="logo-carousel">
           <div class="logo-carousel__track" style="animation-duration: 45s;">
@@ -338,34 +409,29 @@
   </section>
 
 
-  <!-- Speaker Reel -->
-  <section id="speaker-reel" class="section section--plum">
-    <div class="container">
-      <div class="section__header fade-in" style="text-align: center; max-width: 700px; margin: 0 auto 1.5rem;">
-        <p class="section-label" style="justify-content: center;">Watch</p>
-        <h2 class="section__title">See Lauren in Action</h2>
-        <p class="section__subtitle" style="max-width: 600px; margin: 0.5rem auto 0;">Invisible Disability Speaker · Resilience Expert · Accessibility Advocate</p>
-      </div>
-      <div class="video-feature fade-in">
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/vkrUMCPjKL0" title="Lauren Pires Speaker Reel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-      <div style="text-align: center; margin-top: 2rem;" class="fade-in">
-        <a href="/contact" class="btn btn--white">Contact Lauren</a>
+  <!-- The problem -->
+  <section class="section" style="padding: 5.5rem 0;">
+    <div class="container hp-split">
+      <img src="/assets/photos/grand-slam-audience.webp" alt="Lauren Pires on stage facing a full audience" width="1719" height="1146" loading="lazy">
+      <div>
+        <p class="hp-stat">80%</p>
+        <h2 class="hp-h2">of disabilities are ones you can't see.</h2>
+        <p>That means people living with them are on your team right now, deciding every day whether it's safe to say so.</p>
+        <p>Lauren knows that decision well. Born with Central Core Disease, a rare neuromuscular condition that leaves her with about 33% of the average person's strength, she hid it for 30 years. Her keynotes give organizations the words and the culture to make telling the truth feel safe.</p>
+        <p><a href="/about" class="hp-link">Read Lauren's story</a></p>
       </div>
     </div>
   </section>
 
   <!-- Keynotes Preview -->
-  <section class="section section--alt">
+  <section class="section section--alt" style="padding: 5rem 0;">
     <div class="container">
-      <div class="section__header fade-in" style="text-align: center;">
-        <p class="section-label" style="justify-content: center;">Speaking</p>
-        <h2 class="section__title">Keynote Topics</h2>
+      <div class="hp-section-head">
+        <h2 class="hp-h2">Keynotes</h2>
+        <a href="/speaking" class="hp-link">See all speaking topics</a>
       </div>
 
-      <div class="keynote-cards-row fade-in">
+      <div class="keynote-cards-row">
         <a href="/speaking" class="keynote-card-img">
           <div class="keynote-card-img__photo">
             <img src="/assets/photos/archangel-wide.webp" alt="Lauren Pires delivering keynote at Archangel Summit" loading="lazy">
@@ -399,9 +465,21 @@
           </div>
         </a>
       </div>
+    </div>
+  </section>
 
-      <div style="text-align: center; margin-top: 2rem;" class="fade-in">
-        <a href="/speaking" class="btn btn--primary">Explore All Speaking Topics</a>
+  <!-- TEDx -->
+  <section class="section hp-tedx" style="padding: 5.5rem 0;">
+    <div class="container hp-split">
+      <a href="https://www.youtube.com/watch?v=SWVUgHY3ibM" class="hp-video-thumb js-video" data-video="SWVUgHY3ibM" data-title="Lauren Pires at TEDxMississauga" aria-label="Play Lauren's TEDxMississauga talk">
+        <img src="/assets/photos/tedx-mississauga-stage.webp" alt="Lauren Pires on the TEDxMississauga stage" width="1280" height="720" loading="lazy">
+        <span class="hp-video-thumb__play"></span>
+      </a>
+      <div>
+        <p class="hp-hero__kicker">TEDxMississauga 2026</p>
+        <h2 class="hp-h2">How can we fit in without losing who we are?</h2>
+        <p>Lauren spent 30 years trying to look like everyone else. In her TEDx talk she explains what that cost her, and what changed when she stopped hiding.</p>
+        <p class="hp-tedx__views">40,000+ views</p>
       </div>
     </div>
   </section>
@@ -410,13 +488,9 @@
   <style>
     .media-logos-colour .logo-carousel__item img { filter: none !important; opacity: 1 !important; }
   </style>
-  <section class="section media-logos-colour" style="padding: 4rem 0; background: #ffffff;">
+  <section class="section media-logos-colour" style="padding: 3rem 0; background: #ffffff;">
     <div class="container">
-      <div class="section__header fade-in" style="text-align: center; margin-bottom: 2rem;">
-        <p class="section-label" style="justify-content: center;">Media Coverage</p>
-        <h2 class="section__title">As Seen On</h2>
-        <p class="section__subtitle" style="margin: 0.5rem auto 0; max-width: 600px; text-align: center;">Lauren has been featured across national television, radio, and leading publications.</p>
-      </div>
+      <p class="hp-logos-line">As seen on</p>
       <!-- Row 1: left to right -->
       <div class="logo-carousel" style="--logo-filter: none;">
           <div class="logo-carousel__track" style="animation-duration: 45s;">
@@ -529,131 +603,131 @@
   </section>
 
 
-  <!-- About Preview -->
-  <section class="section section--plum-light">
+  <!-- Featured testimonial -->
+  <section class="hp-quote-band">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-image fade-in">
-          <div class="about-image__frame">
-            <img src="/assets/photos/hero-portrait.webp" alt="Lauren Pires invisible disability speaker and resilience keynote speaker" width="1333" height="2000" fetchpriority="high">
-          </div>
-        </div>
-        <div class="about-content fade-in">
-          <p class="section-label">About Lauren</p>
-          <h2>An Award-Winning Speaker on Resilience, Joy and Self-Acceptance</h2>
-          <p>
-            Lauren Pires is an award-winning TEDx speaker on resilience, joy, and self-acceptance. Born with <strong>Central Core Disease</strong>, a rare neuromuscular disorder, she navigates life with 33% of the physical strength of the average person.
-          </p>
-          <p>
-            Named <strong>#2 Inspirational Speaker of the Year</strong> in North America's largest inspirational speaking competition (Speaker Slam, 2023) and recognized globally on the <strong>D-30 Disability Impact List</strong> (Diversability, 2024), Lauren is a trailblazer in the disability advocacy space. She made history as the first Canadian recipient of the prestigious "But You LOOK Good" Inspiration Award.
-          </p>
-          <p>
-            As <strong>Canada's first and only Invisible Disabilities Association Ambassador</strong>, Lauren has raised over $5,000 USD for the nonprofit. She played a key role in the global Rare Disease Day #LightUpForRare campaign, leading the lighting of 26 landmarks across 18 Canadian cities in 2026.
-          </p>
-          <a href="/about" class="btn btn--outline" style="margin-top: 1rem;">Read Full Bio</a>
-        </div>
-      </div>
+      <blockquote>
+        <p class="hp-quote-band__text">"It got one of the top satisfaction ratings out of many employee learning sessions we hosted this year."</p>
+        <footer class="hp-quote-band__who"><strong>Shine Jiyoun Chung</strong>Senior Consultant, Employee Wellbeing, The Co-operators</footer>
+      </blockquote>
     </div>
   </section>
 
-  <!-- Credentials Bar -->
-  <div class="credentials">
-    <div class="credentials__inner">
-      <div class="credentials__title-wrap">
-        <p class="credentials__title">Awards & Recognition</p>
+  <!-- Testimonials -->
+  <section class="section" style="padding: 5rem 0;">
+    <div class="container">
+      <div class="hp-quotes">
+        <blockquote class="hp-quote">
+          <h3>"All of us were moved and inspired by her story."</h3>
+          <p>Her presentation was phenomenal and very well received. It can be difficult to create engagement in a virtual setting but Lauren did a great job sparking discussion.</p>
+          <footer><strong>Lisa Paterson</strong>VP, Operations &amp; Pre-Claim Services, GroupHEALTH Benefit Solutions</footer>
+        </blockquote>
+        <blockquote class="hp-quote">
+          <h3>"This had real impact."</h3>
+          <p>When I saw the depth of questions that showed up in the chat, and some people who came off camera, I knew. It was an excellent 101 and it opens up so many more questions on this topic.</p>
+          <footer><strong>Kurtis Chow</strong>Senior Specialist, People Operations, Arc'teryx Equipment</footer>
+        </blockquote>
+        <blockquote class="hp-quote">
+          <h3>"Her desire to connect with the crowd was evident."</h3>
+          <p>She was inspiring, innovative, and diverse with her delivery, which is essential for speaking to teens and educators.</p>
+          <footer><strong>Estelle Gonzalez-Fadel</strong>Curriculum Head/Teacher, Peel District School Board</footer>
+        </blockquote>
       </div>
-      <div class="credentials__items">
-        <div class="credential">
-          <span class="credential__icon"></span>
-          Invisible Disability Impact Award Recipient
-        </div>
-        <div class="credential">
-          <span class="credential__icon"></span>
-          Top 30 Global Disability Leader
-        </div>
-        <div class="credential">
-          <span class="credential__icon"></span>
-          #2 Inspirational Speaker of the Year
-        </div>
+      <p style="margin-top: 2.5rem;"><a href="/testimonials" class="hp-link">Read more from event organizers</a></p>
+    </div>
+  </section>
+
+  <!-- Meet Lauren -->
+  <section class="section section--alt" style="padding: 5.5rem 0;">
+    <div class="container hp-split hp-split--flip">
+      <div>
+        <h2 class="hp-h2">Meet Lauren</h2>
+        <p>Lauren Pires went undiagnosed for two decades and spent 30 years hiding her disability. Today she is one of Canada's most visible voices for people living with invisible and rare disabilities, and she speaks to corporations, governments and schools about bias, belonging and finding joy on hard days.</p>
+        <ul class="hp-recognition">
+          <li><strong>#2 Inspirational Speaker of the Year</strong>, Speaker Slam 2023</li>
+          <li><strong>D-30 Disability Impact List</strong>, Diversability 2024</li>
+          <li><strong>First Canadian</strong> to receive the "But You LOOK Good" Inspiration Award</li>
+          <li><strong>Canada's first Invisible Disabilities Association Ambassador</strong></li>
+          <li>Led <strong>#LightUpForRare</strong>, lighting 26 landmarks across 18 Canadian cities</li>
+        </ul>
+        <p><a href="/about" class="hp-link">Read Lauren's full bio</a></p>
+      </div>
+      <img src="/assets/photos/hero-portrait.webp" alt="Lauren Pires smiling" width="1333" height="2000" loading="lazy" style="max-height: 640px; object-fit: cover; object-position: center top;">
+    </div>
+  </section>
+
+  <!-- Closing CTA -->
+  <section class="hp-cta">
+    <div class="container">
+      <h2 class="hp-h2">Want Lauren at your next event?</h2>
+      <p>Keynotes, workshops and virtual sessions for corporations, governments, associations and schools.</p>
+      <a href="/contact" class="hp-btn-solid">Check Lauren's Availability</a>
+    </div>
+  </section>
+
+  <!-- Video lightbox (reel + TEDx). Links work without JS and open YouTube. -->
+  <div class="hp-lightbox" id="videoBox" role="dialog" aria-modal="true" aria-label="Video" hidden>
+    <button class="hp-lightbox__close" aria-label="Close video">×</button>
+    <div class="hp-lightbox__inner">
+      <div class="hp-lightbox__frame"></div>
+      <div class="hp-lightbox__cta">
+        <span>Want Lauren at your event?</span>
+        <a href="/contact" class="hp-btn-solid">Check Lauren's Availability</a>
       </div>
     </div>
   </div>
-
-  <!-- Testimonials -->
-  <section class="section section--teal">
-    <div class="container">
-      <div class="section__header fade-in">
-        <p class="section-label">Testimonials</p>
-        <h2 class="section__title">What Clients Are Saying</h2>
-      </div>
-
-      <div class="testimonials-grid">
-        <div class="testimonial fade-in">
-          <p class="testimonial__quote">
-            She had a great balance between storytelling and knowledge transfer skills. After the session, I received several personal messages from our employees — they deeply appreciated the empowering space and energy Lauren brought. It got one of the top satisfaction ratings out of many employee learning sessions we hosted this year.
-          </p>
-          <p class="testimonial__author">Shine Jiyoun Chung</p>
-          <p class="testimonial__role">Senior Consultant, Employee Wellbeing – The Co-operators</p>
-        </div>
-
-        <div class="testimonial fade-in">
-          <p class="testimonial__quote">
-            Her presentation was phenomenal and very well received. It can be difficult to create engagement in a virtual setting but Lauren did a great job sparking discussion, and all of us were moved and inspired by her story.
-          </p>
-          <p class="testimonial__author">Lisa Paterson</p>
-          <p class="testimonial__role">VP, Operations & Pre-Claim Services – GroupHEALTH Benefit Solutions</p>
-        </div>
-
-        <div class="testimonial fade-in">
-          <p class="testimonial__quote">
-            When I saw the depth of questions that showed up in the chat, and some people who came off camera, I was like "this had real impact." It was an excellent 101 and it just opens up so many more questions on this topic.
-          </p>
-          <p class="testimonial__author">Kurtis Chow</p>
-          <p class="testimonial__role">Senior Specialist, People Operations – Arc'teryx Equipment</p>
-        </div>
-
-        <div class="testimonial fade-in">
-          <p class="testimonial__quote">
-            She was inspiring, innovative, and diverse with her delivery, and her desire to connect with the crowd was evident — which is essential for speaking to teens and educators.
-          </p>
-          <p class="testimonial__author">Estelle Gonzalez-Fadel</p>
-          <p class="testimonial__role">Curriculum Head/Teacher – Peel District School Board</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section" style="padding: 5rem 0;">
-    <div class="container fade-in contact-tailored-grid">
-      <div>
-        <img src="/assets/photos/cta-stage.webp" alt="Lauren Pires speaking on stage" style="width: 100%; border-radius: 12px; display: block;">
-      </div>
-      <div>
-        <p class="section-label">Book Lauren</p>
-        <h2 class="section__title" style="color: var(--charcoal);">Bring Lauren to Your Event</h2>
-        <p class="section__subtitle" style="margin-top: 1rem;">Ready to spark meaningful conversations about disability, inclusion, and resilience?</p>
-        <a href="/contact" class="btn btn--lg" style="margin-top: 1.5rem; padding: 1rem 2.5rem; font-size: 1.1rem; background: var(--teal); color: var(--white); border-radius: 6px;">Book Lauren for Your Event →</a>
-      </div>
-    </div>
-  </section>
-
   </main>
 
   <!-- Footer -->
   {% include "footer.njk" %}
 
-  <!-- Scroll animation script -->
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+    // Hero stage loop: only download the video on larger screens without reduced motion.
+    // Phones keep the still poster (the section's background image).
+    (function() {
+      const v = document.querySelector('.hp-hero__video');
+      if (!v) return;
+      const wide = window.matchMedia('(min-width: 769px)').matches;
+      const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!wide || still) { v.remove(); return; }
+      [['webm', 'video/webm'], ['mp4', 'video/mp4']].forEach(([key, type]) => {
+        const s = document.createElement('source');
+        s.src = v.dataset[key]; s.type = type; v.appendChild(s);
       });
-    }, { threshold: 0.1 });
+      v.load();
+      v.play().catch(() => {});
+    })();
 
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    // Video lightbox for the speaker reel and the TEDx talk.
+    (function() {
+      const box = document.getElementById('videoBox');
+      if (!box) return;
+      const frame = box.querySelector('.hp-lightbox__frame');
+      let lastFocus;
+      function open(e) {
+        e.preventDefault();
+        lastFocus = e.currentTarget;
+        const id = lastFocus.dataset.video;
+        const title = lastFocus.dataset.title || 'Video';
+        frame.innerHTML = '<iframe src="https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0" title="' + title +
+          '" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+        box.setAttribute('aria-label', title);
+        box.hidden = false;
+        document.body.style.overflow = 'hidden';
+        box.querySelector('.hp-lightbox__close').focus();
+        if (window.gtag) gtag('event', 'video_open', { video_title: title });
+      }
+      function close() {
+        frame.innerHTML = '';  // removing the iframe stops playback
+        box.hidden = true;
+        document.body.style.overflow = '';
+        if (lastFocus) lastFocus.focus();
+      }
+      document.querySelectorAll('.js-video').forEach(a => a.addEventListener('click', open));
+      box.addEventListener('click', e => { if (e.target === box || e.target.closest('.hp-lightbox__close')) close(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape' && !box.hidden) close(); });
+    })();
+
     // Mobile nav toggle
     // Homepage banner. CHANGE THE EXPIRY whenever the copy changes or it silently disappears. Dismissible per session.
     (function() {
