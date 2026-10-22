@@ -57,10 +57,14 @@ navCtaHref: "/contact"
     :root { --pink: #FF5FA2; --pink-dark: #E8438A; --sun: #FFD23F; --night: #160A22; }
 
     /* Hero: silent stage loop + headline */
-    .hp-hero { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: center;
-      overflow: hidden; background: var(--night) url(/assets/video/lauren-hero-poster.webp) center / cover no-repeat;
-      padding: 120px 0 80px; color: var(--white); }
-    .hp-hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+    /* The hero starts below the fixed banner + nav (--hdr-h is measured by JS), so the header never covers the video.
+       The video is anchored to the top: on screens wider than 16:9 the crop comes off the floor, never her head. */
+    .hp-hero { position: relative; margin-top: var(--hdr-h, 80px);
+      min-height: calc(100vh - var(--hdr-h, 80px)); min-height: calc(100svh - var(--hdr-h, 80px));
+      display: flex; align-items: center; overflow: hidden;
+      background: var(--night) url(/assets/video/lauren-hero-poster.webp) center top / cover no-repeat;
+      padding: 3.5rem 0 4rem; color: var(--white); }
+    .hp-hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; z-index: 0; }
     .hp-hero::after { content: ""; position: absolute; inset: 0; z-index: 1;
       background: linear-gradient(90deg, rgba(22,10,34,.92) 0%, rgba(22,10,34,.66) 42%, rgba(22,10,34,.06) 76%); }
     .hp-hero .container { position: relative; z-index: 2; width: 100%; }
@@ -154,7 +158,7 @@ navCtaHref: "/contact"
       .hp-quote-band::before { background: rgba(42,18,64,.82); }
     }
     @media (max-width: 768px) {
-      .hp-hero { align-items: flex-end; background-position: 72% center; padding-bottom: 3.5rem; }
+      .hp-hero { align-items: flex-end; background-position: 72% top; padding-bottom: 3.5rem; }
       .hp-hero::after { background: linear-gradient(0deg, rgba(22,10,34,.95) 0%, rgba(22,10,34,.7) 45%, rgba(22,10,34,.1) 80%); }
       .hp-hero__title { font-size: 4.6rem; }
     }
@@ -682,6 +686,14 @@ navCtaHref: "/contact"
   {% include "footer.njk" %}
 
   <script>
+    // Measure the fixed banner + nav so the hero starts right below them (see .hp-hero CSS).
+    function setHeaderHeight() {
+      const nav = document.querySelector('.nav');
+      if (nav) document.documentElement.style.setProperty('--hdr-h', Math.round(nav.getBoundingClientRect().bottom) + 'px');
+    }
+    window.addEventListener('resize', setHeaderHeight);
+    window.addEventListener('load', setHeaderHeight);
+
     // Hero stage loop: only download the video on larger screens without reduced motion.
     // Phones keep the still poster (the section's background image).
     (function() {
@@ -752,8 +764,13 @@ navCtaHref: "/contact"
           document.body.classList.remove('has-banner');
           document.documentElement.style.removeProperty('--banner-h');
           sessionStorage.setItem('walkBannerDismissed', '1');
+          setTimeout(setHeaderHeight, 350);  // after the nav's 0.3s slide-up
         });
       }
+      // The nav has a 0.3s transition, so measure now and again once it settles.
+      setHeaderHeight();
+      setTimeout(setHeaderHeight, 350);
+      window.addEventListener('resize', () => setTimeout(setHeaderHeight, 50));
     })();
 
     const toggle = document.querySelector('.nav__toggle');
