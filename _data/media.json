@@ -1,5 +1,70 @@
 [
   {
+    "outlet": "Healthing",
+    "title": "Living with an Invisible Disability: 'I Felt Like Nobody Would Understand or Relate to Me'",
+    "date": "2026-10-01",
+    "url": "https://www.healthing.ca/disability/living-with-an-invisible-disability-i-felt-like-nobody-would-understand-or-relate-to-me",
+    "kind": "print"
+  },
+  {
+    "outlet": "The GH Podcast",
+    "title": "Turning Adversity into Opportunity",
+    "date": "2026-10-01",
+    "url": "https://open.spotify.com/episode/0rwgIkCvTkSrUmb91F2kEA",
+    "kind": "podcast"
+  },
+  {
+    "outlet": "PTBO Today",
+    "title": "Peterborough City Hall to Light Up White for Invisible Disabilities Week",
+    "date": "2026-10-01",
+    "url": "https://www.ptbotoday.ca/2026/10/21/peterborough-city-hall-to-light-up-white-for-invisible-disabilities-week",
+    "kind": "print"
+  },
+  {
+    "outlet": "Oakville News",
+    "title": "Oakville Town Hall to Light Up White for Invisible Disabilities Week",
+    "date": "2026-10-01",
+    "url": "https://www.oakvillenews.org/local-news/oakville-town-hall-to-light-up-white-for-invisible-disabilities-week-12892908",
+    "logo": "/assets/media/oakville-news.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "Niagara This Week",
+    "title": "Niagara Landmarks to Be Lit White for Invisible Disabilities",
+    "date": "2026-10-01",
+    "url": "https://www.niagarathisweek.com/news/niagara-region/niagara-landmarks-to-be-lit-white-for-invisible-disabilities/article_73c7fedb-6e9d-5e75-9735-8cfd104a166c.html",
+    "kind": "print"
+  },
+  {
+    "outlet": "Thorold Today",
+    "title": "Niagara Sign and Peace Bridge to Light Up White for Invisible Disabilities Week",
+    "date": "2026-10-01",
+    "url": "https://www.thoroldtoday.ca/local-news/niagara-sign-and-peace-bridge-to-light-up-white-for-invisible-disabilities-week-12891242",
+    "logo": "/assets/media/thorold-today.png",
+    "kind": "print"
+  },
+  {
+    "outlet": "Pelham Today",
+    "title": "Niagara Sign and Peace Bridge to Light Up White for Invisible Disabilities Week",
+    "date": "2026-10-01",
+    "url": "https://www.pelhamtoday.ca/local-news/niagara-sign-and-peace-bridge-to-light-up-white-for-invisible-disabilities-week-12891247",
+    "kind": "print"
+  },
+  {
+    "outlet": "Fort Erie Radio",
+    "title": "Peace Bridge to Shine White Sunday for Invisible Disabilities",
+    "date": "2026-10-01",
+    "url": "https://forterieradio.ca/peace-bridge-to-shine-white-sunday-for-invisible-disabilities",
+    "kind": "radio"
+  },
+  {
+    "outlet": "Authority in the Wild",
+    "title": "What Hiding a Weakness Actually Costs You",
+    "date": "2026-09-01",
+    "url": "https://open.spotify.com/episode/2H4Whj1UwgNsVQ6AVer2uy",
+    "kind": "podcast"
+  },
+  {
     "outlet": "CityNews Toronto",
     "title": "Mississauga woman inspires others with 5K walk for charity (680 News Athlete of the Week)",
     "date": "2026-06-15",
@@ -15,6 +80,13 @@
     "video": "4Xv7tZjDpF8",
     "kind": "radio",
     "logo": "/assets/media/680-news.png"
+  },
+  {
+    "outlet": "Miss Matched Podcast",
+    "title": "She Kept Her Disability Secret While Dating... Then This Happened on Date Two",
+    "date": "2026-05-01",
+    "url": "https://open.spotify.com/episode/2hfclusoLPZ01dhSqYgmck",
+    "kind": "podcast"
   },
   {
     "outlet": "CP24 Breakfast",
@@ -97,12 +169,33 @@
     "kind": "broadcast"
   },
   {
+    "outlet": "Hat Collecting Podcast",
+    "title": "33% Strength, 100% Spirit",
+    "date": "2025-07-01",
+    "url": "https://open.spotify.com/episode/49lxDlHyPlG7l2b1w7aN4p",
+    "kind": "podcast"
+  },
+  {
     "outlet": "Canadian SME Magazine",
     "title": "Building Inclusion Through Empathy",
     "date": "2025-06-01",
     "url": "https://canadiansme.ca/building-inclusion-through-empathy/",
     "logo": "/assets/media/canadian-sme.png",
     "kind": "print"
+  },
+  {
+    "outlet": "Hiding in Plain Sight",
+    "title": "Episode 18: Embracing Invisible Disabilities",
+    "date": "2025-04-01",
+    "url": "https://open.spotify.com/episode/6PG35mBnzV1TFd7WI8JUoq",
+    "kind": "podcast"
+  },
+  {
+    "outlet": "Courage in Action",
+    "title": "Episode 69: The Daily \"Yay\"",
+    "date": "2025-03-01",
+    "url": "https://open.spotify.com/episode/6bQIHlmi4QhqZVDS1O5voM",
+    "kind": "podcast"
   },
   {
     "outlet": "CityNews Toronto",
