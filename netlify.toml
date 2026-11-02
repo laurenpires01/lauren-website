@@ -1,9 +1,11 @@
 # ============================================================
 # Lauren Pires — netlify.toml (Eleventy build)
 # ============================================================
-# NOTE: Do NOT add http→https or non-www→www redirects here.
-# Netlify handles HTTPS automatically; the canonical www domain
-# is set in the Netlify dashboard under Domain Settings.
+# NOTE: Do NOT add http→https or www→non-www redirects here.
+# Netlify handles HTTPS automatically; the primary domain is the
+# bare laurensaysyay.com (set in the Netlify dashboard under Domain
+# Settings), and www redirects to it. Canonical tags, the sitemap
+# and robots.txt all use https://laurensaysyay.com to match.
 
 [build]
   command = "npm install && npx @11ty/eleventy"
