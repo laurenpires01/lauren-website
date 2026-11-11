@@ -140,6 +140,8 @@ ul { list-style: none; }
   height: 80px;
 }
 
+.nav__logo { flex-shrink: 0; }
+
 .nav__logo img {
   height: 80px;
   width: auto;
@@ -1697,6 +1699,15 @@ ul { list-style: none; }
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Narrow desktop: keep the logo full-shape and the menu on one line */
+@media (min-width: 901px) and (max-width: 1180px) {
+  .nav__logo img { height: 60px; }
+  .nav__links { gap: 1.1rem; }
+  .nav__link { font-size: 0.9rem; }
+  .nav__social { display: none; }
+  .nav__cta { white-space: nowrap; padding-left: 1rem; padding-right: 1rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
