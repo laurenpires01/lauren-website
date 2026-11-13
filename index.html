@@ -710,6 +710,32 @@ navCtaHref: "/contact"
       v.play().catch(() => {});
     })();
 
+    // ---- Button tracking (GA4) ----
+    // Events: video_open {video_title, placement} and availability_click {placement, video_title?}.
+    // placement says where on the page the click happened, so GA can show which spot leads to booking requests.
+    function placementOf(el) {
+      if (el.dataset.placement) return el.dataset.placement;
+      if (el.closest('.nav')) return 'nav';
+      if (el.closest('.walk-banner')) return 'banner';
+      if (el.closest('.hp-lightbox')) return 'video_popup';
+      if (el.closest('.hp-hero')) return 'hero';
+      if (el.closest('.hp-tedx')) return 'tedx_section';
+      if (el.closest('.hp-cta')) return 'closing_cta';
+      if (el.closest('footer')) return 'footer';
+      return 'other';
+    }
+    function track(name, params) {
+      if (typeof window.gtag === 'function') gtag('event', name, params);  // gtag sends via beacon, so clicks that leave the page still count
+    }
+    let playingTitle = '';  // the video open in the pop-up, if any
+    document.addEventListener('click', e => {
+      const a = e.target.closest('a[href^="/contact"]');
+      if (!a) return;
+      const params = { placement: placementOf(a) };
+      if (params.placement === 'video_popup' && playingTitle) params.video_title = playingTitle;
+      track('availability_click', params);
+    });
+
     // Video lightbox for the speaker reel and the TEDx talk.
     (function() {
       const box = document.getElementById('videoBox');
@@ -727,10 +753,12 @@ navCtaHref: "/contact"
         box.hidden = false;
         document.body.style.overflow = 'hidden';
         box.querySelector('.hp-lightbox__close').focus();
-        if (window.gtag) gtag('event', 'video_open', { video_title: title });
+        playingTitle = title;
+        track('video_open', { video_title: title, placement: placementOf(lastFocus) });
       }
       function close() {
         frame.innerHTML = '';  // removing the iframe stops playback
+        playingTitle = '';
         box.hidden = true;
         document.body.style.overflow = '';
         if (lastFocus) lastFocus.focus();
