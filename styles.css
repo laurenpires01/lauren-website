@@ -140,9 +140,12 @@ ul { list-style: none; }
   height: 80px;
 }
 
+.nav__logo { flex-shrink: 0; }
+
 .nav__logo img {
   height: 80px;
   width: auto;
+  object-fit: contain;
 }
 
 .nav__links {
@@ -1546,6 +1549,7 @@ ul { list-style: none; }
   border-left: 3px solid var(--plum);
 }
 
+.contact-info h2,
 .contact-info h3 {
   font-family: var(--font-display);
   font-size: 1.3rem;
@@ -1646,6 +1650,7 @@ ul { list-style: none; }
 
 .footer__brand img {
   height: 72px;
+  width: auto;
   filter: brightness(10);
   opacity: 0.8;
 }
@@ -1694,6 +1699,19 @@ ul { list-style: none; }
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Narrow desktop: keep the logo full-shape and the menu on one line */
+@media (min-width: 901px) and (max-width: 1180px) {
+  .nav__logo img { height: 60px; }
+  .nav__links { gap: 1.1rem; }
+  .nav__link { font-size: 0.9rem; }
+  .nav__social { display: none; }
+  .nav__cta { white-space: nowrap; padding-left: 1rem; padding-right: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { opacity: 1; transform: none; transition: none; }
 }
 
 /* --- Responsive --- */

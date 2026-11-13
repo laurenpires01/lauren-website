@@ -660,3 +660,14 @@ Added 31 posts covering April 14 to September 4, 2026 (Walk and Roll, TEDxMissis
 **Filters added to eleventy.config.js:** monthYear, longDate, head, groupByYear.
 
 Static sections on /links (edit by hand): the four buttons under the TEDx card, and "Talks and features". Podcast appearances that only exist on Linktree (Miss Matched, Hat Collecting, Hiding in Plain Sight, Courage in Action) are not in media.json yet because their episode URLs were not available; add them with kind "podcast".
+
+---
+
+## URL and image conventions (Nov 10, 2026 audit)
+
+- Every internal link, canonical tag, og:url, JSON-LD URL and sitemap entry ends with a trailing slash (`/about/`, `/blog/post-name/`). Netlify serves pages at the slash address; the no-slash form 301-redirects.
+- Blog post `<title>` ends with `| Lauren Pires` only. `og:image`, `twitter:image` and the BlogPosting `image` use the post's own featured image.
+- The featured image at the top of a blog post has its real `width`/`height` and `fetchpriority="high"` (not lazy). Other images use `loading="lazy"`.
+- Header and footer logo is `/assets/logo.webp` (46 KB). `logo.svg` (863 KB) is no longer referenced.
+- Keep new images under about 200 KB: 1200x630 for blog images, WebP at quality 80.
+- The homepage TEDx banner expires Dec 31, 2027 (see the script at the bottom of `index.html`).
