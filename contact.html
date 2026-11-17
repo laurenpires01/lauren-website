@@ -168,7 +168,7 @@
 
         <!-- Contact Form -->
         <div>
-          <form name="contact" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+          <form name="contact" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" toolname="request_lauren_pires_booking" tooldescription="Send a booking or enquiry request to keynote speaker Lauren Pires (invisible disability, workplace inclusion and resilience keynotes, workshops, podcast guest spots, media). Lauren replies by email.">
             <input type="hidden" name="form-name" value="contact">
             <p class="hidden" style="display:none;">
               <label>Don't fill this out if you're human: <input name="bot-field"></label>
@@ -196,7 +196,7 @@
 
             <div class="form-group">
               <label for="inquiry">Inquiry Type</label>
-              <select id="inquiry" name="inquiry">
+              <select id="inquiry" name="inquiry" toolparamdescription="Type of request: keynote, workshop, podcast, media or other.">
                 <option value="" disabled selected>Select one</option>
                 <option value="keynote">Keynote / Speaking Engagement</option>
                 <option value="workshop">Workshop / Training</option>
@@ -208,7 +208,7 @@
 
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Tell Lauren about your event, audience, and what you're looking for..." required></textarea>
+              <textarea id="message" name="message" toolparamdescription="Event details: organization, date, location or virtual, audience size and type, and which keynote topic interests them." placeholder="Tell Lauren about your event, audience, and what you're looking for..." required></textarea>
             </div>
 
             <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.75rem; margin-top: 0.5rem;">
