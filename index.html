@@ -158,7 +158,11 @@ navCtaHref: "/contact/"
       .hp-quote-band::before { background: rgba(42,18,64,.82); }
     }
     @media (max-width: 768px) {
-      .hp-hero { align-items: flex-end; background-position: 72% top; padding-bottom: 3.5rem; }
+      /* Phones: no stage loop. Use Lauren's portrait hero from the old site, face at the top, text over the lower half. */
+      .hp-hero__video { display: none; }
+      /* The photo spans the screen width; her face sits in the top ~60vw, so the text starts below it on any phone height. */
+      .hp-hero { align-items: flex-end; padding-top: 64vw; padding-bottom: 3.5rem;
+        background-image: url(/assets/photos/lauren-pires-hero-mobile.webp); background-size: 100% auto; background-position: center top; }
       .hp-hero::after { background: linear-gradient(0deg, rgba(22,10,34,.95) 0%, rgba(22,10,34,.7) 45%, rgba(22,10,34,.1) 80%); }
       .hp-hero__title { font-size: 4.6rem; }
     }
@@ -213,7 +217,8 @@ navCtaHref: "/contact/"
       body.has-banner .hero-full { padding-top: 62px; }
     }
   </style>
-  <link rel="preload" href="/assets/video/lauren-hero-poster-v6.webp" as="image" type="image/webp">
+  <link rel="preload" href="/assets/video/lauren-hero-poster-v6.webp" as="image" type="image/webp" media="(min-width: 769px)">
+  <link rel="preload" href="/assets/photos/lauren-pires-hero-mobile.webp" as="image" type="image/webp" media="(max-width: 768px)">
 
   <script type="application/ld+json">
   {
@@ -716,7 +721,7 @@ navCtaHref: "/contact/"
     window.addEventListener('load', setHeaderHeight);
 
     // Hero stage loop: only download the video on larger screens without reduced motion.
-    // Phones keep the still poster (the section's background image).
+    // Phones get Lauren's portrait photo instead (the section's background image, set in the 768px media query).
     (function() {
       const v = document.querySelector('.hp-hero__video');
       if (!v) return;
